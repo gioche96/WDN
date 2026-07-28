@@ -3,45 +3,46 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { BASE_PATH } from "@/lib/paths";
 
 const images = [
     {
-        src: "/images/story/1.jpg",
+        src: `${BASE_PATH}/images/story/1.jpg`,
         subtitle: "Torino · Febbraio 2020",
         desktopClass: "md:col-span-5 md:row-span-2",
     },
     {
-        src: "/images/story/2.jpg",
+        src: `${BASE_PATH}/images/story/2.jpg`,
         subtitle: "Etna · Luglio 2020",
         desktopClass: "md:col-span-3 md:row-span-1",
     },
     {
-        src: "/images/story/3.jpg",
+        src: `${BASE_PATH}/images/story/3.jpg`,
         subtitle: "Taormina · Luglio 2020",
         desktopClass: "md:col-span-4 md:row-span-1",
     },
     {
-        src: "/images/story/4.jpg",
+        src: `${BASE_PATH}/images/story/4.jpg`,
         subtitle: "Ragusa · Luglio 2020",
         desktopClass: "md:col-span-4 md:row-span-1",
     },
     {
-        src: "/images/story/5.jpg",
+        src: `${BASE_PATH}/images/story/5.jpg`,
         subtitle: "Cascate delle Marmore · Agosto 2020",
         desktopClass: "md:col-span-3 md:row-span-1",
     },
     {
-        src: "/images/story/6.jpg",
+        src: `${BASE_PATH}/images/story/6.jpg`,
         subtitle: "Cascate delle Marmore · Agosto 2020",
         desktopClass: "md:col-span-5 md:row-span-1",
     },
     {
-        src: "/images/story/7.jpg",
+        src: `${BASE_PATH}/images/story/7.jpg`,
         subtitle: "Basilea · Marzo 2021",
         desktopClass: "md:col-span-7 md:row-span-2",
     },
     {
-        src: "/images/story/8.jpg",
+        src: `${BASE_PATH}/images/story/8.jpg`,
         subtitle: "Roma · Agosto 2020",
         desktopClass: "md:col-span-5 md:row-span-1",
     },

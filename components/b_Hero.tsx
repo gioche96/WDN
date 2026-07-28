@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/paths";
 
 export default function Hero() {
 
@@ -14,7 +15,7 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen overflow-hidden">
             <Image
-                src="/wedding-cover.jpg"
+                src={`${BASE_PATH}/wedding-cover.jpg`}
                 alt="Alice e Giorgio"
                 fill
                 priority
