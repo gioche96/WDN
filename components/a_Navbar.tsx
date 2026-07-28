@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/paths";
 
 const links = [
     { label: "Anteprima", href: "#trailer" },
@@ -43,7 +44,7 @@ export default function a_Navbar() {
             <nav className="mx-auto flex h-20 max-w-7xl items-center px-6">
                 <a href="#" className="shrink-0">
                     <Image
-                        src="/logo.png"
+                        src={`${BASE_PATH}/logo.png`}
                         alt="Alice e Giorgio"
                         width={2000}
                         height={2000}
