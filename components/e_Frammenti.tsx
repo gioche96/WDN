@@ -179,11 +179,11 @@ export default function Frammenti() {
         >
             <div className="mx-auto max-w-7xl px-6 text-center">
                 <div className="mx-auto mb-10 w-full md:mb-12">
-                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt]">
+                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
                         Frammenti
                     </p>
 
-                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl">
+                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
                         Ricordi che abbiamo vissuto
                     </h2>
 

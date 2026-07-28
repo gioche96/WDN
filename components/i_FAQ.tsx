@@ -38,11 +38,11 @@ export default function FAQ() {
         <section id="faq" className="bg-white px-6 py-10 md:py-15">
             <div className="mx-auto max-w-4xl">
                 <div className="mb-10 text-center">
-                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt]">
+                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
                         Informazioni
                     </p>
 
-                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl">
+                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
                         Domande frequenti
                     </h2>
                 </div>

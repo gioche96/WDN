@@ -25,11 +25,11 @@ export default function Location() {
         >
             <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
                 <div>
-                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] lg:text-left md:text-[13pt]">
+                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] lg:text-left md:text-[13pt] text-black">
                         La location
                     </p>
 
-                    <h2 className="mb-8 text-center font-title text-4xl leading-tight md:text-6xl lg:text-left">
+                    <h2 className="mb-8 text-center font-title text-4xl leading-tight md:text-6xl lg:text-left text-black">
                         Un luogo speciale
                         <br />
                         per il nostro giorno
@@ -91,7 +91,7 @@ export default function Location() {
                         {gallery.map((image) => (
                             <div
                                 key={image.src}
-                                className="relative aspect-square overflow-hidden rounded-md"
+                                className="relative aspect-square overflow-hidden rounded-md border border-[#6D1F32]/30"
                             >
                                 <Image
                                     src={image.src}
@@ -111,7 +111,7 @@ export default function Location() {
                             loading="lazy"
                             allowFullScreen
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="absolute inset-0 h-full w-full border-0"
+                            className="absolute inset-0 h-full w-full border border-[#6D1F32]/30"
                         />
                     </div>
                 </div>

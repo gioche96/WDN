@@ -11,11 +11,11 @@ export default function Donazione() {
             <div className="mx-auto max-w-6xl">
 
                 <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt]">
+                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
                         Un nuovo capitolo
                     </p>
 
-                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl">
+                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
                         Il regalo più bello
                     </h2>
 
@@ -32,7 +32,7 @@ export default function Donazione() {
 
                     {/* VIAGGIO */}
 
-                    <div className="overflow-hidden rounded-md border border-black/10 bg-white">
+                    <div className="overflow-hidden rounded-md border border-[#6D1F32]/30 bg-white">
                         <div className="relative h-72">
                             <Image
                                 src={`${BASE_PATH}/images/gift/travel.jpg`}
@@ -86,7 +86,7 @@ export default function Donazione() {
 
                     {/* BENEFICENZA */}
 
-                    <div className="overflow-hidden rounded-md border border-black/10 bg-white">
+                    <div className="overflow-hidden rounded-md border border-[#6D1F32]/30 bg-white">
                         <div className="relative h-72">
                             <Image
                                 src={`${BASE_PATH}/images/gift/charity.jpg`}

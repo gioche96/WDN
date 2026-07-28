@@ -56,11 +56,11 @@ export default function Program() {
             <div className="mx-auto max-w-6xl">
                 {/* Intestazione */}
                 <div className="mx-auto mb-11 max-w-2xl text-center md:mb-15">
-                    <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-black/65 md:text-[13pt]">
+                    <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-black/65 md:text-[13pt] text-black">
                         Sabato 4 settembre 2027
                     </p>
 
-                    <h2 className="font-title text-4xl leading-tight md:text-6xl">
+                    <h2 className="font-title text-4xl leading-tight md:text-6xl text-black">
                         Il programma
                     </h2>
                 </div>

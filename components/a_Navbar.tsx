@@ -61,7 +61,7 @@ export default function a_Navbar() {
                             href={link.href}
                             className="
                                 relative pb-1 text-sm
-                                transition-colors duration-300
+                                transition-colors duration-100
                                 after:absolute after:bottom-0 after:left-0
                                 after:h-px after:w-0 after:bg-current
                                 after:transition-all after:duration-300

@@ -11,7 +11,7 @@ export default function Trailer() {
                     Un'anteprima
                 </p>
 
-                <h2 className="mt-2 font-title text-4xl leading-tight md:text-6xl">
+                <h2 className="mt-2 font-title text-4xl leading-tight md:text-6xl text-black">
                     Il nostro trailer
                 </h2>
 
@@ -31,7 +31,7 @@ export default function Trailer() {
                         disablePictureInPicture
                         playsInline
                         preload="metadata"
-                        className="aspect-video w-full rounded-xl border-8 border-[#C6B182]/90 object-cover shadow-lg"
+                        className="aspect-video w-full rounded-xl border-5 border-[#6D1F32]/80 object-cover shadow-lg"
                     >
                         <source src={`${BASE_PATH}/videos/trailer.mp4`} type="video/mp4" />
                     </video>

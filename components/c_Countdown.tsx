@@ -79,7 +79,7 @@ export default function Countdown() {
                     ))}
                 </div>
 
-                <p className="font-title mt-8 text-4xl md:text-5xl">
+                <p className="font-title mt-8 text-4xl md:text-5xl text-black">
                     al nostro sì
                 </p>
 

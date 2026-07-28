@@ -26,11 +26,11 @@ export default function Travel() {
         <section id="travel" className="bg-white px-6 py-10 md:py-15">
             <div className="mx-auto max-w-7xl px-6 text-center">
                 <div className="mx-auto mb-10 w-full md:mb-12">
-                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt]">
+                    <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
                         Informazioni utili
                     </p>
 
-                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl">
+                    <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
                         Viaggio e soggiorno
                     </h2>
                 </div>
