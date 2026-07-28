@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ExternalLink, Heart, Plane } from "lucide-react";
+import { BASE_PATH } from "@/lib/paths";
 
 export default function Donazione() {
     return (
@@ -34,7 +35,7 @@ export default function Donazione() {
                     <div className="overflow-hidden rounded-md border border-black/10 bg-white">
                         <div className="relative h-72">
                             <Image
-                                src="/images/gift/travel.jpg"
+                                src={`${BASE_PATH}/images/gift/travel.jpg`}
                                 alt="Il nostro prossimo viaggio"
                                 fill
                                 sizes="(min-width:1024px) 50vw, 100vw"
@@ -88,7 +89,7 @@ export default function Donazione() {
                     <div className="overflow-hidden rounded-md border border-black/10 bg-white">
                         <div className="relative h-72">
                             <Image
-                                src="/images/gift/charity.jpg"
+                                src={`${BASE_PATH}/images/gift/charity.jpg`}
                                 alt="Associazione benefica"
                                 fill
                                 sizes="(min-width:1024px) 50vw, 100vw"

@@ -1,17 +1,18 @@
 import Image from "next/image";
 import { ExternalLink, MapPin } from "lucide-react";
+import { BASE_PATH } from "@/lib/paths";
 
 const gallery = [
     {
-        src: "/images/location/location-1.jpg",
+        src: `${BASE_PATH}/images/location/location-1.jpg`,
         alt: "Esterno del Relais Chiaramonte",
     },
     {
-        src: "/images/location/location-2.jpg",
+        src: `${BASE_PATH}/images/location/location-2.jpg`,
         alt: "Sala Qirat",
     },
     {
-        src: "/images/location/location-3.jpg",
+        src: `${BASE_PATH}/images/location/location-3.jpg`,
         alt: "Dettaglio della location",
     },
 ];

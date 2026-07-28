@@ -1,3 +1,5 @@
+import { BASE_PATH } from "@/lib/paths";
+
 export default function Trailer() {
     return (
         <section
@@ -31,7 +33,7 @@ export default function Trailer() {
                         preload="metadata"
                         className="aspect-video w-full rounded-xl border-8 border-[#C6B182]/90 object-cover shadow-lg"
                     >
-                        <source src="/videos/trailer.mp4" type="video/mp4" />
+                        <source src={`${BASE_PATH}/videos/trailer.mp4`} type="video/mp4" />
                     </video>
                 </div>
 
