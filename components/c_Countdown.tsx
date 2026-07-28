@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const weddingDate = new Date("2027-09-04T16:00:00");
 
@@ -32,6 +33,7 @@ function getTimeLeft(): TimeLeft {
 }
 
 export default function Countdown() {
+    const { t } = useTranslation();
     const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
     useEffect(() => {
@@ -45,10 +47,10 @@ export default function Countdown() {
     }, []);
 
     const items = [
-        { value: timeLeft?.days ?? 0, label: "Giorni" },
-        { value: timeLeft?.hours ?? 0, label: "Ore" },
-        { value: timeLeft?.minutes ?? 0, label: "Minuti" },
-        { value: timeLeft?.seconds ?? 0, label: "Secondi" },
+        { value: timeLeft?.days ?? 0, label: t("countdown.days") },
+        { value: timeLeft?.hours ?? 0, label: t("countdown.hours") },
+        { value: timeLeft?.minutes ?? 0, label: t("countdown.minutes") },
+        { value: timeLeft?.seconds ?? 0, label: t("countdown.seconds") },
     ];
 
     return (
@@ -60,7 +62,7 @@ export default function Countdown() {
                 <div className="mb-8 h-px w-full bg-black/15" />
 
                 <p className="text-[10pt] uppercase tracking-[0.35em] text-black/55 md:text-[13pt]">
-                    Mancano
+                    {t("countdown.missing")}
                 </p>
 
                 <div className="mt-8 grid grid-cols-4 gap-4 md:gap-8">
@@ -80,7 +82,7 @@ export default function Countdown() {
                 </div>
 
                 <p className="font-title mt-8 text-4xl md:text-5xl text-black">
-                    al nostro sì
+                    {t("countdown.toOurYes")}
                 </p>
 
                 <div className="mt-10 h-px w-full bg-black/15" />

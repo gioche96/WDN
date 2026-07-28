@@ -1,0 +1,60 @@
+{
+    "navbar": {
+        "logoAlt": "Alice und Giorgio",
+        "openMenu": "Menü öffnen",
+        "closeMenu": "Menü schließen",
+        "links": {
+            "preview": "Vorschau",
+            "fragments": "Momente",
+            "program": "Programm",
+            "location": "Location",
+            "travel": "Reise",
+            "donation": "Geschenk",
+            "faq": "FAQ",
+            "rsvp": "RSVP"
+        }
+    },
+    "hero": {
+        "imageAlt": "Alice und Giorgio",
+        "announcement": "Wir heiraten",
+        "date": "4. September 2027",
+        "scrollToCountdown": "Zum Countdown scrollen"
+    },
+    "countdown": {
+        "missing": "Noch",
+        "days": "Tage",
+        "hours": "Stunden",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "toOurYes": "bis zu unserer Hochzeit"
+    },
+    "trailer": {
+        "subtitle": "Ein Vorgeschmack",
+        "title": "Unser Trailer",
+        "description": "Vor unserem großen Tag möchten wir euch einen kleinen Vorgeschmack auf das geben, was uns erwartet. Ein kurzer Trailer, der einen besonderen Moment unserer Geschichte erzählt und das schönste Kapitel eröffnet.",
+        "story": {
+            "beforeDate": "Dieses Video wurde am",
+            "afterDate": " in Chieri aufgenommen, dem Ort, an dem wir uns bereits in einer schlichten und persönlichen standesamtlichen Zeremonie das Ja-Wort gegeben haben. Der nächste Schritt ist jedoch der, den wir gemeinsam mit euch erleben möchten. Am 4. September feiern wir unsere Hochzeit im Kreis der Menschen, die unseren gemeinsamen Weg so besonders gemacht haben. Dies ist nur der Trailer... der schönste Film beginnt erst noch!"
+        }
+    },
+    "fragments": {
+        "eyebrow": "Momente",
+        "title": "Erinnerungen, die wir gemeinsam erlebt haben",
+        "description": "Unsere Geschichte begann vor 7 Jahren, fast zufällig, mit Begegnungen, Gesprächen und kleinen Momenten, die schnell wichtig wurden. Seitdem haben wir Reisen, Pläne und Träume miteinander geteilt.",
+        "previousPhoto": "Vorheriges Foto",
+        "nextPhoto": "Nächstes Foto",
+        "photoAlt": "Alice und Giorgio {{number}}",
+        "goToPhoto": "Zu Foto {{number}} wechseln: {{subtitle}}",
+        "enlargePhoto": "Foto vergrößern: {{subtitle}}",
+        "images": {
+            "1": "Turin · Februar 2020",
+            "2": "Ätna · Juli 2020",
+            "3": "Taormina · Juli 2020",
+            "4": "Ragusa · Juli 2020",
+            "5": "Marmore-Wasserfälle · August 2020",
+            "6": "Marmore-Wasserfälle · August 2020",
+            "7": "Basel · März 2021",
+            "8": "Rom · August 2020"
+        }
+    }
+}

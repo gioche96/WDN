@@ -3,9 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { BASE_PATH } from "@/lib/paths";
 
 export default function Hero() {
+    const { t } = useTranslation();
 
     const { scrollY } = useScroll();
 
@@ -16,16 +18,16 @@ export default function Hero() {
         <section className="relative min-h-screen overflow-hidden">
             <Image
                 src={`${BASE_PATH}/wedding-cover.jpg`}
-                alt="Alice e Giorgio"
+                alt={t("hero.imageAlt")}
                 fill
                 priority
-                className="object-cover object-center"  /** remove grayscale for colours */
+                className="object-cover object-center"
             />
 
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/10 to-transparent" />
 
-            <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-8 md:px-14 lg:px-24 text-white">
+            <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-8 text-white md:px-14 lg:px-24">
                 <motion.div
                     style={{
                         y: textY,
@@ -37,9 +39,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9 }}
-                        className="mb-10 text-l uppercase tracking-[0.45em] md:mb-15 md:text-l"
+                        className="mb-10 text-lg uppercase tracking-[0.45em] md:mb-15"
                     >
-                        Ci sposiamo
+                        {t("hero.announcement")}
                     </motion.p>
 
                     <motion.div
@@ -49,7 +51,7 @@ export default function Hero() {
                         className="font-title"
                     >
                         <div className="flex items-end">
-                            <h1 className="text-[5rem] font-normal leading-[0.85] tracking-[0.00em] md:text-[7rem] lg:text-[10rem]">
+                            <h1 className="text-[5rem] font-normal leading-[0.85] tracking-[0] md:text-[7rem] lg:text-[10rem]">
                                 Alice
                             </h1>
 
@@ -58,7 +60,7 @@ export default function Hero() {
                             </span>
                         </div>
 
-                        <h1 className="ml-16 mt-2 text-[5rem] font-normal leading-[0.85] tracking-[0.00em] md:ml-28 md:text-[7rem] lg:ml-40 lg:text-[10rem]">
+                        <h1 className="ml-16 mt-2 text-[5rem] font-normal leading-[0.85] tracking-[0] md:ml-28 md:text-[7rem] lg:ml-40 lg:text-[10rem]">
                             Giorgio
                         </h1>
                     </motion.div>
@@ -67,22 +69,30 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.9, delay: 0.75 }}
-                        className="mt-10 text-l uppercase tracking-[0.4em] md:mt-15 md:text-l"
+                        className="mt-10 text-lg uppercase tracking-[0.4em] md:mt-15"
                     >
-                        4 Settembre 2027
+                        {t("hero.date")}
                     </motion.p>
-
                 </motion.div>
             </div>
 
             <motion.a
                 href="#countdown"
-                aria-label="Scorri verso il countdown"
+                aria-label={t("hero.scrollToCountdown")}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: [0, 8, 0] }}
+                animate={{
+                    opacity: 1,
+                    y: [0, 8, 0],
+                }}
                 transition={{
-                    opacity: { duration: 1, delay: 1.1 },
-                    y: { duration: 1.8, repeat: Infinity },
+                    opacity: {
+                        duration: 1,
+                        delay: 1.1,
+                    },
+                    y: {
+                        duration: 1.8,
+                        repeat: Infinity,
+                    },
                 }}
                 className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white"
             >
@@ -91,4 +101,3 @@ export default function Hero() {
         </section>
     );
 }
-

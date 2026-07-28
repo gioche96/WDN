@@ -1,0 +1,60 @@
+{
+    "navbar": {
+        "logoAlt": "Alice et Giorgio",
+        "openMenu": "Ouvrir le menu",
+        "closeMenu": "Fermer le menu",
+        "links": {
+            "preview": "Aperçu",
+            "fragments": "Fragments",
+            "program": "Programme",
+            "location": "Lieu",
+            "travel": "Voyage",
+            "donation": "Cadeau",
+            "faq": "FAQ",
+            "rsvp": "RSVP"
+        }
+    },
+    "hero": {
+        "imageAlt": "Alice et Giorgio",
+        "announcement": "Nous nous marions",
+        "date": "4 septembre 2027",
+        "scrollToCountdown": "Faire défiler jusqu'au compte à rebours"
+    },
+    "countdown": {
+        "missing": "Plus que",
+        "days": "Jours",
+        "hours": "Heures",
+        "minutes": "Minutes",
+        "seconds": "Secondes",
+        "toOurYes": "avant notre mariage"
+    },
+    "trailer": {
+        "subtitle": "Un aperçu",
+        "title": "Notre bande-annonce",
+        "description": "Avant le grand jour, nous souhaitons partager avec vous un petit aperçu de ce qui nous attend. Une courte bande-annonce qui raconte un moment spécial de notre histoire et ouvre les portes du plus beau chapitre.",
+        "story": {
+            "beforeDate": "Cette vidéo a été réalisée le",
+            "afterDate": " à Chieri, le lieu où nous nous sommes déjà promis l'un à l'autre lors d'une cérémonie civile simple et intime. La prochaine étape sera celle dont nous rêvons de vivre avec vous. Le 4 septembre, nous célébrerons notre union entourés des personnes qui ont rendu notre parcours si précieux. Ceci n'est que la bande-annonce... le plus beau film reste à commencer!"
+        }
+    },
+    "fragments": {
+        "eyebrow": "Fragments",
+        "title": "Les souvenirs que nous avons vécus",
+        "description": "Notre histoire a commencé il y a 7 ans, presque par hasard, au fil de rencontres, de conversations et de petits moments rapidement devenus importants. Depuis, nous avons partagé des voyages, des projets et des rêves.",
+        "previousPhoto": "Photo précédente",
+        "nextPhoto": "Photo suivante",
+        "photoAlt": "Alice et Giorgio {{number}}",
+        "goToPhoto": "Aller à la photo {{number}} : {{subtitle}}",
+        "enlargePhoto": "Agrandir la photo : {{subtitle}}",
+        "images": {
+            "1": "Turin · Février 2020",
+            "2": "Etna · Juillet 2020",
+            "3": "Taormine · Juillet 2020",
+            "4": "Raguse · Juillet 2020",
+            "5": "Cascades des Marmore · Août 2020",
+            "6": "Cascades des Marmore · Août 2020",
+            "7": "Bâle · Mars 2021",
+            "8": "Rome · Août 2020"
+        }
+    }
+}

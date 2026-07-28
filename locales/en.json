@@ -1,0 +1,60 @@
+{
+    "navbar": {
+        "logoAlt": "Alice and Giorgio",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "links": {
+            "preview": "Preview",
+            "fragments": "Fragments",
+            "program": "Schedule",
+            "location": "Location",
+            "travel": "Travel",
+            "donation": "Gift",
+            "faq": "FAQ",
+            "rsvp": "RSVP"
+        }
+    },
+    "hero": {
+        "imageAlt": "Alice and Giorgio",
+        "announcement": "We're getting married",
+        "date": "4 September 2027",
+        "scrollToCountdown": "Scroll to the countdown"
+    },
+    "countdown": {
+        "missing": "Only",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "toOurYes": "until our wedding"
+    },
+    "trailer": {
+        "subtitle": "A preview",
+        "title": "Our trailer",
+        "description": "Before the big day, we'd love to share a little glimpse of what awaits us. A short trailer that tells a special moment of our story and opens the door to the most beautiful chapter yet.",
+        "story": {
+            "beforeDate": "This video was filmed on",
+            "afterDate": " in Chieri, the place where we had already promised ourselves to one another during a simple and intimate civil ceremony. The next step, however, is the one we have always dreamed of sharing with you. On September 4th we will celebrate our union surrounded by the people who have made our journey so special. This is only the trailer... the best movie is yet to begin!"
+        }
+    },
+    "fragments": {
+        "eyebrow": "Fragments",
+        "title": "Memories we have shared",
+        "description": "Our story began 7 years ago, almost by chance, through encounters, conversations and small moments that soon became important. Since then, we have shared journeys, plans and dreams.",
+        "previousPhoto": "Previous photo",
+        "nextPhoto": "Next photo",
+        "photoAlt": "Alice and Giorgio {{number}}",
+        "goToPhoto": "Go to photo {{number}}: {{subtitle}}",
+        "enlargePhoto": "Enlarge photo: {{subtitle}}",
+        "images": {
+            "1": "Turin · February 2020",
+            "2": "Mount Etna · July 2020",
+            "3": "Taormina · July 2020",
+            "4": "Ragusa · July 2020",
+            "5": "Marmore Falls · August 2020",
+            "6": "Marmore Falls · August 2020",
+            "7": "Basel · March 2021",
+            "8": "Rome · August 2020"
+        }
+    }
+}

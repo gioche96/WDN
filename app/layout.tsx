@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import I18nProvider from "./I18nProvider";
 
 /** Font names */
 const fontTitle = localFont({
@@ -33,10 +34,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="it"
+      lang="en"
       className={`${fontTitle.variable} ${fontAmpersand.variable} ${inter.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <I18nProvider>
+          {children}
+        </I18nProvider>
+      </body>
     </html>
   );
 }

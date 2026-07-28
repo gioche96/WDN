@@ -4,52 +4,60 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BASE_PATH } from "@/lib/paths";
+import { useTranslation } from "react-i18next";
 
 const images = [
     {
         src: `${BASE_PATH}/images/story/1.jpg`,
-        subtitle: "Torino · Febbraio 2020",
+        subtitleKey: "1",
         desktopClass: "md:col-span-5 md:row-span-2",
     },
     {
         src: `${BASE_PATH}/images/story/2.jpg`,
-        subtitle: "Etna · Luglio 2020",
+        subtitleKey: "2",
         desktopClass: "md:col-span-3 md:row-span-1",
     },
     {
         src: `${BASE_PATH}/images/story/3.jpg`,
-        subtitle: "Taormina · Luglio 2020",
+        subtitleKey: "3",
         desktopClass: "md:col-span-4 md:row-span-1",
     },
     {
         src: `${BASE_PATH}/images/story/4.jpg`,
-        subtitle: "Ragusa · Luglio 2020",
+        subtitleKey: "4",
         desktopClass: "md:col-span-4 md:row-span-1",
     },
     {
         src: `${BASE_PATH}/images/story/5.jpg`,
-        subtitle: "Cascate delle Marmore · Agosto 2020",
+        subtitleKey: "5",
         desktopClass: "md:col-span-3 md:row-span-1",
     },
     {
         src: `${BASE_PATH}/images/story/6.jpg`,
-        subtitle: "Cascate delle Marmore · Agosto 2020",
+        subtitleKey: "6",
         desktopClass: "md:col-span-5 md:row-span-1",
     },
     {
         src: `${BASE_PATH}/images/story/7.jpg`,
-        subtitle: "Basilea · Marzo 2021",
+        subtitleKey: "7",
         desktopClass: "md:col-span-7 md:row-span-2",
     },
     {
         src: `${BASE_PATH}/images/story/8.jpg`,
-        subtitle: "Roma · Agosto 2020",
+        subtitleKey: "8",
         desktopClass: "md:col-span-5 md:row-span-1",
     },
 ];
 
 export default function Frammenti() {
-    const repeatedImages = [...images, ...images];
+    const { t } = useTranslation();
+
+    const translatedImages = images.map((image) => ({
+        ...image,
+        subtitle: t(`fragments.images.${image.subtitleKey}`),
+    }));
+
+    const repeatedImages = [...translatedImages, ...translatedImages];
 
     const trackRef = useRef<HTMLDivElement>(null);
     const offsetRef = useRef(0);
@@ -180,18 +188,16 @@ export default function Frammenti() {
             <div className="mx-auto max-w-7xl px-6 text-center">
                 <div className="mx-auto mb-10 w-full md:mb-12">
                     <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
-                        Frammenti
+                        {t("fragments.eyebrow")}
                     </p>
 
                     <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
-                        Ricordi che abbiamo vissuto
+                        {t("fragments.title")}
                     </h2>
 
                     <div className="mx-auto mt-5 max-w-5xl space-y-4 text-center text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[15pt] md:leading-9">
                         <p>
-                            La nostra storia è iniziata 7 anni fa, quasi per caso, tra incontri,
-                            conversazioni e piccoli momenti diventati presto importanti.
-                            Da allora abbiamo condiviso viaggi, progetti e sogni.
+                            {t("fragments.description")}
                         </p>
                     </div>
                 </div>
@@ -212,10 +218,12 @@ export default function Frammenti() {
                                         >
                                             <Image
                                                 src={image.src}
-                                                alt={`Alice e Giorgio ${(index %
-                                                    images.length) +
-                                                    1
-                                                    }`}
+                                                alt={t("fragments.photoAlt", {
+                                                    number:
+                                                        (index %
+                                                            images.length) +
+                                                        1,
+                                                })}
                                                 fill
                                                 sizes="300px"
                                                 className="object-cover"
@@ -237,7 +245,7 @@ export default function Frammenti() {
                         <button
                             type="button"
                             onClick={goToPrevious}
-                            aria-label="Foto precedente"
+                            aria-label={t("fragments.previousPhoto")}
                             className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         >
                             <ChevronLeft
@@ -249,7 +257,7 @@ export default function Frammenti() {
                         <button
                             type="button"
                             onClick={goToNext}
-                            aria-label="Foto successiva"
+                            aria-label={t("fragments.nextPhoto")}
                             className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         >
                             <ChevronRight
@@ -260,13 +268,15 @@ export default function Frammenti() {
                     </div>
 
                     <div className="mt-6 flex justify-center gap-2">
-                        {images.map((image, index) => (
+                        {translatedImages.map((image, index) => (
                             <button
                                 key={image.src}
                                 type="button"
                                 onClick={() => goToImage(index)}
-                                aria-label={`Vai alla foto ${index + 1
-                                    }: ${image.subtitle}`}
+                                aria-label={t("fragments.goToPhoto", {
+                                    number: index + 1,
+                                    subtitle: image.subtitle,
+                                })}
                                 className={`h-2 rounded-full transition-all duration-300 ${activeImage === index
                                     ? "w-7 bg-[#6D1F32]"
                                     : "w-2 bg-[#C6B182]/50 hover:bg-[#C6B182]"
@@ -278,7 +288,7 @@ export default function Frammenti() {
 
                 {/* Desktop: mosaico */}
                 <div className="hidden grid-cols-12 auto-rows-[190px] gap-4 md:grid">
-                    {images.map((image, index) => {
+                    {translatedImages.map((image, index) => {
                         const isSelected =
                             selectedImage === index;
 
@@ -291,7 +301,9 @@ export default function Frammenti() {
                                         isSelected ? null : index
                                     )
                                 }
-                                aria-label={`Ingrandisci foto: ${image.subtitle}`}
+                                aria-label={t("fragments.enlargePhoto", {
+                                    subtitle: image.subtitle,
+                                })}
                                 aria-pressed={isSelected}
                                 className={`
                                     group relative overflow-hidden
@@ -310,8 +322,9 @@ export default function Frammenti() {
                             >
                                 <Image
                                     src={image.src}
-                                    alt={`Alice e Giorgio ${index + 1
-                                        }`}
+                                    alt={t("fragments.photoAlt", {
+                                        number: index + 1,
+                                    })}
                                     fill
                                     sizes="(min-width: 1280px) 40vw, 50vw"
                                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"

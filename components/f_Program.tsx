@@ -160,7 +160,7 @@ function ProgramEvent({
                     {event.time}
                 </p>
 
-                <h3 className="text-3xl font-light text-black md:text-4xl">
+                <h3 className="text-[17pt] font-light text-black md:text-[20pt]">
                     {event.title}
                 </h3>
             </div>

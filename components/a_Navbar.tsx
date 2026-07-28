@@ -3,25 +3,37 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { BASE_PATH } from "@/lib/paths";
 
 const links = [
-    { label: "Anteprima", href: "#trailer" },
-    { label: "Frammenti", href: "#frammenti" },
-    { label: "Programma", href: "#program" },
-    { label: "Location", href: "#location" },
-    { label: "Viaggio", href: "#travel" },
-    { label: "Donazione", href: "#donazione" },
-    { label: "FAQ", href: "#faq" },
-    { label: "RSVP", href: "#rsvp" },
+    { key: "preview", href: "#trailer" },
+    { key: "fragments", href: "#frammenti" },
+    { key: "program", href: "#program" },
+    { key: "location", href: "#location" },
+    { key: "travel", href: "#travel" },
+    { key: "donation", href: "#donazione" },
+    { key: "faq", href: "#faq" },
+    { key: "rsvp", href: "#rsvp" },
 ];
 
 const languages = ["IT", "FR", "DE", "EN"];
 
-export default function a_Navbar() {
+export default function Navbar() {
+    const { t, i18n } = useTranslation();
+
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [activeLanguage, setActiveLanguage] = useState("IT");
+
+    const activeLanguage =
+        i18n.resolvedLanguage?.toUpperCase() ?? "IT";
+
+    const changeLanguage = async (language: string) => {
+        const languageCode = language.toLowerCase();
+
+        await i18n.changeLanguage(languageCode);
+        document.documentElement.lang = languageCode;
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +43,9 @@ export default function a_Navbar() {
         handleScroll();
         window.addEventListener("scroll", handleScroll);
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return (
@@ -45,10 +59,9 @@ export default function a_Navbar() {
                 <a href="#" className="shrink-0">
                     <Image
                         src={`${BASE_PATH}/logo.png`}
-                        alt="Alice e Giorgio"
+                        alt={t("navbar.logoAlt")}
                         width={2000}
                         height={2000}
-                        loading="eager"
                         priority
                         className="h-10 w-auto object-contain"
                     />
@@ -72,7 +85,7 @@ export default function a_Navbar() {
                                 focus-visible:after:w-full
                             "
                         >
-                            {link.label}
+                            {t(`navbar.links.${link.key}`)}
                         </a>
                     ))}
                 </div>
@@ -88,7 +101,7 @@ export default function a_Navbar() {
                                     key={language}
                                     type="button"
                                     onClick={() =>
-                                        setActiveLanguage(language)
+                                        changeLanguage(language)
                                     }
                                     aria-pressed={isActive}
                                     className={`
@@ -116,7 +129,9 @@ export default function a_Navbar() {
                     <button
                         type="button"
                         aria-label={
-                            isOpen ? "Chiudi menu" : "Apri menu"
+                            isOpen
+                                ? t("navbar.closeMenu")
+                                : t("navbar.openMenu")
                         }
                         aria-expanded={isOpen}
                         onClick={() =>
@@ -151,7 +166,7 @@ export default function a_Navbar() {
                                     focus-visible:outline-none
                                 "
                             >
-                                {link.label}
+                                {t(`navbar.links.${link.key}`)}
                             </a>
                         ))}
                     </div>

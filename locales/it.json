@@ -1,0 +1,60 @@
+{
+    "navbar": {
+        "logoAlt": "Alice e Giorgio",
+        "openMenu": "Apri menu",
+        "closeMenu": "Chiudi menu",
+        "links": {
+            "preview": "Anteprima",
+            "fragments": "Frammenti",
+            "program": "Programma",
+            "location": "Location",
+            "travel": "Viaggio",
+            "donation": "Donazione",
+            "faq": "FAQ",
+            "rsvp": "RSVP"
+        }
+    },
+    "hero": {
+        "imageAlt": "Alice e Giorgio",
+        "announcement": "Ci sposiamo",
+        "date": "4 settembre 2027",
+        "scrollToCountdown": "Scorri verso il conto alla rovescia"
+    },
+    "countdown": {
+        "missing": "Mancano",
+        "days": "Giorni",
+        "hours": "Ore",
+        "minutes": "Minuti",
+        "seconds": "Secondi",
+        "toOurYes": "al nostro sì"
+    },
+    "trailer": {
+        "subtitle": "Un'anteprima",
+        "title": "Il nostro trailer",
+        "description": "Prima del grande giorno, desideriamo condividere con voi un piccolo assaggio di ciò che ci aspetta. Un breve trailer che racconta un momento speciale della nostra storia e che apre le porte al capitolo più bello.",
+        "story": {
+            "beforeDate": "Questo video è stato realizzato il",
+            "afterDate": " a Chieri, il luogo in cui ci siamo già promessi l'uno all'altra con una cerimonia civile, vissuta nella semplicità e nell'intimità. Il prossimo passo, però, sarà quello che sogniamo di vivere insieme a voi. Il 4 settembre celebreremo la nostra unione circondati dalle persone che hanno reso speciale il nostro cammino. Questo è soltanto il trailer... il film più bello deve ancora cominciare!"
+        }
+    },
+    "fragments": {
+        "eyebrow": "Frammenti",
+        "title": "Ricordi che abbiamo vissuto",
+        "description": "La nostra storia è iniziata 7 anni fa, quasi per caso, tra incontri, conversazioni e piccoli momenti diventati presto importanti. Da allora abbiamo condiviso viaggi, progetti e sogni.",
+        "previousPhoto": "Foto precedente",
+        "nextPhoto": "Foto successiva",
+        "photoAlt": "Alice e Giorgio {{number}}",
+        "goToPhoto": "Vai alla foto {{number}}: {{subtitle}}",
+        "enlargePhoto": "Ingrandisci foto: {{subtitle}}",
+        "images": {
+            "1": "Torino · Febbraio 2020",
+            "2": "Etna · Luglio 2020",
+            "3": "Taormina · Luglio 2020",
+            "4": "Ragusa · Luglio 2020",
+            "5": "Cascate delle Marmore · Agosto 2020",
+            "6": "Cascate delle Marmore · Agosto 2020",
+            "7": "Basilea · Marzo 2021",
+            "8": "Roma · Agosto 2020"
+        }
+    }
+}
