@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f1e6;
+  --foreground: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
+
+.font-title {
+  font-family: var(--font-title), cursive;
+}
+
+.font-ampersand {
+  font-family: var(--font-ampersand);
+}
+
+.story-film {
+  width: 100%;
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 5%,
+      black 95%,
+      transparent);
+}
+
+.story-film-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  will-change: transform;
+}
+
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+label[for],
+select {
+  cursor: pointer;
+}
+
+@layer base {
+  section[id] {
+    scroll-margin-top: 5em;
+  }
+}
