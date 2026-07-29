@@ -43,7 +43,7 @@ export default function Trailer() {
                 <div className="mx-auto mt-8 max-w-5xl space-y-4 text-center text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[15pt] md:leading-9">
                     <p>
                         {t("trailer.story.beforeDate")}{" "}
-                        <strong>10 Febbraio 2027</strong>,
+                        <strong>{t("trailer.story.date")}</strong>{" "}
                         {t("trailer.story.afterDate")}
                     </p>
                 </div>

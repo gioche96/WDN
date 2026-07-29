@@ -34,6 +34,7 @@
         "description": "Prima del grande giorno, desideriamo condividere con voi un piccolo assaggio di ciò che ci aspetta. Un breve trailer che racconta un momento speciale della nostra storia e che apre le porte al capitolo più bello.",
         "story": {
             "beforeDate": "Questo video è stato realizzato il",
+            "date": "10 Febbraio 2027",
             "afterDate": " a Chieri, il luogo in cui ci siamo già promessi l'uno all'altra con una cerimonia civile, vissuta nella semplicità e nell'intimità. Il prossimo passo, però, sarà quello che sogniamo di vivere insieme a voi. Il 4 settembre celebreremo la nostra unione circondati dalle persone che hanno reso speciale il nostro cammino. Questo è soltanto il trailer... il film più bello deve ancora cominciare!"
         }
     },
@@ -165,7 +166,7 @@
         "title": "RSVP",
         "description": {
             "beforeDeadline": "Compila il modulo per comunicarci se sarai presente e fornirci tutte le informazioni necessarie per accoglierti al meglio. Per motivi organizzativi, ti chiediamo una risposta entro il",
-            "deadline": "10 febbraio 2027"
+            "deadline": "10 Febbraio 2027"
         },
         "success": {
             "subtitle": "Conferma ricevuta",

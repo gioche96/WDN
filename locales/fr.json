@@ -17,7 +17,7 @@
     "hero": {
         "imageAlt": "Alice et Giorgio",
         "announcement": "Nous nous marions",
-        "date": "4 septembre 2027",
+        "date": "4 Septembre 2027",
         "scrollToCountdown": "Faire défiler jusqu'au compte à rebours"
     },
     "countdown": {
@@ -34,6 +34,7 @@
         "description": "Avant le grand jour, nous souhaitons partager avec vous un petit aperçu de ce qui nous attend. Une courte bande-annonce qui raconte un moment spécial de notre histoire et ouvre les portes du plus beau chapitre.",
         "story": {
             "beforeDate": "Cette vidéo a été réalisée le",
+            "date": "10 Février 2027",
             "afterDate": " à Chieri, le lieu où nous nous sommes déjà promis l'un à l'autre lors d'une cérémonie civile simple et intime. La prochaine étape sera celle dont nous rêvons de vivre avec vous. Le 4 septembre, nous célébrerons notre union entourés des personnes qui ont rendu notre parcours si précieux. Ceci n'est que la bande-annonce... le plus beau film reste à commencer!"
         }
     },
@@ -165,7 +166,7 @@
         "title": "RSVP",
         "description": {
             "beforeDeadline": "Remplissez le formulaire pour nous indiquer si vous serez présent et nous fournir toutes les informations nécessaires afin de vous accueillir au mieux. Pour des raisons d’organisation, merci de répondre avant le",
-            "deadline": "10 février 2027"
+            "deadline": "10 Février 2027"
         },
         "success": {
             "subtitle": "Réponse reçue",

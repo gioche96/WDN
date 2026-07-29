@@ -65,7 +65,7 @@ export default function Donazione() {
                                 {t("donation.travel.description")}
                             </p>
 
-                            <div className="mt-10 border-t border-black/20 pt-8">
+                            <div className="mt-7 border-t border-black/20 pt-7">
                                 <p className="text-xs uppercase tracking-[0.25em] text-black/50">
                                     IBAN
                                 </p>
@@ -115,7 +115,7 @@ export default function Donazione() {
                                 {t("donation.charity.description")}
                             </p>
 
-                            <div className="mt-10 border-t border-black/20 pt-8">
+                            <div className="mt-7 border-t border-black/20 pt-7">
                                 <p className="text-xs uppercase tracking-[0.25em] text-black/50">
                                     {t("donation.charity.organizationLabel")}
                                 </p>
