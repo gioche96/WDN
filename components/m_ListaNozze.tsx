@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { ExternalLink, Heart, Plane } from "lucide-react";
 import { BASE_PATH } from "@/lib/paths";
+import { useTranslation } from "react-i18next";
 
 export default function Donazione() {
+    const { t } = useTranslation();
+
     return (
         <section
             id="donazione"
@@ -12,19 +17,15 @@ export default function Donazione() {
 
                 <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
                     <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
-                        Un nuovo capitolo
+                        {t("donation.subtitle")}
                     </p>
 
                     <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
-                        Il regalo più bello
+                        {t("donation.title")}
                     </h2>
 
                     <p className="mx-auto mt-5 max-w-5xl space-y-4 text-center text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[15pt] md:leading-9">
-                        Più che oggetti, sogniamo esperienze.
-                        Il regalo più bello sarà poter continuare a scoprire il mondo insieme,
-                        collezionando ricordi che ci accompagneranno per tutta la vita.
-                        Se desiderate farci un regalo, potrete contribuire al nostro viaggio
-                        e, allo stesso tempo, sostenere una causa a cui teniamo particolarmente.
+                        {t("donation.description")}
                     </p>
                 </div>
 
@@ -36,7 +37,7 @@ export default function Donazione() {
                         <div className="relative h-72">
                             <Image
                                 src={`${BASE_PATH}/images/gift/travel.jpg`}
-                                alt="Il nostro prossimo viaggio"
+                                alt={t("donation.travel.imageAlt")}
                                 fill
                                 sizes="(min-width:1024px) 50vw, 100vw"
                                 className="object-cover"
@@ -52,20 +53,16 @@ export default function Donazione() {
                                 />
 
                                 <p className="uppercase tracking-[0.25em] text-sm">
-                                    Viaggio di nozze
+                                    {t("donation.travel.label")}
                                 </p>
                             </div>
 
                             <h3 className="mb-5 text-3xl font-title">
-                                Il nostro prossimo viaggio
+                                {t("donation.travel.title")}
                             </h3>
 
                             <p className="mx-auto mt-5 max-w-5xl space-y-4 text-left text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[13pt] md:leading-7">
-                                Viaggiare è una delle cose che più amiamo.
-                                Ogni destinazione ci lascia qualcosa di nuovo,
-                                ogni partenza diventa un ricordo da custodire.
-                                Se vorrete contribuire, ci aiuterete a vivere
-                                una nuova avventura insieme.
+                                {t("donation.travel.description")}
                             </p>
 
                             <div className="mt-10 border-t border-black/20 pt-8">
@@ -78,7 +75,7 @@ export default function Donazione() {
                                 </p>
 
                                 <p className="mt-2 text-sm text-black/60">
-                                    Intestatario: Giorgio Chessari
+                                    {t("donation.travel.accountHolder")}
                                 </p>
                             </div>
                         </div>
@@ -90,7 +87,7 @@ export default function Donazione() {
                         <div className="relative h-72">
                             <Image
                                 src={`${BASE_PATH}/images/gift/charity.jpg`}
-                                alt="Associazione benefica"
+                                alt={t("donation.charity.imageAlt")}
                                 fill
                                 sizes="(min-width:1024px) 50vw, 100vw"
                                 className="object-cover"
@@ -106,43 +103,36 @@ export default function Donazione() {
                                 />
 
                                 <p className="uppercase tracking-[0.25em] text-sm">
-                                    Beneficenza
+                                    {t("donation.charity.label")}
                                 </p>
                             </div>
 
                             <h3 className="mb-5 text-3xl font-title">
-                                Un gesto che va oltre noi
+                                {t("donation.charity.title")}
                             </h3>
 
                             <p className="mx-auto mt-5 max-w-5xl space-y-4 text-left text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[13pt] md:leading-7">
-                                Crediamo che un momento di gioia possa diventare
-                                anche un'occasione per fare del bene.
-                                Per questo motivo una parte dei regali ricevuti
-                                sarà destinata a sostenere un'organizzazione
-                                che opera ogni giorno per aiutare chi ne ha più bisogno.
+                                {t("donation.charity.description")}
                             </p>
 
                             <div className="mt-10 border-t border-black/20 pt-8">
                                 <p className="text-xs uppercase tracking-[0.25em] text-black/50">
-                                    Associazione
+                                    {t("donation.charity.organizationLabel")}
                                 </p>
 
                                 <h4 className="mt-3 text-xl">
-                                    Nome dell'associazione
+                                    {t("donation.charity.organizationName")}
                                 </h4>
 
                                 <p className="mx-auto mt-5 max-w-5xl space-y-4 text-left text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[13pt] md:leading-7">
-                                    Breve descrizione della missione
-                                    dell'associazione. Potrai sostituire questo
-                                    testo quando avrai scelto il progetto che
-                                    desideri sostenere.
+                                    {t("donation.charity.organizationDescription")}
                                 </p>
 
                                 <a
                                     href="#"
                                     className="group mt-6 inline-flex items-center gap-2 border-b border-black pb-1 text-sm uppercase tracking-[0.2em]"
                                 >
-                                    Visita il sito
+                                    {t("donation.charity.visitWebsite")}
 
                                     <ExternalLink
                                         size={14}

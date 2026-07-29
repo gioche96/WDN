@@ -56,5 +56,187 @@
             "7": "Basel · March 2021",
             "8": "Rome · August 2020"
         }
+    },
+    "program": {
+        "date": "Saturday, September 4, 2027",
+        "title": "The schedule",
+        "events": {
+            "ceremony": {
+                "title": "Ceremony",
+                "description": "Welcoming of the guests and beginning of the ceremony."
+            },
+            "aperitif": {
+                "title": "Aperitif",
+                "description": "Toasts, music and moments together."
+            },
+            "dinner": {
+                "title": "Dinner",
+                "description": "Dinner, speeches and celebrations."
+            },
+            "party": {
+                "title": "Party",
+                "description": "Music, dancing and celebrations until late."
+            }
+        }
+    },
+    "location": {
+        "subtitle": "The venue",
+        "title": {
+            "firstLine": "A special place",
+            "secondLine": "for our special day"
+        },
+        "officialWebsite": "Official website",
+        "openGoogleMaps": "Open in Google Maps",
+        "mapTitle": "Map of Sala Qirat",
+        "gallery": {
+            "exteriorAlt": "Exterior of Relais Chiaramonte",
+            "roomAlt": "Sala Qirat",
+            "detailAlt": "Venue detail"
+        }
+    },
+    "travel": {
+        "subtitle": "Useful information",
+        "title": "Travel and accommodation",
+        "items": {
+            "arrival": {
+                "title": "For those travelling from afar",
+                "description": "Catania Airport is the main arrival point for guests travelling to Sicily by plane. From there, you can rent a car or take an Etna Trasporti bus, which provides frequent connections between Catania and Ragusa throughout the day."
+            },
+            "directions": {
+                "title": "How to get there",
+                "description": "Relais Chiaramonte is easily accessible by car and is approximately 15 minutes from the centre of Ragusa. The venue has a large private car park reserved for guests."
+            },
+            "accommodation": {
+                "title": "Where to stay",
+                "description": "For guests who would like to stay overnight, the Relais has a limited number of rooms available. Alternatively, Ragusa and the surrounding area offer many options, including hotels, B&Bs and holiday homes to suit every need."
+            }
+        }
+    },
+    "donation": {
+        "subtitle": "A new chapter",
+        "title": "The most beautiful gift",
+        "description": "More than material gifts, we dream of experiences. The most beautiful gift would be the opportunity to continue discovering the world together, collecting memories that will stay with us for a lifetime. Should you wish to give us a gift, you can contribute to our journey while also supporting a cause that is especially close to our hearts.",
+        "travel": {
+            "imageAlt": "Our next journey",
+            "label": "Honeymoon",
+            "title": "Our next journey",
+            "description": "Travelling is one of the things we love most. Every destination gives us something new, and every departure becomes a memory to cherish. By contributing, you will help us experience a new adventure together.",
+            "accountHolder": "Account holder: Giorgio Chessari"
+        },
+        "charity": {
+            "imageAlt": "Charitable organization",
+            "label": "Charity",
+            "title": "A gesture that goes beyond us",
+            "description": "We believe that a joyful occasion can also become an opportunity to do good. For this reason, part of the gifts we receive will be donated to an organization that works every day to help those who need it most.",
+            "organizationLabel": "Organization",
+            "organizationName": "Name of the organization",
+            "organizationDescription": "A brief description of the organization's mission. You can replace this text once you have chosen the project you would like to support.",
+            "visitWebsite": "Visit the website"
+        }
+    },
+    "faq": {
+        "subtitle": "Information",
+        "title": "Frequently asked questions",
+        "questions": {
+            "confirmation": {
+                "question": "When should we confirm our attendance?",
+                "answer": "Please confirm your attendance by the date that will be indicated in the invitation."
+            },
+            "dressCode": {
+                "question": "Is there a dress code?",
+                "answer": "The dress code will be formal. We will add any further details here."
+            },
+            "allergies": {
+                "question": "Can we communicate allergies or dietary restrictions?",
+                "answer": "Yes. You will be able to indicate allergies, intolerances and dietary requirements in the RSVP form."
+            },
+            "children": {
+                "question": "Are children invited?",
+                "answer": "We will provide information here regarding children's participation."
+            },
+            "parking": {
+                "question": "Is parking available?",
+                "answer": "Parking information will be added once confirmed."
+            }
+        }
+    },
+    "rsvp": {
+        "subtitle": "Confirm your attendance",
+        "title": "RSVP",
+        "description": {
+            "beforeDeadline": "Please complete the form to let us know whether you will attend and to provide all the information we need to welcome you. For organizational purposes, please reply by",
+            "deadline": "February 10, 2027"
+        },
+        "success": {
+            "subtitle": "Response received",
+            "title": "Thank you!",
+            "attending": "We have received your confirmation. We can't wait to share this special day with you.",
+            "notAttending": "We have received your response. We are sorry that you cannot join us, but thank you for letting us know. We are sending you a warm hug."
+        },
+        "errors": {
+            "notConfigured": "The RSVP service address has not been configured.",
+            "invalidResponse": "The RSVP service did not respond correctly.",
+            "submissionFailed": "Your response could not be submitted.",
+            "generic": "An error occurred. Please try again."
+        },
+        "form": {
+            "fullName": "Full name",
+            "fullNamePlaceholder": "Full name",
+            "email": {
+                "label": "Email",
+                "placeholder": "address@email.com"
+            },
+            "attendance": {
+                "label": "Will you attend?",
+                "placeholder": "Select an answer",
+                "yes": "Yes, I will attend",
+                "no": "No, I will not be able to attend"
+            },
+            "guestCount": {
+                "label": "Number of people, including you",
+                "personSingular": "person",
+                "personPlural": "people"
+            },
+            "guests": {
+                "legend": "Guest information",
+                "guestTitle": "Guest {{number}}",
+                "namePlaceholder": "Guest's full name"
+            },
+            "menu": {
+                "label": "Menu preference",
+                "placeholder": "Select a menu",
+                "standard": "Standard menu",
+                "vegetarian": "Vegetarian menu",
+                "vegan": "Vegan menu",
+                "child": "Children's menu"
+            },
+            "allergies": {
+                "label": "Allergies or intolerances",
+                "placeholder": "Please indicate any allergies, intolerances or dietary requirements"
+            },
+            "transport": {
+                "label": "Transport",
+                "placeholder": "How do you plan to reach the venue?",
+                "own": "I will arrive using my own transport",
+                "rental": "I will rent a vehicle",
+                "help": "I need help with transport"
+            },
+            "accommodation": {
+                "label": "Accommodation",
+                "placeholder": "Have you already arranged your stay?",
+                "arranged": "I already have accommodation",
+                "recommendation": "I would like a recommendation",
+                "help": "I need help"
+            },
+            "message": {
+                "legend": "A message for the couple",
+                "label": "Message for the couple",
+                "placeholder": "Leave us a message..."
+            },
+            "submit": {
+                "submitting": "Submitting...",
+                "default": "Submit response"
+            }
+        }
     }
 }

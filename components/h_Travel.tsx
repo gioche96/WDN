@@ -1,37 +1,45 @@
-import { BedDouble, Car, Plane } from "lucide-react";
+"use client";
 
-const travelInformation = [
-    {
-        icon: Plane,
-        title: "Per chi arriva da lontano",
-        description:
-            "L'aeroporto di Catania è il principale punto di arrivo per chi raggiunge la Sicilia in aereo. Da lì è possibile noleggiare un'auto oppure prendere gli autobus Etna Trasporti, che collegano Catania a Ragusa con corse frequenti durante la giornata.",
-    },
-    {
-        icon: Car,
-        title: "Come arrivare",
-        description:
-            "Il Relais Chiaramonte è facilmente raggiungibile in automobile e dista circa 15 minuti dal centro di Ragusa. La struttura dispone di un ampio parcheggio riservato agli ospiti.",
-    },
-    {
-        icon: BedDouble,
-        title: "Dove dormire",
-        description:
-            "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere. In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza.",
-    },
-];
+import { BedDouble, Car, Plane } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Travel() {
+    const { t } = useTranslation();
+
+    const travelInformation = [
+        {
+            icon: Plane,
+            title: t("travel.items.arrival.title"),
+            description: t(
+                "travel.items.arrival.description"
+            ),
+        },
+        {
+            icon: Car,
+            title: t("travel.items.directions.title"),
+            description: t(
+                "travel.items.directions.description"
+            ),
+        },
+        {
+            icon: BedDouble,
+            title: t("travel.items.accommodation.title"),
+            description: t(
+                "travel.items.accommodation.description"
+            ),
+        },
+    ];
+
     return (
         <section id="travel" className="bg-white px-6 py-10 md:py-15">
             <div className="mx-auto max-w-7xl px-6 text-center">
                 <div className="mx-auto mb-10 w-full md:mb-12">
                     <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
-                        Informazioni utili
+                        {t("travel.subtitle")}
                     </p>
 
                     <h2 className="text-center font-title text-4xl leading-tight md:text-6xl text-black">
-                        Viaggio e soggiorno
+                        {t("travel.title")}
                     </h2>
                 </div>
 

@@ -56,5 +56,187 @@
             "7": "Basilea · Marzo 2021",
             "8": "Roma · Agosto 2020"
         }
+    },
+    "program": {
+        "date": "Sabato 4 settembre 2027",
+        "title": "Il programma",
+        "events": {
+            "ceremony": {
+                "title": "Cerimonia",
+                "description": "Accoglienza degli ospiti e inizio della cerimonia."
+            },
+            "aperitif": {
+                "title": "Aperitivo",
+                "description": "Brindisi, musica e momenti insieme."
+            },
+            "dinner": {
+                "title": "Cena",
+                "description": "Cena, discorsi e festeggiamenti."
+            },
+            "party": {
+                "title": "Party",
+                "description": "Musica, balli e festa fino a tardi."
+            }
+        }
+    },
+    "location": {
+        "subtitle": "La location",
+        "title": {
+            "firstLine": "Un luogo speciale",
+            "secondLine": "per il nostro giorno"
+        },
+        "officialWebsite": "Sito ufficiale",
+        "openGoogleMaps": "Apri su Google Maps",
+        "mapTitle": "Mappa Sala Qirat",
+        "gallery": {
+            "exteriorAlt": "Esterno del Relais Chiaramonte",
+            "roomAlt": "Sala Qirat",
+            "detailAlt": "Dettaglio della location"
+        }
+    },
+    "travel": {
+        "subtitle": "Informazioni utili",
+        "title": "Viaggio e soggiorno",
+        "items": {
+            "arrival": {
+                "title": "Per chi arriva da lontano",
+                "description": "L'aeroporto di Catania è il principale punto di arrivo per chi raggiunge la Sicilia in aereo. Da lì è possibile noleggiare un'auto oppure prendere gli autobus Etna Trasporti, che collegano Catania a Ragusa con corse frequenti durante la giornata."
+            },
+            "directions": {
+                "title": "Come arrivare",
+                "description": "Il Relais Chiaramonte è facilmente raggiungibile in automobile e dista circa 15 minuti dal centro di Ragusa. La struttura dispone di un ampio parcheggio riservato agli ospiti."
+            },
+            "accommodation": {
+                "title": "Dove dormire",
+                "description": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere. In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
+            }
+        }
+    },
+    "donation": {
+        "subtitle": "Un nuovo capitolo",
+        "title": "Il regalo più bello",
+        "description": "Più che oggetti, sogniamo esperienze. Il regalo più bello sarà poter continuare a scoprire il mondo insieme, collezionando ricordi che ci accompagneranno per tutta la vita. Se desiderate farci un regalo, potrete contribuire al nostro viaggio e, allo stesso tempo, sostenere una causa a cui teniamo particolarmente.",
+        "travel": {
+            "imageAlt": "Il nostro prossimo viaggio",
+            "label": "Viaggio di nozze",
+            "title": "Il nostro prossimo viaggio",
+            "description": "Viaggiare è una delle cose che più amiamo. Ogni destinazione ci lascia qualcosa di nuovo, ogni partenza diventa un ricordo da custodire. Se vorrete contribuire, ci aiuterete a vivere una nuova avventura insieme.",
+            "accountHolder": "Intestatario: Giorgio Chessari"
+        },
+        "charity": {
+            "imageAlt": "Associazione benefica",
+            "label": "Beneficenza",
+            "title": "Un gesto che va oltre noi",
+            "description": "Crediamo che un momento di gioia possa diventare anche un'occasione per fare del bene. Per questo motivo una parte dei regali ricevuti sarà destinata a sostenere un'organizzazione che opera ogni giorno per aiutare chi ne ha più bisogno.",
+            "organizationLabel": "Associazione",
+            "organizationName": "Nome dell'associazione",
+            "organizationDescription": "Breve descrizione della missione dell'associazione. Potrai sostituire questo testo quando avrai scelto il progetto che desideri sostenere.",
+            "visitWebsite": "Visita il sito"
+        }
+    },
+    "faq": {
+        "subtitle": "Informazioni",
+        "title": "Domande frequenti",
+        "questions": {
+            "confirmation": {
+                "question": "Entro quando dobbiamo confermare la presenza?",
+                "answer": "Vi chiediamo di confermare la vostra presenza entro la data che comunicheremo nell'invito."
+            },
+            "dressCode": {
+                "question": "È previsto un dress code?",
+                "answer": "Il dress code sarà elegante. Aggiungeremo qui eventuali indicazioni più specifiche."
+            },
+            "allergies": {
+                "question": "È possibile comunicare allergie o intolleranze?",
+                "answer": "Sì. Potrete indicare allergie, intolleranze ed esigenze alimentari nel modulo RSVP."
+            },
+            "children": {
+                "question": "I bambini sono invitati?",
+                "answer": "Inseriremo qui le indicazioni relative alla partecipazione dei bambini."
+            },
+            "parking": {
+                "question": "È disponibile un parcheggio?",
+                "answer": "Aggiungeremo le informazioni sul parcheggio quando saranno confermate."
+            }
+        }
+    },
+    "rsvp": {
+        "subtitle": "Conferma la tua presenza",
+        "title": "RSVP",
+        "description": {
+            "beforeDeadline": "Compila il modulo per comunicarci se sarai presente e fornirci tutte le informazioni necessarie per accoglierti al meglio. Per motivi organizzativi, ti chiediamo una risposta entro il",
+            "deadline": "10 febbraio 2027"
+        },
+        "success": {
+            "subtitle": "Conferma ricevuta",
+            "title": "Grazie!",
+            "attending": "Abbiamo ricevuto la tua conferma. Non vediamo l'ora di condividere con te questa giornata speciale.",
+            "notAttending": "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un caro abbraccio."
+        },
+        "errors": {
+            "notConfigured": "L'indirizzo del servizio RSVP non è configurato.",
+            "invalidResponse": "Il servizio RSVP non ha risposto correttamente.",
+            "submissionFailed": "Invio della risposta non riuscito.",
+            "generic": "Si è verificato un errore. Riprova."
+        },
+        "form": {
+            "fullName": "Nome e cognome",
+            "fullNamePlaceholder": "Nome e cognome",
+            "email": {
+                "label": "Email",
+                "placeholder": "indirizzo@email.com"
+            },
+            "attendance": {
+                "label": "Parteciperai?",
+                "placeholder": "Seleziona una risposta",
+                "yes": "Sì, sarò presente",
+                "no": "No, non potrò partecipare"
+            },
+            "guestCount": {
+                "label": "Numero di persone, incluso te",
+                "personSingular": "persona",
+                "personPlural": "persone"
+            },
+            "guests": {
+                "legend": "Informazioni degli ospiti",
+                "guestTitle": "Ospite {{number}}",
+                "namePlaceholder": "Nome e cognome dell'ospite"
+            },
+            "menu": {
+                "label": "Preferenza menu",
+                "placeholder": "Seleziona un menu",
+                "standard": "Menu normale",
+                "vegetarian": "Menu vegetariano",
+                "vegan": "Menu vegano",
+                "child": "Menu bambino"
+            },
+            "allergies": {
+                "label": "Allergie o intolleranze",
+                "placeholder": "Indica eventuali allergie, intolleranze o necessità alimentari"
+            },
+            "transport": {
+                "label": "Trasporto",
+                "placeholder": "Come pensi di raggiungere la location?",
+                "own": "Arriverò con mezzi propri",
+                "rental": "Affitterò un veicolo",
+                "help": "Ho bisogno di aiuto per il trasporto"
+            },
+            "accommodation": {
+                "label": "Alloggio",
+                "placeholder": "Hai già organizzato il tuo soggiorno?",
+                "arranged": "Ho già una sistemazione",
+                "recommendation": "Vorrei una raccomandazione",
+                "help": "Ho bisogno di aiuto"
+            },
+            "message": {
+                "legend": "Un messaggio per gli sposi",
+                "label": "Messaggio per gli sposi",
+                "placeholder": "Lasciaci un messaggio..."
+            },
+            "submit": {
+                "submitting": "Invio in corso...",
+                "default": "Invia conferma"
+            }
+        }
     }
 }

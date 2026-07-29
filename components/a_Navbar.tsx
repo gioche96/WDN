@@ -17,7 +17,7 @@ const links = [
     { key: "rsvp", href: "#rsvp" },
 ];
 
-const languages = ["IT", "FR", "DE", "EN"];
+const languages = ["IT", "EN", "FR", "DE"];
 
 export default function Navbar() {
     const { t, i18n } = useTranslation();

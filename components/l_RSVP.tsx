@@ -1,10 +1,12 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 type Attendance = "" | "yes" | "no";
 
 export default function RSVP() {
+    const { t } = useTranslation();
     const [submitted, setSubmitted] = useState(false);
     const [attendance, setAttendance] = useState<Attendance>("");
     const [guestCount, setGuestCount] = useState(1);
@@ -49,7 +51,7 @@ export default function RSVP() {
             <div className="mx-auto max-w-3xl">
                 <div className="mb-10 text-center md:mb-14">
                     <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-white/75 md:text-[13pt]">
-                        Conferma la tua presenza
+                        {t("rsvp.subtitle")}
                     </p>
 
                     <h2 className="font-title text-4xl leading-tight md:text-6xl">
@@ -57,28 +59,25 @@ export default function RSVP() {
                     </h2>
 
                     <p className="mx-auto mt-5 max-w-2xl text-[13pt] leading-7 text-white/80 md:mt-6 md:text-[15pt] md:leading-9">
-                        Compila il modulo per comunicarci se sarai
-                        presente e fornirci tutte le informazioni
-                        necessarie per accoglierti al meglio.
-                        Per motivi organizzativi, ti chiediamo una
-                        risposta entro il <strong>10 Febbraio 2027</strong>.
+                        {t("rsvp.description.beforeDeadline")} {" "}
+                        <strong>{t("rsvp.description.deadline")}</strong>.
                     </p>
                 </div>
 
                 {submitted ? (
                     <div className="rounded-md border border-white/30 px-6 py-12 text-center md:px-10 md:py-16">
                         <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-white/70 md:text-[13pt]">
-                            Conferma ricevuta
+                            {t("rsvp.success.subtitle")}
                         </p>
 
                         <h3 className="font-title text-4xl leading-tight md:text-5xl">
-                            Grazie!
+                            {t("rsvp.success.title")}
                         </h3>
 
                         <p className="mx-auto mt-5 max-w-xl text-[13pt] leading-7 text-white/80 md:text-[15pt] md:leading-8">
                             {attendance === "yes"
-                                ? "Abbiamo ricevuto la tua conferma. Non vediamo l'ora di condividere con te questa giornata speciale."
-                                : "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un caro abbraccio."}
+                                ? t("rsvp.success.attending")
+                                : t("rsvp.success.notAttending")}
                         </p>
                     </div>
                 ) : (
@@ -142,7 +141,7 @@ export default function RSVP() {
                                 console.log("RSVP URL:", scriptUrl);
                                 if (!scriptUrl) {
                                     throw new Error(
-                                        "L'indirizzo del servizio RSVP non è configurato.",
+                                        t("rsvp.errors.notConfigured"),
                                     );
                                 }
 
@@ -156,7 +155,7 @@ export default function RSVP() {
 
                                 if (!response.ok) {
                                     throw new Error(
-                                        "Il servizio RSVP non ha risposto correttamente.",
+                                        t("rsvp.errors.invalidResponse"),
                                     );
                                 }
 
@@ -164,7 +163,7 @@ export default function RSVP() {
 
                                 if (!result.success) {
                                     throw new Error(
-                                        result.message || "Invio della risposta non riuscito.",
+                                        result.message || t("rsvp.errors.submissionFailed"),
                                     );
                                 }
 
@@ -174,7 +173,7 @@ export default function RSVP() {
                                 setSubmitError(
                                     error instanceof Error
                                         ? error.message
-                                        : "Si è verificato un errore. Riprova.",
+                                        : t("rsvp.errors.generic"),
                                 );
                             } finally {
                                 setIsSubmitting(false);
@@ -193,7 +192,7 @@ export default function RSVP() {
                             <div className="grid gap-8 md:grid-cols-2">
                                 <label className="grid gap-1">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        Nome e cognome
+                                        {t("rsvp.form.fullName")}
                                     </span>
 
                                     <input
@@ -203,14 +202,14 @@ export default function RSVP() {
                                         autoComplete="name"
                                         value={mainGuestName}
                                         onChange={(event) => setMainGuestName(event.target.value)}
-                                        placeholder="Nome e cognome"
+                                        placeholder={t("rsvp.form.fullNamePlaceholder")}
                                         className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
                                     />
                                 </label>
 
                                 <label className="grid gap-1">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        Email
+                                        {t("rsvp.form.email.label")}
                                     </span>
 
                                     <input
@@ -218,7 +217,7 @@ export default function RSVP() {
                                         name="email"
                                         required
                                         autoComplete="email"
-                                        placeholder="indirizzo@email.com"
+                                        placeholder={t("rsvp.form.email.placeholder")}
                                         className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
                                     />
                                 </label>
@@ -226,7 +225,7 @@ export default function RSVP() {
 
                             <label className="grid gap-1">
                                 <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                    Parteciperai?
+                                    {t("rsvp.form.attendance.label")}
                                 </span>
 
                                 <select
@@ -237,15 +236,15 @@ export default function RSVP() {
                                     className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                 >
                                     <option value="" disabled className="bg-[#F5F1E6] text-black">
-                                        Seleziona una risposta
+                                        {t("rsvp.form.attendance.placeholder")}
                                     </option>
 
                                     <option value="yes" className="bg-[#F5F1E6] text-black">
-                                        Sì, sarò presente
+                                        {t("rsvp.form.attendance.yes")}
                                     </option>
 
                                     <option value="no" className="bg-[#F5F1E6] text-black">
-                                        No, non potrò partecipare
+                                        {t("rsvp.form.attendance.no")}
                                     </option>
                                 </select>
                             </label>
@@ -261,7 +260,7 @@ export default function RSVP() {
 
                                     <label className="grid gap-1">
                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                            Numero di persone, incluso te
+                                            {t("rsvp.form.guestCount.label")}
                                         </span>
 
                                         <select
@@ -289,8 +288,8 @@ export default function RSVP() {
                                                 >
                                                     {number}{" "}
                                                     {number === 1
-                                                        ? "persona"
-                                                        : "persone"}
+                                                        ? t("rsvp.form.guestCount.personSingular")
+                                                        : t("rsvp.form.guestCount.personPlural")}
                                                 </option>
                                             ))}
                                         </select>
@@ -301,7 +300,7 @@ export default function RSVP() {
 
                                 <fieldset className="grid gap-8">
                                     <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/75 md:text-sm">
-                                        Informazioni degli ospiti
+                                        {t("rsvp.form.guests.legend")}
                                     </legend>
 
                                     <div className="grid gap-5">
@@ -314,9 +313,9 @@ export default function RSVP() {
                                             >
                                                 <div>
                                                     <p className="font-title text-2xl md:text-3xl">
-                                                        {index === 0
-                                                            ? "Ospite 1"
-                                                            : `Ospite ${index + 1}`}
+                                                        {t("rsvp.form.guests.guestTitle", {
+                                                            number: index + 1,
+                                                        })}
                                                     </p>
 
                                                 </div>
@@ -325,7 +324,7 @@ export default function RSVP() {
                                                     {index === 0 ? (
                                                         <div className="grid gap-1">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                                Nome e cognome
+                                                                {t("rsvp.form.fullName")}
                                                             </span>
 
                                                             <p className="border-b border-white/35 py-4 text-[13pt] text-white/75 md:text-[14pt]">
@@ -341,14 +340,14 @@ export default function RSVP() {
                                                     ) : (
                                                         <label className="grid gap-1">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                                Nome e cognome
+                                                                {t("rsvp.form.fullName")}
                                                             </span>
 
                                                             <input
                                                                 type="text"
                                                                 name={`guests[${index}][name]`}
                                                                 required
-                                                                placeholder="Nome e cognome dell'ospite"
+                                                                placeholder={t("rsvp.form.guests.namePlaceholder")}
                                                                 className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
                                                             />
                                                         </label>
@@ -356,7 +355,7 @@ export default function RSVP() {
 
                                                     <label className="grid gap-2">
                                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                            Preferenza menu
+                                                            {t("rsvp.form.menu.label")}
                                                         </span>
 
                                                         <select
@@ -366,12 +365,12 @@ export default function RSVP() {
                                                             className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                                         >
                                                             <option value="" disabled className="bg-[#F5F1E6] text-black">
-                                                                Seleziona un menu
+                                                                {t("rsvp.form.menu.placeholder")}
                                                             </option>
-                                                            <option value="standard" className="bg-[#F5F1E6] text-black">Menu normale</option>
-                                                            <option value="vegetarian" className="bg-[#F5F1E6] text-black">Menu vegetariano</option>
-                                                            <option value="vegan" className="bg-[#F5F1E6] text-black">Menu vegano</option>
-                                                            <option value="child" className="bg-[#F5F1E6] text-black">Menu bambino</option>
+                                                            <option value="standard" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.standard")}</option>
+                                                            <option value="vegetarian" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.vegetarian")}</option>
+                                                            <option value="vegan" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.vegan")}</option>
+                                                            <option value="child" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.child")}</option>
                                                         </select>
                                                     </label>
                                                 </div>
@@ -379,14 +378,13 @@ export default function RSVP() {
 
                                                 <label className="grid gap-1">
                                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                        Allergie o
-                                                        intolleranze
+                                                        {t("rsvp.form.allergies.label")}
                                                     </span>
 
                                                     <textarea
                                                         name={`guests[${index}][allergies]`}
                                                         rows={3}
-                                                        placeholder="Indica eventuali allergie, intolleranze o necessità alimentari"
+                                                        placeholder={t("rsvp.form.allergies.placeholder")}
                                                         className="resize-none rounded-md border border-white/30 bg-transparent p-4 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
                                                     />
                                                 </label>
@@ -399,7 +397,7 @@ export default function RSVP() {
 
                                 <label className="grid gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        Trasporto
+                                        {t("rsvp.form.transport.label")}
                                     </span>
 
                                     <select
@@ -409,19 +407,19 @@ export default function RSVP() {
                                         className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                     >
                                         <option value="" disabled className="bg-white text-black">
-                                            Come pensi di raggiungere la location?
+                                            {t("rsvp.form.transport.placeholder")}
                                         </option>
 
                                         <option value="own" className="bg-[#F5F1E6] text-black">
-                                            Arriverò con mezzi propri
+                                            {t("rsvp.form.transport.own")}
                                         </option>
 
                                         <option value="rental" className="bg-[#F5F1E6] text-black">
-                                            Affitterò un veicolo
+                                            {t("rsvp.form.transport.rental")}
                                         </option>
 
                                         <option value="help" className="bg-[#F5F1E6] text-black">
-                                            Ho bisogno di aiuto per il trasporto
+                                            {t("rsvp.form.transport.help")}
                                         </option>
                                     </select>
                                 </label>
@@ -430,7 +428,7 @@ export default function RSVP() {
 
                                 <label className="grid gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        Alloggio
+                                        {t("rsvp.form.accommodation.label")}
                                     </span>
 
                                     <select
@@ -440,25 +438,25 @@ export default function RSVP() {
                                         className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                     >
                                         <option value="" disabled className="bg-white text-black">
-                                            Hai già organizzato il tuo soggiorno?
+                                            {t("rsvp.form.accommodation.placeholder")}
                                         </option>
 
                                         <option
                                             value="already-arranged"
                                             className="bg-[#F5F1E6] text-black"
                                         >
-                                            Ho già una sistemazione
+                                            {t("rsvp.form.accommodation.arranged")}
                                         </option>
 
                                         <option
                                             value="recommendation"
                                             className="bg-[#F5F1E6] text-black"
                                         >
-                                            Vorrei una raccomandazione
+                                            {t("rsvp.form.accommodation.recommendation")}
                                         </option>
 
                                         <option value="help" className="bg-[#F5F1E6] text-black">
-                                            Ho bisogno di aiuto
+                                            {t("rsvp.form.accommodation.help")}
                                         </option>
                                     </select>
                                 </label>
@@ -470,18 +468,18 @@ export default function RSVP() {
                         {attendance && (
                             <fieldset className="grid gap-6">
                                 <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/75 md:text-sm">
-                                    Un messaggio per gli sposi
+                                    {t("rsvp.form.message.legend")}
                                 </legend>
 
                                 <label className="grid gap-1">
                                     <span className="sr-only">
-                                        Messaggio per gli sposi
+                                        {t("rsvp.form.message.label")}
                                     </span>
 
                                     <textarea
                                         name="message"
                                         rows={5}
-                                        placeholder="Lasciaci un messaggio..."
+                                        placeholder={t("rsvp.form.message.placeholder")}
                                         className="min-h-36 resize-none rounded-md border border-white/30 bg-transparent p-5 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt] md:leading-8"
                                     />
                                 </label>
@@ -500,7 +498,9 @@ export default function RSVP() {
                             disabled={!attendance || isSubmitting}
                             className="mt-2 justify-self-center rounded-md border border-white px-8 py-4 text-[10pt] uppercase tracking-[0.25em] transition-colors duration-300 hover:bg-white hover:text-[#979775] disabled:cursor-not-allowed disabled:opacity-40 md:mt-4 md:px-10 md:text-sm"
                         >
-                            {isSubmitting ? "Invio in corso..." : "Invia conferma"}
+                            {isSubmitting
+                                ? t("rsvp.form.submit.submitting")
+                                : t("rsvp.form.submit.default")}
                         </button>
                     </form>
                 )}

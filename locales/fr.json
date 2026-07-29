@@ -56,5 +56,187 @@
             "7": "Bâle · Mars 2021",
             "8": "Rome · Août 2020"
         }
+    },
+    "program": {
+        "date": "Samedi 4 septembre 2027",
+        "title": "Le programme",
+        "events": {
+            "ceremony": {
+                "title": "Cérémonie",
+                "description": "Accueil des invités et début de la cérémonie."
+            },
+            "aperitif": {
+                "title": "Apéritif",
+                "description": "Toasts, musique et moments partagés."
+            },
+            "dinner": {
+                "title": "Dîner",
+                "description": "Dîner, discours et célébrations."
+            },
+            "party": {
+                "title": "Soirée",
+                "description": "Musique, danse et fête jusque tard dans la nuit."
+            }
+        }
+    },
+    "location": {
+        "subtitle": "Le lieu",
+        "title": {
+            "firstLine": "Un lieu spécial",
+            "secondLine": "pour notre grand jour"
+        },
+        "officialWebsite": "Site officiel",
+        "openGoogleMaps": "Ouvrir dans Google Maps",
+        "mapTitle": "Carte de la Sala Qirat",
+        "gallery": {
+            "exteriorAlt": "Extérieur du Relais Chiaramonte",
+            "roomAlt": "Sala Qirat",
+            "detailAlt": "Détail du lieu"
+        }
+    },
+    "travel": {
+        "subtitle": "Informations utiles",
+        "title": "Voyage et hébergement",
+        "items": {
+            "arrival": {
+                "title": "Pour ceux qui viennent de loin",
+                "description": "L'aéroport de Catane est le principal point d'arrivée pour les personnes qui rejoignent la Sicile en avion. Depuis l'aéroport, il est possible de louer une voiture ou de prendre les bus Etna Trasporti, qui assurent des liaisons fréquentes entre Catane et Raguse tout au long de la journée."
+            },
+            "directions": {
+                "title": "Comment s'y rendre",
+                "description": "Le Relais Chiaramonte est facilement accessible en voiture et se trouve à environ 15 minutes du centre de Raguse. L'établissement dispose d'un grand parking privé réservé aux invités."
+            },
+            "accommodation": {
+                "title": "Où dormir",
+                "description": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres. Raguse et ses environs proposent également de nombreuses solutions, notamment des hôtels, des chambres d'hôtes et des locations de vacances adaptées à tous les besoins."
+            }
+        }
+    },
+    "donation": {
+        "subtitle": "Un nouveau chapitre",
+        "title": "Le plus beau des cadeaux",
+        "description": "Plus que des objets, nous rêvons d'expériences. Le plus beau cadeau serait de pouvoir continuer à découvrir le monde ensemble, en collectionnant des souvenirs qui nous accompagneront toute notre vie. Si vous souhaitez nous offrir un cadeau, vous pourrez contribuer à notre voyage tout en soutenant une cause qui nous tient particulièrement à cœur.",
+        "travel": {
+            "imageAlt": "Notre prochain voyage",
+            "label": "Voyage de noces",
+            "title": "Notre prochain voyage",
+            "description": "Voyager est l'une des choses que nous aimons le plus. Chaque destination nous apporte quelque chose de nouveau et chaque départ devient un souvenir à garder précieusement. En contribuant, vous nous aiderez à vivre une nouvelle aventure ensemble.",
+            "accountHolder": "Titulaire du compte : Giorgio Chessari"
+        },
+        "charity": {
+            "imageAlt": "Association caritative",
+            "label": "Solidarité",
+            "title": "Un geste qui va au-delà de nous",
+            "description": "Nous pensons qu'un moment de joie peut également devenir une occasion de faire le bien. C'est pourquoi une partie des cadeaux reçus sera destinée à soutenir une organisation qui œuvre chaque jour pour aider les personnes qui en ont le plus besoin.",
+            "organizationLabel": "Association",
+            "organizationName": "Nom de l'association",
+            "organizationDescription": "Brève description de la mission de l'association. Vous pourrez remplacer ce texte lorsque vous aurez choisi le projet que vous souhaitez soutenir.",
+            "visitWebsite": "Visiter le site"
+        }
+    },
+    "faq": {
+        "subtitle": "Informations",
+        "title": "Questions fréquentes",
+        "questions": {
+            "confirmation": {
+                "question": "Jusqu'à quand pouvons-nous confirmer notre présence ?",
+                "answer": "Nous vous remercions de confirmer votre présence avant la date indiquée sur l'invitation."
+            },
+            "dressCode": {
+                "question": "Y a-t-il un dress code ?",
+                "answer": "Une tenue élégante est souhaitée. Nous ajouterons ici d'éventuelles précisions."
+            },
+            "allergies": {
+                "question": "Peut-on signaler des allergies ou des intolérances ?",
+                "answer": "Oui. Vous pourrez indiquer vos allergies, intolérances et besoins alimentaires dans le formulaire RSVP."
+            },
+            "children": {
+                "question": "Les enfants sont-ils invités ?",
+                "answer": "Nous ajouterons ici les informations concernant la participation des enfants."
+            },
+            "parking": {
+                "question": "Un parking est-il disponible ?",
+                "answer": "Les informations concernant le parking seront ajoutées dès qu'elles seront confirmées."
+            }
+        }
+    },
+    "rsvp": {
+        "subtitle": "Confirmez votre présence",
+        "title": "RSVP",
+        "description": {
+            "beforeDeadline": "Remplissez le formulaire pour nous indiquer si vous serez présent et nous fournir toutes les informations nécessaires afin de vous accueillir au mieux. Pour des raisons d’organisation, merci de répondre avant le",
+            "deadline": "10 février 2027"
+        },
+        "success": {
+            "subtitle": "Réponse reçue",
+            "title": "Merci !",
+            "attending": "Nous avons bien reçu votre confirmation. Nous avons hâte de partager cette journée si spéciale avec vous.",
+            "notAttending": "Nous avons bien reçu votre réponse. Nous sommes désolés que vous ne puissiez pas être parmi nous, mais nous vous remercions de nous avoir prévenus et vous embrassons bien fort."
+        },
+        "errors": {
+            "notConfigured": "L’adresse du service RSVP n’est pas configurée.",
+            "invalidResponse": "Le service RSVP n’a pas répondu correctement.",
+            "submissionFailed": "L’envoi de la réponse a échoué.",
+            "generic": "Une erreur est survenue. Veuillez réessayer."
+        },
+        "form": {
+            "fullName": "Nom et prénom",
+            "fullNamePlaceholder": "Nom et prénom",
+            "email": {
+                "label": "E-mail",
+                "placeholder": "adresse@email.com"
+            },
+            "attendance": {
+                "label": "Serez-vous présent ?",
+                "placeholder": "Sélectionnez une réponse",
+                "yes": "Oui, je serai présent",
+                "no": "Non, je ne pourrai pas participer"
+            },
+            "guestCount": {
+                "label": "Nombre de personnes, vous compris",
+                "personSingular": "personne",
+                "personPlural": "personnes"
+            },
+            "guests": {
+                "legend": "Informations sur les invités",
+                "guestTitle": "Invité {{number}}",
+                "namePlaceholder": "Nom et prénom de l’invité"
+            },
+            "menu": {
+                "label": "Préférence de menu",
+                "placeholder": "Sélectionnez un menu",
+                "standard": "Menu classique",
+                "vegetarian": "Menu végétarien",
+                "vegan": "Menu végan",
+                "child": "Menu enfant"
+            },
+            "allergies": {
+                "label": "Allergies ou intolérances",
+                "placeholder": "Indiquez les éventuelles allergies, intolérances ou exigences alimentaires"
+            },
+            "transport": {
+                "label": "Transport",
+                "placeholder": "Comment pensez-vous rejoindre le lieu de réception ?",
+                "own": "Je viendrai par mes propres moyens",
+                "rental": "Je louerai un véhicule",
+                "help": "J’ai besoin d’aide pour le transport"
+            },
+            "accommodation": {
+                "label": "Hébergement",
+                "placeholder": "Avez-vous déjà organisé votre séjour ?",
+                "arranged": "J’ai déjà un hébergement",
+                "recommendation": "Je souhaiterais une recommandation",
+                "help": "J’ai besoin d’aide"
+            },
+            "message": {
+                "legend": "Un message pour les mariés",
+                "label": "Message pour les mariés",
+                "placeholder": "Laissez-nous un message..."
+            },
+            "submit": {
+                "submitting": "Envoi en cours...",
+                "default": "Envoyer la réponse"
+            }
+        }
     }
 }

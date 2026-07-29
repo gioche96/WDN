@@ -1,23 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import { ExternalLink, MapPin } from "lucide-react";
 import { BASE_PATH } from "@/lib/paths";
-
-const gallery = [
-    {
-        src: `${BASE_PATH}/images/location/location-1.jpg`,
-        alt: "Esterno del Relais Chiaramonte",
-    },
-    {
-        src: `${BASE_PATH}/images/location/location-2.jpg`,
-        alt: "Sala Qirat",
-    },
-    {
-        src: `${BASE_PATH}/images/location/location-3.jpg`,
-        alt: "Dettaglio della location",
-    },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Location() {
+    const { t } = useTranslation();
+
+    const gallery = [
+        {
+            src: `${BASE_PATH}/images/location/location-1.jpg`,
+            alt: t("location.gallery.exteriorAlt"),
+        },
+        {
+            src: `${BASE_PATH}/images/location/location-2.jpg`,
+            alt: t("location.gallery.roomAlt"),
+        },
+        {
+            src: `${BASE_PATH}/images/location/location-3.jpg`,
+            alt: t("location.gallery.detailAlt"),
+        },
+    ];
+
     return (
         <section
             id="location"
@@ -26,13 +31,13 @@ export default function Location() {
             <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
                 <div>
                     <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] lg:text-left md:text-[13pt] text-black">
-                        La location
+                        {t("location.subtitle")}
                     </p>
 
                     <h2 className="mb-8 text-center font-title text-4xl leading-tight md:text-6xl lg:text-left text-black">
-                        Un luogo speciale
+                        {t("location.title.firstLine")}
                         <br />
-                        per il nostro giorno
+                        {t("location.title.secondLine")}
                     </h2>
 
                     <div className="flex gap-4">
@@ -62,7 +67,7 @@ export default function Location() {
                             rel="noreferrer"
                             className="group inline-flex items-center gap-2 border-b border-black pb-1 text-sm uppercase tracking-[0.2em]"
                         >
-                            Sito ufficiale
+                            {t("location.officialWebsite")}
 
                             <ExternalLink
                                 size={14}
@@ -76,7 +81,7 @@ export default function Location() {
                             rel="noreferrer"
                             className="group inline-flex items-center gap-2 border-b border-black pb-1 text-sm uppercase tracking-[0.2em]"
                         >
-                            Apri su Google Maps
+                            {t("location.openGoogleMaps")}
 
                             <ExternalLink
                                 size={14}
@@ -106,7 +111,7 @@ export default function Location() {
 
                     <div className="relative h-[160px] overflow-hidden rounded-md md:h-[180px]">
                         <iframe
-                            title="Mappa Sala Qirat"
+                            title={t("location.mapTitle")}
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.8833677544035!2d14.63910647812349!3d36.83533987749175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311bd0030d8c15f%3A0xa91169fdef8cdfd5!2sQIRAT!5e1!3m2!1sit!2sch!4v1785163491045!5m2!1sit!2sch"
                             loading="lazy"
                             allowFullScreen

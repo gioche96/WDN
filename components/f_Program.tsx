@@ -6,36 +6,42 @@ import {
     useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-
-const events = [
-    {
-        time: "15:30",
-        title: "Cerimonia",
-        description:
-            "Accoglienza degli ospiti e inizio della cerimonia.",
-    },
-    {
-        time: "17:00",
-        title: "Aperitivo",
-        description:
-            "Brindisi, musica e momenti insieme.",
-    },
-    {
-        time: "19:30",
-        title: "Cena",
-        description:
-            "Cena, discorsi e festeggiamenti.",
-    },
-    {
-        time: "23:00",
-        title: "Party",
-        description:
-            "Musica, balli e festa fino a tardi.",
-    },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Program() {
+    const { t } = useTranslation();
     const timelineRef = useRef<HTMLDivElement>(null);
+
+    const events = [
+        {
+            time: "15:30",
+            title: t("program.events.ceremony.title"),
+            description: t(
+                "program.events.ceremony.description"
+            ),
+        },
+        {
+            time: "17:00",
+            title: t("program.events.aperitif.title"),
+            description: t(
+                "program.events.aperitif.description"
+            ),
+        },
+        {
+            time: "19:30",
+            title: t("program.events.dinner.title"),
+            description: t(
+                "program.events.dinner.description"
+            ),
+        },
+        {
+            time: "23:00",
+            title: t("program.events.party.title"),
+            description: t(
+                "program.events.party.description"
+            ),
+        },
+    ];
 
     const { scrollYProgress } = useScroll({
         target: timelineRef,
@@ -57,11 +63,11 @@ export default function Program() {
                 {/* Intestazione */}
                 <div className="mx-auto mb-11 max-w-2xl text-center md:mb-15">
                     <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-black/65 md:text-[13pt] text-black">
-                        Sabato 4 settembre 2027
+                        {t("program.date")}
                     </p>
 
                     <h2 className="font-title text-4xl leading-tight md:text-6xl text-black">
-                        Il programma
+                        {t("program.title")}
                     </h2>
                 </div>
 
