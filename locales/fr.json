@@ -224,10 +224,11 @@
             },
             "accommodation": {
                 "label": "Hébergement",
-                "placeholder": "Avez-vous déjà organisé votre séjour ?",
-                "arranged": "J’ai déjà un hébergement",
-                "recommendation": "Je souhaiterais une recommandation",
-                "help": "J’ai besoin d’aide"
+                "placeholder": "Où prévoyez-vous de séjourner ?",
+                "arranged": "J'ai déjà un hébergement",
+                "entireRoom": "Je souhaiterais une chambre sur place (usage privatif)",
+                "sharedRoom": "Je souhaiterais une chambre sur place et je suis disposé(e) à la partager",
+                "nearby": "Je chercherai un hébergement à proximité"
             },
             "message": {
                 "legend": "Un message pour les mariés",

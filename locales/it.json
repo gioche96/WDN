@@ -224,10 +224,11 @@
             },
             "accommodation": {
                 "label": "Alloggio",
-                "placeholder": "Hai già organizzato il tuo soggiorno?",
+                "placeholder": "Dove pensi di soggiornare?",
                 "arranged": "Ho già una sistemazione",
-                "recommendation": "Vorrei una raccomandazione",
-                "help": "Ho bisogno di aiuto"
+                "entireRoom": "Vorrei una camera in struttura (uso esclusivo)",
+                "sharedRoom": "Vorrei una camera in struttura, disponibile a condividerla",
+                "nearby": "Cercherò una sistemazione nei dintorni"
             },
             "message": {
                 "legend": "Un messaggio per gli sposi",

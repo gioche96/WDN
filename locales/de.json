@@ -224,10 +224,11 @@
             },
             "accommodation": {
                 "label": "Unterkunft",
-                "placeholder": "Habt ihr eure Übernachtung bereits organisiert?",
+                "placeholder": "Wo möchtet ihr übernachten?",
                 "arranged": "Ich habe bereits eine Unterkunft",
-                "recommendation": "Ich hätte gerne eine Empfehlung",
-                "help": "Ich benötige Hilfe"
+                "entireRoom": "Ich möchte ein Zimmer in der Unterkunft (zur alleinigen Nutzung)",
+                "sharedRoom": "Ich möchte ein Zimmer in der Unterkunft und bin bereit, es zu teilen",
+                "nearby": "Ich werde mir eine Unterkunft in der Umgebung suchen"
             },
             "message": {
                 "legend": "Eine Nachricht an das Brautpaar",

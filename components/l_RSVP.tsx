@@ -442,21 +442,25 @@ export default function RSVP() {
                                         </option>
 
                                         <option
-                                            value="already-arranged"
+                                            value="arranged"
                                             className="bg-[#F5F1E6] text-black"
                                         >
                                             {t("rsvp.form.accommodation.arranged")}
                                         </option>
 
                                         <option
-                                            value="recommendation"
+                                            value="entire-room"
                                             className="bg-[#F5F1E6] text-black"
                                         >
-                                            {t("rsvp.form.accommodation.recommendation")}
+                                            {t("rsvp.form.accommodation.entireRoom")}
                                         </option>
 
-                                        <option value="help" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.accommodation.help")}
+                                        <option value="shared-room" className="bg-[#F5F1E6] text-black">
+                                            {t("rsvp.form.accommodation.sharedRoom")}
+                                        </option>
+
+                                        <option value="nearby" className="bg-[#F5F1E6] text-black">
+                                            {t("rsvp.form.accommodation.nearby")}
                                         </option>
                                     </select>
                                 </label>

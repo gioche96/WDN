@@ -224,10 +224,11 @@
             },
             "accommodation": {
                 "label": "Accommodation",
-                "placeholder": "Have you already arranged your stay?",
+                "placeholder": "Where are you planning to stay?",
                 "arranged": "I already have accommodation",
-                "recommendation": "I would like a recommendation",
-                "help": "I need help"
+                "entireRoom": "I'd like a room at the venue (private occupancy)",
+                "sharedRoom": "I'd like a room at the venue and I'm happy to share",
+                "nearby": "I'll look for accommodation nearby"
             },
             "message": {
                 "legend": "A message for the couple",
