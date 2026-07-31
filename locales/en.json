@@ -172,7 +172,7 @@
             "subtitle": "Response received",
             "title": "Thank you!",
             "attending": "We have received your confirmation. We can't wait to share this special day with you.",
-            "notAttending": "We have received your response. We are sorry that you cannot join us, but thank you for letting us know. We are sending you a warm hug."
+            "notAttending": "We have received your response. We are sorry that you cannot join us, but thank you for letting us know. We are sending you a big hug."
         },
         "errors": {
             "notConfigured": "The RSVP service address has not been configured.",

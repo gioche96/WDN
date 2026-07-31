@@ -172,7 +172,7 @@
             "subtitle": "Conferma ricevuta",
             "title": "Grazie!",
             "attending": "Abbiamo ricevuto la tua conferma. Non vediamo l'ora di condividere con te questa giornata speciale.",
-            "notAttending": "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un caro abbraccio."
+            "notAttending": "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un abbraccio."
         },
         "errors": {
             "notConfigured": "L'indirizzo del servizio RSVP non è configurato.",
