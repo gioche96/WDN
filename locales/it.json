@@ -101,7 +101,11 @@
         "items": {
             "arrival": {
                 "title": "Per chi arriva da lontano",
-                "description": "L'aeroporto di Catania è il principale punto di arrivo per chi raggiunge la Sicilia in aereo. Da lì è possibile noleggiare un'auto oppure prendere gli autobus Etna Trasporti, che collegano Catania a Ragusa con corse frequenti durante la giornata."
+                "description": {
+                    "beforeLink": "L'aeroporto di Catania è il principale punto di arrivo per chi raggiunge la Sicilia in aereo. Da lì è possibile noleggiare un'auto oppure prendere gli autobus ",
+                    "link": "Etna Trasporti",
+                    "afterLink": ", che collegano Catania a Ragusa con corse frequenti durante la giornata."
+                }
             },
             "directions": {
                 "title": "Come arrivare",
@@ -109,7 +113,7 @@
             },
             "accommodation": {
                 "title": "Dove dormire",
-                "description": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere. In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
+                "description": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere (vedi FAQ). In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
             }
         }
     },
@@ -172,7 +176,7 @@
             "subtitle": "Conferma ricevuta",
             "title": "Grazie!",
             "attending": "Abbiamo ricevuto la tua conferma. Non vediamo l'ora di condividere con te questa giornata speciale.",
-            "notAttending": "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un abbraccio."
+            "notAttending": "Abbiamo ricevuto la tua risposta. Ci dispiace che tu non possa essere con noi, ma ti ringraziamo per averci avvisato e ti mandiamo un grande abbraccio."
         },
         "errors": {
             "notConfigured": "L'indirizzo del servizio RSVP non è configurato.",

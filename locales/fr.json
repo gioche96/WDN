@@ -101,7 +101,11 @@
         "items": {
             "arrival": {
                 "title": "Pour ceux qui viennent de loin",
-                "description": "L'aéroport de Catane est le principal point d'arrivée pour les personnes qui rejoignent la Sicile en avion. Depuis l'aéroport, il est possible de louer une voiture ou de prendre les bus Etna Trasporti, qui assurent des liaisons fréquentes entre Catane et Raguse tout au long de la journée."
+                "description": {
+                    "beforeLink": "L'aéroport de Catane est le principal point d'arrivée pour les personnes qui rejoignent la Sicile en avion. Depuis l'aéroport, il est possible de louer une voiture ou de prendre les bus ",
+                    "link": "Etna Trasporti",
+                    "afterLink": ", qui assurent des liaisons fréquentes entre Catane et Raguse tout au long de la journée."
+                }
             },
             "directions": {
                 "title": "Comment s'y rendre",
@@ -109,7 +113,7 @@
             },
             "accommodation": {
                 "title": "Où dormir",
-                "description": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres. Raguse et ses environs proposent également de nombreuses solutions, notamment des hôtels, des chambres d'hôtes et des locations de vacances adaptées à tous les besoins."
+                "description": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres (voir FAQ). Raguse et ses environs proposent également de nombreuses solutions, notamment des hôtels, des chambres d'hôtes et des locations de vacances adaptées à tous les besoins."
             }
         }
     },

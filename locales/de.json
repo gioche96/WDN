@@ -101,7 +101,11 @@
         "items": {
             "arrival": {
                 "title": "Für Gäste mit längerer Anreise",
-                "description": "Der Flughafen Catania ist der wichtigste Ankunftsort für Gäste, die mit dem Flugzeug nach Sizilien reisen. Von dort aus könnt ihr ein Auto mieten oder die Busse von Etna Trasporti nehmen, die Catania tagsüber regelmäßig mit Ragusa verbinden."
+                "description": {
+                    "beforeLink": "Der Flughafen Catania ist der wichtigste Ankunftsort für Gäste, die mit dem Flugzeug nach Sizilien reisen. Von dort aus könnt ihr ein Auto mieten oder die Busse von ",
+                    "link": "Etna Trasporti",
+                    "afterLink": " nehmen, die Catania tagsüber regelmäßig mit Ragusa verbinden."
+                }
             },
             "directions": {
                 "title": "Anfahrt",
@@ -109,7 +113,7 @@
             },
             "accommodation": {
                 "title": "Übernachtungsmöglichkeiten",
-                "description": "Für Gäste, die über Nacht bleiben möchten, verfügt das Relais über eine begrenzte Anzahl an Zimmern. Alternativ bieten Ragusa und die Umgebung zahlreiche Unterkünfte, darunter Hotels, Bed & Breakfasts und Ferienwohnungen für unterschiedliche Bedürfnisse."
+                "description": "Für Gäste, die über Nacht bleiben möchten, verfügt das Relais über eine begrenzte Anzahl an Zimmern (siehe FAQ). Alternativ bieten Ragusa und die Umgebung zahlreiche Unterkünfte, darunter Hotels, Bed & Breakfasts und Ferienwohnungen für unterschiedliche Bedürfnisse."
             }
         }
     },

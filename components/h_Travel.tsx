@@ -9,24 +9,20 @@ export default function Travel() {
     const travelInformation = [
         {
             icon: Plane,
+            key: "arrival",
             title: t("travel.items.arrival.title"),
-            description: t(
-                "travel.items.arrival.description"
-            ),
         },
         {
             icon: Car,
+            key: "directions",
             title: t("travel.items.directions.title"),
-            description: t(
-                "travel.items.directions.description"
-            ),
+            description: t("travel.items.directions.description"),
         },
         {
             icon: BedDouble,
+            key: "accommodation",
             title: t("travel.items.accommodation.title"),
-            description: t(
-                "travel.items.accommodation.description"
-            ),
+            description: t("travel.items.accommodation.description"),
         },
     ];
 
@@ -63,7 +59,22 @@ export default function Travel() {
                                 </h3>
 
                                 <p className="mx-auto mt-5 max-w-5xl space-y-4 text-center text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[13pt] md:leading-7">
-                                    {item.description}
+                                    {item.key === "arrival" ? (
+                                        <>
+                                            {t("travel.items.arrival.description.beforeLink")}
+                                            <a
+                                                href="https://www.etnatrasporti.it/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                                            >
+                                                {t("travel.items.arrival.description.link")}
+                                            </a>
+                                            {t("travel.items.arrival.description.afterLink")}
+                                        </>
+                                    ) : (
+                                        item.description
+                                    )}
                                 </p>
                             </article>
                         );

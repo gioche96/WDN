@@ -101,7 +101,11 @@
         "items": {
             "arrival": {
                 "title": "For those travelling from afar",
-                "description": "Catania Airport is the main arrival point for guests travelling to Sicily by plane. From there, you can rent a car or take an Etna Trasporti bus, which provides frequent connections between Catania and Ragusa throughout the day."
+                "description": {
+                    "beforeLink": "Catania Airport is the main arrival point for guests travelling to Sicily by plane. From there, you can rent a car or take an ",
+                    "link": "Etna Trasporti",
+                    "afterLink": " bus, which provides frequent connections between Catania and Ragusa throughout the day."
+                }
             },
             "directions": {
                 "title": "How to get there",
@@ -109,7 +113,7 @@
             },
             "accommodation": {
                 "title": "Where to stay",
-                "description": "For guests who would like to stay overnight, the Relais has a limited number of rooms available. Alternatively, Ragusa and the surrounding area offer many options, including hotels, B&Bs and holiday homes to suit every need."
+                "description": "For guests who would like to stay overnight, the Relais has a limited number of rooms available (see FAQ). Alternatively, Ragusa and the surrounding area offer many options, including hotels, B&Bs and holiday homes to suit every need."
             }
         }
     },
