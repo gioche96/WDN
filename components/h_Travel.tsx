@@ -1,6 +1,10 @@
 "use client";
 
-import { BedDouble, Car, Plane } from "lucide-react";
+import {
+    BedDouble,
+    MessageCircle,
+    Plane,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function Travel() {
@@ -13,21 +17,25 @@ export default function Travel() {
             title: t("travel.items.arrival.title"),
         },
         {
-            icon: Car,
-            key: "directions",
-            title: t("travel.items.directions.title"),
-            description: t("travel.items.directions.description"),
-        },
-        {
             icon: BedDouble,
             key: "accommodation",
             title: t("travel.items.accommodation.title"),
-            description: t("travel.items.accommodation.description"),
+            description: t(
+                "travel.items.accommodation.description"
+            ),
+        },
+        {
+            icon: MessageCircle,
+            key: "community",
+            title: t("travel.items.community.title"),
         },
     ];
 
     return (
-        <section id="travel" className="bg-white px-6 py-10 md:py-15">
+        <section
+            id="travel"
+            className="bg-white px-6 py-10 md:py-15"
+        >
             <div className="mx-auto max-w-7xl px-6 text-center">
                 <div className="mx-auto mb-10 w-full md:mb-12">
                     <p className="mb-4 text-center text-[10pt] uppercase tracking-[0.3em] md:text-[13pt] text-black">
@@ -61,16 +69,42 @@ export default function Travel() {
                                 <p className="mx-auto mt-5 max-w-5xl space-y-4 text-center text-[12pt] leading-6.5 text-black/70 md:space-y-6 md:text-[13pt] md:leading-7">
                                     {item.key === "arrival" ? (
                                         <>
-                                            {t("travel.items.arrival.description.beforeLink")}
+                                            {t(
+                                                "travel.items.arrival.description.beforeLink"
+                                            )}
                                             <a
-                                                href="https://www.etnatrasporti.it/"
+                                                href="https://www.etnatrasporti.it"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="underline underline-offset-2 transition-opacity hover:opacity-70"
                                             >
-                                                {t("travel.items.arrival.description.link")}
+                                                {t(
+                                                    "travel.items.arrival.description.link"
+                                                )}
                                             </a>
-                                            {t("travel.items.arrival.description.afterLink")}
+                                            {t(
+                                                "travel.items.arrival.description.afterLink"
+                                            )}
+                                        </>
+                                    ) : item.key ===
+                                        "community" ? (
+                                        <>
+                                            {t(
+                                                "travel.items.community.description.beforeLink"
+                                            )}
+                                            <a
+                                                href="https://chat.whatsapp.com/HLIDLbxukx1EL6eT2OBdcF"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                                            >
+                                                {t(
+                                                    "travel.items.community.description.link"
+                                                )}
+                                            </a>
+                                            {t(
+                                                "travel.items.community.description.afterLink"
+                                            )}
                                         </>
                                     ) : (
                                         item.description

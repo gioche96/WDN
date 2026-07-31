@@ -48,14 +48,14 @@
         "goToPhoto": "Go to photo {{number}}: {{subtitle}}",
         "enlargePhoto": "Enlarge photo: {{subtitle}}",
         "images": {
-            "1": "Turin · February 2020",
-            "2": "Mount Etna · July 2020",
-            "3": "Taormina · July 2020",
-            "4": "Ragusa · July 2020",
-            "5": "Marmore Falls · August 2020",
-            "6": "Marmore Falls · August 2020",
-            "7": "Basel · March 2021",
-            "8": "Rome · August 2020"
+            "1": "Paris · March 2025",
+            "2": "Bannalpsee · August 2025",
+            "3": "Le Tenet · February 2023",
+            "4": "Rigi Kulm · March 2021",
+            "5": "Loano · January 2025",
+            "6": "Oberried · June 2023",
+            "7": "New York · May 2026",
+            "8": "Colmar · January 2023"
         }
     },
     "program": {
@@ -107,13 +107,17 @@
                     "afterLink": " bus, which provides frequent connections between Catania and Ragusa throughout the day."
                 }
             },
-            "directions": {
-                "title": "How to get there",
-                "description": "Relais Chiaramonte is easily accessible by car and is approximately 15 minutes from the centre of Ragusa. The venue has a large private car park reserved for guests."
-            },
             "accommodation": {
                 "title": "Where to stay",
                 "description": "For guests who would like to stay overnight, the Relais has a limited number of rooms available (see FAQ). Alternatively, Ragusa and the surrounding area offer many options, including hotels, B&Bs and holiday homes to suit every need."
+            },
+            "community": {
+                "title": "Let’s connect",
+                "description": {
+                    "beforeLink": "We have created a WhatsApp group for everyone attending the wedding. It will be a place to get to know one another, stay in touch and share useful information before the celebration. ",
+                    "link": "Join the WhatsApp group",
+                    "afterLink": "."
+                }
             }
         }
     },

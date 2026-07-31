@@ -48,14 +48,14 @@
         "goToPhoto": "Zu Foto {{number}} wechseln: {{subtitle}}",
         "enlargePhoto": "Foto vergrößern: {{subtitle}}",
         "images": {
-            "1": "Turin · Februar 2020",
-            "2": "Ätna · Juli 2020",
-            "3": "Taormina · Juli 2020",
-            "4": "Ragusa · Juli 2020",
-            "5": "Marmore-Wasserfälle · August 2020",
-            "6": "Marmore-Wasserfälle · August 2020",
-            "7": "Basel · März 2021",
-            "8": "Rom · August 2020"
+            "1": "Paris · März 2025",
+            "2": "Bannalpsee · August 2025",
+            "3": "Le Tenet · Februar 2023",
+            "4": "Rigi Kulm · März 2021",
+            "5": "Loano · Januar 2025",
+            "6": "Oberried · Juni 2023",
+            "7": "New York · Mai 2026",
+            "8": "Colmar · Januar 2023"
         }
     },
     "program": {
@@ -107,13 +107,17 @@
                     "afterLink": " nehmen, die Catania tagsüber regelmäßig mit Ragusa verbinden."
                 }
             },
-            "directions": {
-                "title": "Anfahrt",
-                "description": "Das Relais Chiaramonte ist bequem mit dem Auto erreichbar und liegt etwa 15 Minuten vom Zentrum von Ragusa entfernt. Die Unterkunft verfügt über einen großen, für Gäste reservierten Parkplatz."
-            },
             "accommodation": {
                 "title": "Übernachtungsmöglichkeiten",
                 "description": "Für Gäste, die über Nacht bleiben möchten, verfügt das Relais über eine begrenzte Anzahl an Zimmern (siehe FAQ). Alternativ bieten Ragusa und die Umgebung zahlreiche Unterkünfte, darunter Hotels, Bed & Breakfasts und Ferienwohnungen für unterschiedliche Bedürfnisse."
+            },
+            "community": {
+                "title": "Lernt euch kennen",
+                "description": {
+                    "beforeLink": "Wir haben eine WhatsApp-Gruppe für alle Gäste eingerichtet, die an der Hochzeit teilnehmen. Dort könnt ihr euch kennenlernen, miteinander kommunizieren und vor der Feier nützliche Informationen austauschen. ",
+                    "link": "Der WhatsApp-Gruppe beitreten",
+                    "afterLink": "."
+                }
             }
         }
     },

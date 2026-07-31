@@ -48,14 +48,14 @@
         "goToPhoto": "Aller à la photo {{number}} : {{subtitle}}",
         "enlargePhoto": "Agrandir la photo : {{subtitle}}",
         "images": {
-            "1": "Turin · Février 2020",
-            "2": "Etna · Juillet 2020",
-            "3": "Taormine · Juillet 2020",
-            "4": "Raguse · Juillet 2020",
-            "5": "Cascades des Marmore · Août 2020",
-            "6": "Cascades des Marmore · Août 2020",
-            "7": "Bâle · Mars 2021",
-            "8": "Rome · Août 2020"
+            "1": "Paris · Mars 2025",
+            "2": "Bannalpsee · Août 2025",
+            "3": "Le Tenet · Février 2023",
+            "4": "Rigi Kulm · Mars 2021",
+            "5": "Loano · Janvier 2025",
+            "6": "Oberried · Juin 2023",
+            "7": "New York · Mai 2026",
+            "8": "Colmar · Janvier 2023"
         }
     },
     "program": {
@@ -107,13 +107,17 @@
                     "afterLink": ", qui assurent des liaisons fréquentes entre Catane et Raguse tout au long de la journée."
                 }
             },
-            "directions": {
-                "title": "Comment s'y rendre",
-                "description": "Le Relais Chiaramonte est facilement accessible en voiture et se trouve à environ 15 minutes du centre de Raguse. L'établissement dispose d'un grand parking privé réservé aux invités."
-            },
             "accommodation": {
                 "title": "Où dormir",
                 "description": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres (voir FAQ). Raguse et ses environs proposent également de nombreuses solutions, notamment des hôtels, des chambres d'hôtes et des locations de vacances adaptées à tous les besoins."
+            },
+            "community": {
+                "title": "Faisons connaissance",
+                "description": {
+                    "beforeLink": "Nous avons créé un groupe WhatsApp pour toutes les personnes qui participeront au mariage. Vous pourrez faire connaissance, communiquer entre vous et partager des informations utiles avant la célébration. ",
+                    "link": "Rejoindre le groupe WhatsApp",
+                    "afterLink": "."
+                }
             }
         }
     },

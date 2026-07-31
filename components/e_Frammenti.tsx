@@ -108,7 +108,8 @@ export default function Frammenti() {
                 offsetRef.current += cycleWidth;
             }
 
-            track.style.transform = `translate3d(${offsetRef.current}px, 0, 0)`;
+            track.style.transform =
+                `translate3d(${offsetRef.current}px, 0, 0)`;
 
             if (itemStepRef.current > 0) {
                 const currentIndex =
@@ -218,13 +219,21 @@ export default function Frammenti() {
                                         >
                                             <Image
                                                 src={image.src}
-                                                alt={t("fragments.photoAlt", {
-                                                    number:
-                                                        (index %
-                                                            images.length) +
-                                                        1,
-                                                })}
+                                                alt={t(
+                                                    "fragments.photoAlt",
+                                                    {
+                                                        number:
+                                                            (index %
+                                                                images.length) +
+                                                            1,
+                                                    }
+                                                )}
                                                 fill
+                                                loading={
+                                                    index === 0
+                                                        ? "eager"
+                                                        : "lazy"
+                                                }
                                                 sizes="300px"
                                                 className="object-cover"
                                             />
@@ -245,7 +254,9 @@ export default function Frammenti() {
                         <button
                             type="button"
                             onClick={goToPrevious}
-                            aria-label={t("fragments.previousPhoto")}
+                            aria-label={t(
+                                "fragments.previousPhoto"
+                            )}
                             className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         >
                             <ChevronLeft
@@ -257,7 +268,9 @@ export default function Frammenti() {
                         <button
                             type="button"
                             onClick={goToNext}
-                            aria-label={t("fragments.nextPhoto")}
+                            aria-label={t(
+                                "fragments.nextPhoto"
+                            )}
                             className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         >
                             <ChevronRight
@@ -273,13 +286,16 @@ export default function Frammenti() {
                                 key={image.src}
                                 type="button"
                                 onClick={() => goToImage(index)}
-                                aria-label={t("fragments.goToPhoto", {
-                                    number: index + 1,
-                                    subtitle: image.subtitle,
-                                })}
+                                aria-label={t(
+                                    "fragments.goToPhoto",
+                                    {
+                                        number: index + 1,
+                                        subtitle: image.subtitle,
+                                    }
+                                )}
                                 className={`h-2 rounded-full transition-all duration-300 ${activeImage === index
-                                    ? "w-7 bg-[#6D1F32]"
-                                    : "w-2 bg-[#C6B182]/50 hover:bg-[#C6B182]"
+                                        ? "w-7 bg-[#6D1F32]"
+                                        : "w-2 bg-[#C6B182]/50 hover:bg-[#C6B182]"
                                     }`}
                             />
                         ))}
@@ -301,9 +317,12 @@ export default function Frammenti() {
                                         isSelected ? null : index
                                     )
                                 }
-                                aria-label={t("fragments.enlargePhoto", {
-                                    subtitle: image.subtitle,
-                                })}
+                                aria-label={t(
+                                    "fragments.enlargePhoto",
+                                    {
+                                        subtitle: image.subtitle,
+                                    }
+                                )}
                                 aria-pressed={isSelected}
                                 className={`
                                     group relative overflow-hidden
@@ -322,10 +341,18 @@ export default function Frammenti() {
                             >
                                 <Image
                                     src={image.src}
-                                    alt={t("fragments.photoAlt", {
-                                        number: index + 1,
-                                    })}
+                                    alt={t(
+                                        "fragments.photoAlt",
+                                        {
+                                            number: index + 1,
+                                        }
+                                    )}
                                     fill
+                                    loading={
+                                        index === 0
+                                            ? "eager"
+                                            : "lazy"
+                                    }
                                     sizes="(min-width: 1280px) 40vw, 50vw"
                                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                                 />

@@ -48,14 +48,14 @@
         "goToPhoto": "Vai alla foto {{number}}: {{subtitle}}",
         "enlargePhoto": "Ingrandisci foto: {{subtitle}}",
         "images": {
-            "1": "Torino · Febbraio 2020",
-            "2": "Etna · Luglio 2020",
-            "3": "Taormina · Luglio 2020",
-            "4": "Ragusa · Luglio 2020",
-            "5": "Cascate delle Marmore · Agosto 2020",
-            "6": "Cascate delle Marmore · Agosto 2020",
-            "7": "Basilea · Marzo 2021",
-            "8": "Roma · Agosto 2020"
+            "1": "Parigi · Marzo 2025",
+            "2": "Bannalpsee · Agosto 2025",
+            "3": "Le Tenet · Febbraio 2023",
+            "4": "Rigi Kulm · Marzo 2021",
+            "5": "Loano · Gennaio 2025",
+            "6": "Oberried · Giugno 2023",
+            "7": "New York · Maggio 2026",
+            "8": "Colmar · Gennaio 2023"
         }
     },
     "program": {
@@ -107,13 +107,17 @@
                     "afterLink": ", che collegano Catania a Ragusa con corse frequenti durante la giornata."
                 }
             },
-            "directions": {
-                "title": "Come arrivare",
-                "description": "Il Relais Chiaramonte è facilmente raggiungibile in automobile e dista circa 15 minuti dal centro di Ragusa. La struttura dispone di un ampio parcheggio riservato agli ospiti."
-            },
             "accommodation": {
                 "title": "Dove dormire",
                 "description": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere (vedi FAQ). In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
+            },
+            "community": {
+                "title": "Connettiamoci",
+                "description": {
+                    "beforeLink": "Abbiamo creato un gruppo WhatsApp per tutti coloro che parteciperanno al matrimonio. Potrete conoscervi, comunicare tra voi e condividere informazioni utili prima della giornata. ",
+                    "link": "Entra nel gruppo WhatsApp",
+                    "afterLink": "."
+                }
             }
         }
     },
