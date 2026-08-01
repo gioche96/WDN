@@ -109,7 +109,11 @@
             },
             "accommodation": {
                 "title": "Où dormir",
-                "description": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres (voir FAQ). Raguse et ses environs proposent également de nombreuses solutions, notamment des hôtels, des chambres d'hôtes et des locations de vacances adaptées à tous les besoins."
+                "description": {
+                    "beforeFaq": "Pour les personnes qui souhaitent passer la nuit sur place, le Relais dispose d'un nombre limité de chambres (",
+                    "faq": "voir la FAQ",
+                    "afterFaq": "). Raguse et ses environs proposent également de nombreux hôtels, chambres d'hôtes et locations de vacances."
+                }
             },
             "community": {
                 "title": "Faisons connaissance",
@@ -147,25 +151,87 @@
         "subtitle": "Informations",
         "title": "Questions fréquentes",
         "questions": {
-            "confirmation": {
-                "question": "Jusqu'à quand pouvons-nous confirmer notre présence ?",
-                "answer": "Nous vous remercions de confirmer votre présence avant la date indiquée sur l'invitation."
+            "arrival": {
+                "question": "À quelle heure dois-je arriver ?",
+                "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités et de profiter d'un verre de bienvenue (offert)."
+            },
+            "location": {
+                "question": "La cérémonie et la réception auront-elles lieu au même endroit ?",
+                "answer": "Oui ! Toute la journée se déroulera au Relais Chiaramonte - Sala Qirat. La cérémonie est prévue en extérieur, mais en cas de mauvais temps, des costumes et des gilets de sauvetage seront à votre disposition."
             },
             "dressCode": {
                 "question": "Y a-t-il un dress code ?",
-                "answer": "Une tenue élégante est souhaitée. Nous ajouterons ici d'éventuelles précisions."
-            },
-            "allergies": {
-                "question": "Peut-on signaler des allergies ou des intolérances ?",
-                "answer": "Oui. Vous pourrez indiquer vos allergies, intolérances et besoins alimentaires dans le formulaire RSVP."
+                "intro": "Oui, une tenue élégante est demandée. Compte tenu de la saison et des espaces extérieurs, nous vous recommandons de porter des chaussures confortables.",
+                "women": {
+                    "label": "Pour les femmes",
+                    "text": "la palette de couleurs recommandée est ",
+                    "colors": [
+                        {
+                            "name": "Warm White",
+                            "hex": "#F5F1E6"
+                        },
+                        {
+                            "name": "Pearl Gray",
+                            "hex": "#D9D5D2"
+                        },
+                        {
+                            "name": "Sandstone",
+                            "hex": "#C6B182"
+                        },
+                        {
+                            "name": "Sage Green",
+                            "hex": "#979775"
+                        },
+                        {
+                            "name": "Blush Pink",
+                            "hex": "#E8C8C8"
+                        },
+                        {
+                            "name": "Deep Burgundy",
+                            "hex": "#6D1F32"
+                        }
+                    ]
+                },
+                "men": {
+                    "label": "Pour les hommes",
+                    "text": "En plus de votre cravate de cérémonie, apportez-en une deuxième et laissez libre cours à votre imagination ! La bride team élira la cravate la plus « horrible » et le gagnant recevra un prix spécial."
+                }
             },
             "children": {
-                "question": "Les enfants sont-ils invités ?",
-                "answer": "Nous ajouterons ici les informations concernant la participation des enfants."
+                "question": "Les enfants sont-ils les bienvenus ?",
+                "answer": "Non, Giorgio n'aime pas les enfants... on plaisante ! Bien sûr qu'ils sont les bienvenus. Merci simplement de les indiquer dans votre RSVP."
+            },
+            "rsvpMeaning": {
+                "question": "Mais que signifie RSVP ?",
+                "answer": "Cela signifie « Répondez s'il vous plaît », une façon très élégante de demander simplement : « Serez-vous parmi nous ? »"
+            },
+            "allergies": {
+                "question": "Puis-je signaler des allergies ou un régime alimentaire particulier ?",
+                "answer": "Bien sûr. Lors de votre confirmation de présence, vous pourrez nous indiquer vos allergies, intolérances ou toute autre exigence alimentaire particulière. Nous ferons de notre mieux pour satisfaire tout le monde."
+            },
+            "accommodation": {
+                "question": "Est-il possible de dormir sur place ?",
+                "answer": {
+                    "beforeEmail": "Oui. Le Relais dispose d'un nombre limité de chambres. Si vous souhaitez y séjourner, nous vous conseillons de réserver le plus tôt possible via Booking, le site officiel ou en écrivant directement à ",
+                    "email": "info@relaischiaramonte.com",
+                    "afterEmail": ", en précisant que vous participez à notre mariage afin de bénéficier du tarif réservé à nos invités."
+                }
             },
             "parking": {
-                "question": "Un parking est-il disponible ?",
-                "answer": "Les informations concernant le parking seront ajoutées dès qu'elles seront confirmées."
+                "question": "Y a-t-il un parking ?",
+                "answer": "Le meilleur moyen d'arriver serait en hélicoptère... mais oui ! Le Relais se trouve à environ 15 minutes de Raguse et dispose d'un grand parking gratuit réservé aux invités."
+            },
+            "confirmation": {
+                "question": "Jusqu'à quand dois-je confirmer ma présence ?",
+                "answer": "Vous êtes déjà un peu en retard. Merci de confirmer votre présence avant la date indiquée sur le site, sinon le chef risque de ne plus nous adresser la parole."
+            },
+            "modify": {
+                "question": "Puis-je modifier ma réponse après avoir envoyé le RSVP ?",
+                "answer": "Oui. Si vos projets changent ou si vous souhaitez mettre à jour les informations transmises, contactez-nous directement."
+            },
+            "unplugged": {
+                "question": "La cérémonie sera-t-elle « unplugged » ?",
+                "answer": "Pendant la cérémonie, nous vous invitons à mettre votre téléphone de côté et à vivre pleinement ce moment avec nous. Des photographes et vidéastes immortaliseront cette journée, alors détendez-vous et profitez-en. Après la cérémonie, n'hésitez pas à prendre autant de photos et de vidéos que vous le souhaitez et, si cela vous fait plaisir, vous pourrez les partager ICI."
             }
         }
     },

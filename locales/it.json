@@ -109,7 +109,11 @@
             },
             "accommodation": {
                 "title": "Dove dormire",
-                "description": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere (vedi FAQ). In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
+                "description": {
+                    "beforeFaq": "Per chi desidera fermarsi a dormire, il Relais dispone di un numero limitato di camere (",
+                    "faq": "vedi FAQ",
+                    "afterFaq": "). In alternativa, Ragusa e i dintorni offrono numerose soluzioni tra hotel, B&B e case vacanza per ogni esigenza."
+                }
             },
             "community": {
                 "title": "Connettiamoci",
@@ -147,25 +151,87 @@
         "subtitle": "Informazioni",
         "title": "Domande frequenti",
         "questions": {
-            "confirmation": {
-                "question": "Entro quando dobbiamo confermare la presenza?",
-                "answer": "Vi chiediamo di confermare la vostra presenza entro la data che comunicheremo nell'invito."
+            "arrival": {
+                "question": "A che ora devo arrivare?",
+                "answer": "Ti consigliamo di arrivare almeno 30 minuti prima dell'inizio della cerimonia. Chi arriva per tempo avrà modo di conoscere altre persone e di godersi un bel drink (offerto)."
+            },
+            "location": {
+                "question": "La cerimonia e il ricevimento si svolgono nello stesso luogo?",
+                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo sono disponibili costumi e salvagenti."
             },
             "dressCode": {
-                "question": "È previsto un dress code?",
-                "answer": "Il dress code sarà elegante. Aggiungeremo qui eventuali indicazioni più specifiche."
-            },
-            "allergies": {
-                "question": "È possibile comunicare allergie o intolleranze?",
-                "answer": "Sì. Potrete indicare allergie, intolleranze ed esigenze alimentari nel modulo RSVP."
+                "question": "C'è un dress code?",
+                "intro": "Sì, il dress code è elegante. Considerando la stagione e gli spazi esterni, consigliamo scarpe comode.",
+                "women": {
+                    "label": "Per le donne",
+                    "text": "la palette consigliata è ",
+                    "colors": [
+                        {
+                            "name": "Warm White",
+                            "hex": "#F5F1E6"
+                        },
+                        {
+                            "name": "Pearl Gray",
+                            "hex": "#D9D5D2"
+                        },
+                        {
+                            "name": "Sandstone",
+                            "hex": "#C6B182"
+                        },
+                        {
+                            "name": "Sage Green",
+                            "hex": "#979775"
+                        },
+                        {
+                            "name": "Blush Pink",
+                            "hex": "#E8C8C8"
+                        },
+                        {
+                            "name": "Deep Burgundy",
+                            "hex": "#6D1F32"
+                        }
+                    ]
+                },
+                "men": {
+                    "label": "Per gli uomini",
+                    "text": "oltre alla classica cravatta da cerimonia, portatene una seconda e sbizzarritevi con la fantasia! Il bride-team voterà la cravatta più \"brutta\" e il vincitore riceverà un premio speciale."
+                }
             },
             "children": {
-                "question": "I bambini sono invitati?",
-                "answer": "Inseriremo qui le indicazioni relative alla partecipazione dei bambini."
+                "question": "I bambini sono i benvenuti?",
+                "answer": "No, a Giorgio non piacciono... ma per questa volta farà un'eccezione. Ti chiediamo soltanto di indicare la loro presenza nella sezione RSVP."
+            },
+            "rsvpMeaning": {
+                "question": "Ma cosa vuol dire RSVP?",
+                "answer": "Significa \"Répondez s'il vous plaît\", un modo da nobili per chiedere semplicemente: «Ci sarai?»"
+            },
+            "allergies": {
+                "question": "È possibile segnalare allergie o esigenze alimentari?",
+                "answer": "Certamente. Durante la conferma della presenza potrai indicarci allergie, intolleranze o qualsiasi esigenza alimentare particolare: faremo il possibile per accontentare tutti."
+            },
+            "accommodation": {
+                "question": "È possibile dormire in struttura?",
+                "answer": {
+                    "beforeEmail": "Sì. Il Relais dispone di un numero limitato di camere. Se desideri pernottare, ti consigliamo di prenotare il prima possibile tramite Booking, il sito ufficiale oppure scrivendo direttamente a ",
+                    "email": "info@relaischiaramonte.com",
+                    "afterEmail": ", specificando che parteciperai al nostro matrimonio, così da poter usufruire della tariffa dedicata agli invitati."
+                }
             },
             "parking": {
                 "question": "È disponibile un parcheggio?",
-                "answer": "Aggiungeremo le informazioni sul parcheggio quando saranno confermate."
+                "answer": "Il mezzo migliore sarebbe l'elicottero... ma in generale sì! La struttura si trova a circa 15 minuti da Ragusa e dispone di un ampio parcheggio gratuito riservato agli ospiti."
+            },
+            "confirmation": {
+                "question": "Entro quando devo confermare la mia presenza?",
+                "answer": "Già sei in ritardo. Ti chiediamo gentilmente di confermare la tua partecipazione entro la data indicata sul sito, altrimenti lo chef ci toglie il saluto."
+            },
+            "modify": {
+                "question": "Posso modificare la mia risposta dopo aver inviato l'RSVP?",
+                "answer": "Sì. Se dovessi cambiare idea o avessi bisogno di aggiornare le informazioni inviate, contattaci direttamente."
+            },
+            "unplugged": {
+                "question": "La cerimonia sarà \"unplugged\"?",
+                "answer": "Durante la cerimonia ti invitiamo a mettere da parte il telefono e a vivere con noi ogni istante. Ci saranno fotografi e videomaker a raccontare la giornata, quindi rilassati e goditi il momento. Dopo la cerimonia, invece, sentiti libero di scattare tutte le foto e i video che desideri e, se ti farà piacere, potrai condividerli direttamente QUI."
             }
         }
     },

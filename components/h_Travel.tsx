@@ -20,9 +20,6 @@ export default function Travel() {
             icon: BedDouble,
             key: "accommodation",
             title: t("travel.items.accommodation.title"),
-            description: t(
-                "travel.items.accommodation.description"
-            ),
         },
         {
             icon: MessageCircle,
@@ -30,6 +27,26 @@ export default function Travel() {
             title: t("travel.items.community.title"),
         },
     ];
+
+    const openAccommodationFaq = (
+        event: React.MouseEvent<HTMLAnchorElement>
+    ) => {
+        event.preventDefault();
+
+        window.history.replaceState(
+            null,
+            "",
+            "#faq-accommodation"
+        );
+
+        window.dispatchEvent(
+            new CustomEvent("open-faq", {
+                detail: {
+                    key: "accommodation",
+                },
+            })
+        );
+    };
 
     return (
         <section
@@ -53,7 +70,7 @@ export default function Travel() {
 
                         return (
                             <article
-                                key={item.title}
+                                key={item.key}
                                 className="border-t border-black/20 pt-8 text-center"
                             >
                                 <Icon
@@ -72,6 +89,7 @@ export default function Travel() {
                                             {t(
                                                 "travel.items.arrival.description.beforeLink"
                                             )}
+
                                             <a
                                                 href="https://www.etnatrasporti.it"
                                                 target="_blank"
@@ -82,16 +100,40 @@ export default function Travel() {
                                                     "travel.items.arrival.description.link"
                                                 )}
                                             </a>
+
                                             {t(
                                                 "travel.items.arrival.description.afterLink"
                                             )}
                                         </>
                                     ) : item.key ===
-                                        "community" ? (
+                                        "accommodation" ? (
+                                        <>
+                                            {t(
+                                                "travel.items.accommodation.description.beforeFaq"
+                                            )}
+
+                                            <a
+                                                href="#faq-accommodation"
+                                                onClick={
+                                                    openAccommodationFaq
+                                                }
+                                                className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                                            >
+                                                {t(
+                                                    "travel.items.accommodation.description.faq"
+                                                )}
+                                            </a>
+
+                                            {t(
+                                                "travel.items.accommodation.description.afterFaq"
+                                            )}
+                                        </>
+                                    ) : (
                                         <>
                                             {t(
                                                 "travel.items.community.description.beforeLink"
                                             )}
+
                                             <a
                                                 href="https://chat.whatsapp.com/HLIDLbxukx1EL6eT2OBdcF"
                                                 target="_blank"
@@ -102,12 +144,11 @@ export default function Travel() {
                                                     "travel.items.community.description.link"
                                                 )}
                                             </a>
+
                                             {t(
                                                 "travel.items.community.description.afterLink"
                                             )}
                                         </>
-                                    ) : (
-                                        item.description
                                     )}
                                 </p>
                             </article>

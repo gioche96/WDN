@@ -109,7 +109,11 @@
             },
             "accommodation": {
                 "title": "Where to stay",
-                "description": "For guests who would like to stay overnight, the Relais has a limited number of rooms available (see FAQ). Alternatively, Ragusa and the surrounding area offer many options, including hotels, B&Bs and holiday homes to suit every need."
+                "description": {
+                    "beforeFaq": "For guests who would like to stay overnight, the Relais has a limited number of rooms available (",
+                    "faq": "see FAQ",
+                    "afterFaq": "). Alternatively, Ragusa and the surrounding area offer a wide range of hotels, B&Bs and holiday homes."
+                }
             },
             "community": {
                 "title": "Let’s connect",
@@ -145,27 +149,89 @@
     },
     "faq": {
         "subtitle": "Information",
-        "title": "Frequently asked questions",
+        "title": "Frequently Asked Questions",
         "questions": {
-            "confirmation": {
-                "question": "When should we confirm our attendance?",
-                "answer": "Please confirm your attendance by the date that will be indicated in the invitation."
+            "arrival": {
+                "question": "What time should I arrive?",
+                "answer": "We recommend arriving at least 30 minutes before the ceremony begins. Arriving early will give you the chance to meet other guests and enjoy a welcome drink (on us)."
+            },
+            "location": {
+                "question": "Will the ceremony and reception take place at the same venue?",
+                "answer": "Yes! The entire day will take place at Relais Chiaramonte - Sala Qirat. The ceremony is planned outdoors, but in case of bad weather, costumes and life jackets will be available."
             },
             "dressCode": {
                 "question": "Is there a dress code?",
-                "answer": "The dress code will be formal. We will add any further details here."
-            },
-            "allergies": {
-                "question": "Can we communicate allergies or dietary restrictions?",
-                "answer": "Yes. You will be able to indicate allergies, intolerances and dietary requirements in the RSVP form."
+                "intro": "Yes, the dress code is elegant. Since part of the event takes place outdoors, we recommend wearing comfortable shoes.",
+                "women": {
+                    "label": "For ladies",
+                    "text": "the recommended colour palette is ",
+                    "colors": [
+                        {
+                            "name": "Warm White",
+                            "hex": "#F5F1E6"
+                        },
+                        {
+                            "name": "Pearl Gray",
+                            "hex": "#D9D5D2"
+                        },
+                        {
+                            "name": "Sandstone",
+                            "hex": "#C6B182"
+                        },
+                        {
+                            "name": "Sage Green",
+                            "hex": "#979775"
+                        },
+                        {
+                            "name": "Blush Pink",
+                            "hex": "#E8C8C8"
+                        },
+                        {
+                            "name": "Deep Burgundy",
+                            "hex": "#6D1F32"
+                        }
+                    ]
+                },
+                "men": {
+                    "label": "For gentlemen",
+                    "text": "Besides your formal wedding tie, bring a second one and get creative! The bride squad will vote for the 'ugliest' tie, and the winner will receive a special prize."
+                }
             },
             "children": {
-                "question": "Are children invited?",
-                "answer": "We will provide information here regarding children's participation."
+                "question": "Are children welcome?",
+                "answer": "No, Giorgio doesn't like children... just kidding! We'd love to have them with us. Please remember to include them in your RSVP."
+            },
+            "rsvpMeaning": {
+                "question": "What does RSVP mean?",
+                "answer": "It stands for the French expression \"Répondez s'il vous plaît\", which is simply a fancy way of asking: \"Will you be there?\""
+            },
+            "allergies": {
+                "question": "Can I let you know about allergies or dietary requirements?",
+                "answer": "Absolutely. When confirming your attendance, you'll be able to let us know about allergies, intolerances or any dietary requirements. We'll do our best to accommodate everyone."
+            },
+            "accommodation": {
+                "question": "Is it possible to stay overnight at the venue?",
+                "answer": {
+                    "beforeEmail": "Yes. The Relais has a limited number of rooms available. If you would like to stay overnight, we recommend booking as early as possible through Booking, the official website, or by emailing ",
+                    "email": "info@relaischiaramonte.com",
+                    "afterEmail": ", making sure to mention that you will be attending our wedding so you can benefit from the special rate reserved for our guests."
+                }
             },
             "parking": {
                 "question": "Is parking available?",
-                "answer": "Parking information will be added once confirmed."
+                "answer": "The best way to arrive would be by helicopter... but yes! The venue is about 15 minutes from Ragusa and offers a large complimentary parking area reserved for guests."
+            },
+            "confirmation": {
+                "question": "When should I confirm my attendance?",
+                "answer": "You're already late. Please confirm your attendance by the date indicated on the website, otherwise the chef might stop talking to us."
+            },
+            "modify": {
+                "question": "Can I change my RSVP after submitting it?",
+                "answer": "Yes. If your plans change or you need to update the information you've provided, simply get in touch with us."
+            },
+            "unplugged": {
+                "question": "Will the ceremony be unplugged?",
+                "answer": "During the ceremony, we'd love for you to put your phone away and simply enjoy the moment with us. Our photographers and videographers will capture every memory, so relax and be fully present. After the ceremony, feel free to take as many photos and videos as you'd like and, if you wish, you can share them HERE."
             }
         }
     },
