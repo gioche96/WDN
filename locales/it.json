@@ -157,7 +157,7 @@
             },
             "location": {
                 "question": "La cerimonia e il ricevimento si svolgono nello stesso luogo?",
-                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo sono disponibili costumi e salvagenti."
+                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo saranno disponibili costumi e salvagenti."
             },
             "dressCode": {
                 "question": "C'è un dress code?",
@@ -194,7 +194,7 @@
                 },
                 "men": {
                     "label": "Per gli uomini",
-                    "text": "oltre alla classica cravatta da cerimonia, portatene una seconda e sbizzarritevi con la fantasia! Il bride-team voterà la cravatta più \"brutta\" e il vincitore riceverà un premio speciale."
+                    "text": "Oltre alla cravatta formale per il matrimonio, portane una seconda e dai libero sfogo alla tua creatività! Il bride-team voterà la cravatta più \"brutta\" e il vincitore riceverà un premio speciale."
                 }
             },
             "children": {
@@ -219,7 +219,7 @@
             },
             "parking": {
                 "question": "È disponibile un parcheggio?",
-                "answer": "Il mezzo migliore sarebbe l'elicottero... ma in generale sì! La struttura si trova a circa 15 minuti da Ragusa e dispone di un ampio parcheggio gratuito riservato agli ospiti."
+                "answer": "Il mezzo migliore per arrivare sarebbe l'elicottero... ma in generale sì! La struttura si trova a circa 15 minuti da Ragusa e dispone di un ampio parcheggio gratuito riservato agli ospiti."
             },
             "confirmation": {
                 "question": "Entro quando devo confermare la mia presenza?",
@@ -227,11 +227,15 @@
             },
             "modify": {
                 "question": "Posso modificare la mia risposta dopo aver inviato l'RSVP?",
-                "answer": "Sì. Se dovessi cambiare idea o avessi bisogno di aggiornare le informazioni inviate, contattaci direttamente."
+                "answer": "Sì. Se dovessi cambiare idea o avessi bisogno di aggiornare le informazioni già inviate, contattaci direttamente."
             },
             "unplugged": {
                 "question": "La cerimonia sarà \"unplugged\"?",
-                "answer": "Durante la cerimonia ti invitiamo a mettere da parte il telefono e a vivere con noi ogni istante. Ci saranno fotografi e videomaker a raccontare la giornata, quindi rilassati e goditi il momento. Dopo la cerimonia, invece, sentiti libero di scattare tutte le foto e i video che desideri e, se ti farà piacere, potrai condividerli direttamente QUI."
+                "answer": {
+                    "beforeLink": "Durante la cerimonia ti invitiamo a mettere da parte il telefono e a vivere con noi ogni istante. Ci saranno fotografi e videomaker a raccontare la giornata, quindi rilassati e goditi il momento. Dopo la cerimonia, invece, sentiti libero di scattare tutte le foto e i video che desideri e, se ti farà piacere, potrai condividerli direttamente ",
+                    "link": "QUI",
+                    "afterLink": "."
+                }
             }
         }
     },

@@ -194,7 +194,7 @@
                 },
                 "men": {
                     "label": "For gentlemen",
-                    "text": "Besides your formal wedding tie, bring a second one and get creative! The bride squad will vote for the 'ugliest' tie, and the winner will receive a special prize."
+                    "text": "Besides your formal wedding tie, bring a second one and get creative! The bride-team will vote for the 'ugliest' tie, and the winner will receive a special prize."
                 }
             },
             "children": {
@@ -227,11 +227,15 @@
             },
             "modify": {
                 "question": "Can I change my RSVP after submitting it?",
-                "answer": "Yes. If your plans change or you need to update the information you've provided, simply get in touch with us."
+                "answer": "Yes. If your plans change or you need to update the information you've already provided, simply get in touch with us."
             },
             "unplugged": {
                 "question": "Will the ceremony be unplugged?",
-                "answer": "During the ceremony, we'd love for you to put your phone away and simply enjoy the moment with us. Our photographers and videographers will capture every memory, so relax and be fully present. After the ceremony, feel free to take as many photos and videos as you'd like and, if you wish, you can share them HERE."
+                "answer": {
+                    "beforeLink": "During the ceremony, we'd love for you to put your phone away and simply enjoy the moment with us. Our photographers and videographers will capture every memory, so relax and be fully present. After the ceremony, feel free to take as many photos and videos as you'd like and, if you wish, you can share them ",
+                    "link": "HERE",
+                    "afterLink": "."
+                }
             }
         }
     },

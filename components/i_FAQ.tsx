@@ -249,38 +249,30 @@ export default function FAQ() {
                                                             )}
                                                             :
                                                         </span>{" "}
-                                                        <span>
-                                                            {t(
-                                                                "faq.questions.dressCode.women.text"
-                                                            )}
-                                                        </span>{" "}
-                                                        {dressCodeColors.map(
-                                                            (
-                                                                color
-                                                            ) => (
-                                                                <span
-                                                                    key={
-                                                                        color.hex
-                                                                    }
-                                                                    className="mb-1 mr-4 inline-flex items-center gap-2"
-                                                                >
-                                                                    <span
-                                                                        className="h-3.5 w-3.5 shrink-0 rounded-full border border-black/15"
-                                                                        style={{
-                                                                            backgroundColor:
-                                                                                color.hex,
-                                                                        }}
-                                                                        aria-hidden="true"
-                                                                    />
+                                                        <div className="inline">
+                                                            <span>
+                                                                {t("faq.questions.dressCode.women.text")}
+                                                            </span>
 
-                                                                    <span>
-                                                                        {
-                                                                            color.name
-                                                                        }
+                                                            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+                                                                {dressCodeColors.map((color) => (
+                                                                    <span
+                                                                        key={color.hex}
+                                                                        className="inline-flex items-center gap-2"
+                                                                    >
+                                                                        <span
+                                                                            className="h-3.5 w-3.5 shrink-0 rounded-full border border-black/15"
+                                                                            style={{
+                                                                                backgroundColor: color.hex,
+                                                                            }}
+                                                                            aria-hidden="true"
+                                                                        />
+
+                                                                        <span>{color.name}</span>
                                                                     </span>
-                                                                </span>
-                                                            )
-                                                        )}
+                                                                ))}
+                                                            </div>
+                                                        </div>
                                                     </li>
 
                                                     <li>
@@ -314,6 +306,27 @@ export default function FAQ() {
 
                                                 {t(
                                                     "faq.questions.accommodation.answer.afterEmail"
+                                                )}
+                                            </p>
+                                        ) : item.key === "unplugged" ? (
+                                            <p className="max-w-2xl leading-7 text-black/70">
+                                                {t(
+                                                    "faq.questions.unplugged.answer.beforeLink"
+                                                )}
+
+                                                <a
+                                                    href="https://TUO-LINK-QUI"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                                                >
+                                                    {t(
+                                                        "faq.questions.unplugged.answer.link"
+                                                    )}
+                                                </a>
+
+                                                {t(
+                                                    "faq.questions.unplugged.answer.afterLink"
                                                 )}
                                             </p>
                                         ) : (

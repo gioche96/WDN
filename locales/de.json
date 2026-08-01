@@ -231,7 +231,11 @@
             },
             "unplugged": {
                 "question": "Wird die Zeremonie „unplugged“ sein?",
-                "answer": "Während der Zeremonie möchten wir euch bitten, das Handy beiseitezulegen und den Moment gemeinsam mit uns zu genießen. Unsere Fotografen und Videografen halten alle Erinnerungen fest, also lehnt euch zurück und erlebt den Augenblick. Nach der Zeremonie könnt ihr selbstverständlich so viele Fotos und Videos machen, wie ihr möchtet, und sie anschließend gerne HIER mit uns teilen."
+                "answer": {
+                    "beforeLink": "Während der Zeremonie möchten wir euch bitten, das Handy beiseitezulegen und den Moment gemeinsam mit uns zu genießen. Unsere Fotografen und Videografen halten alle Erinnerungen fest, also lehnt euch zurück und erlebt den Augenblick. Nach der Zeremonie könnt ihr selbstverständlich so viele Fotos und Videos machen, wie ihr möchtet, und sie anschließend gerne ",
+                    "link": "HIER",
+                    "afterLink": " mit uns teilen."
+                }
             }
         }
     },

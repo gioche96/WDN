@@ -231,7 +231,11 @@
             },
             "unplugged": {
                 "question": "La cérémonie sera-t-elle « unplugged » ?",
-                "answer": "Pendant la cérémonie, nous vous invitons à mettre votre téléphone de côté et à vivre pleinement ce moment avec nous. Des photographes et vidéastes immortaliseront cette journée, alors détendez-vous et profitez-en. Après la cérémonie, n'hésitez pas à prendre autant de photos et de vidéos que vous le souhaitez et, si cela vous fait plaisir, vous pourrez les partager ICI."
+                "answer": {
+                    "beforeLink": "Pendant la cérémonie, nous vous invitons à mettre votre téléphone de côté et à vivre pleinement ce moment avec nous. Des photographes et vidéastes immortaliseront cette journée, alors détendez-vous et profitez-en. Après la cérémonie, n'hésitez pas à prendre autant de photos et de vidéos que vous le souhaitez et, si cela vous fait plaisir, vous pourrez les partager ",
+                    "link": "ICI",
+                    "afterLink": "."
+                }
             }
         }
     },
