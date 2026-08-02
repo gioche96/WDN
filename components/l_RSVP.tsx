@@ -500,11 +500,21 @@ export default function RSVP() {
                         <button
                             type="submit"
                             disabled={!attendance || isSubmitting}
-                            className="mt-2 justify-self-center rounded-md border border-white px-8 py-4 text-[10pt] uppercase tracking-[0.25em] transition-colors duration-300 hover:bg-white hover:text-[#979775] disabled:cursor-not-allowed disabled:opacity-40 md:mt-4 md:px-10 md:text-sm"
+                            aria-busy={isSubmitting}
+                            className="mt-2 inline-flex items-center justify-center gap-3 justify-self-center rounded-md border border-white px-8 py-4 text-[10pt] uppercase tracking-[0.25em] transition-colors duration-300 hover:bg-white hover:text-[#979775] disabled:cursor-not-allowed disabled:opacity-40 md:mt-4 md:px-10 md:text-sm"
                         >
-                            {isSubmitting
-                                ? t("rsvp.form.submit.submitting")
-                                : t("rsvp.form.submit.default")}
+                            {isSubmitting && (
+                                <span
+                                    className="h-4 w-4 shrink-0 animate-spin rounded-full border-2 border-white/40 border-t-white"
+                                    aria-hidden="true"
+                                />
+                            )}
+
+                            <span>
+                                {isSubmitting
+                                    ? t("rsvp.form.submit.submitting")
+                                    : t("rsvp.form.submit.default")}
+                            </span>
                         </button>
                     </form>
                 )}
