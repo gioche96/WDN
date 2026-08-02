@@ -287,6 +287,12 @@ export default function FAQ() {
                                                         )}
                                                     </li>
                                                 </ul>
+                                                <p className="mt-6 text-sm italic text-black/55">
+                                                    <span className="font-medium">
+                                                        {t("faq.questions.dressCode.ps.label")}:
+                                                    </span>{" "}
+                                                    {t("faq.questions.dressCode.ps.text")}
+                                                </p>
                                             </div>
                                         ) : item.key ===
                                             "accommodation" ? (

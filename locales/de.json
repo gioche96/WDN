@@ -142,8 +142,8 @@
             "title": "Eine Geste, die über uns hinausgeht",
             "description": "Wir glauben, dass ein Moment der Freude auch zu einer Gelegenheit werden kann, etwas Gutes zu tun. Deshalb wird ein Teil der erhaltenen Geschenke einer Organisation zugutekommen, die sich täglich für Menschen einsetzt, die besondere Unterstützung benötigen.",
             "organizationLabel": "Organisation",
-            "organizationName": "Name der Organisation",
-            "organizationDescription": "Kurze Beschreibung der Mission der Organisation. Diesen Text könnt ihr ersetzen, sobald ihr das Projekt ausgewählt habt, das ihr unterstützen möchtet.",
+            "organizationName": "Human Dreams e.V.",
+            "organizationDescription": "Human Dreams e.V. ist eine gemeinnützige Organisation, die von Nicole Mtawa gegründet wurde und Kinder mit Behinderungen, schweren Erkrankungen und besonderem Betreuungsbedarf unterstützt. Mit Projekten in Tansania, Namibia und Indien bietet sie Unterkunft, medizinische Versorgung, Physiotherapie, Bildung und tägliche Unterstützung. Ihr Ziel ist es, den verletzlichsten Kindern ein würdevolles, sicheres Leben und bessere Zukunftsperspektiven zu ermöglichen.",
             "visitWebsite": "Website besuchen"
         }
     },
@@ -195,6 +195,10 @@
                 "men": {
                     "label": "Für Herren",
                     "text": "Bringt zusätzlich zu eurer klassischen Krawatte eine zweite mit und lasst eurer Kreativität freien Lauf! Das Bride-Team wird die „hässlichste“ Krawatte wählen und der Gewinner erhält einen besonderen Preis."
+                },
+                "ps": {
+                    "label": "PS",
+                    "text": "Giorgio hatte absolut nichts mit der Auswahl der Farbpalette zu tun."
                 }
             },
             "children": {

@@ -142,8 +142,8 @@
             "title": "A gesture that goes beyond us",
             "description": "We believe that a joyful occasion can also become an opportunity to do good. For this reason, part of the gifts we receive will be donated to an organization that works every day to help those who need it most.",
             "organizationLabel": "Organization",
-            "organizationName": "Name of the organization",
-            "organizationDescription": "A brief description of the organization's mission. You can replace this text once you have chosen the project you would like to support.",
+            "organizationName": "Human Dreams e.V.",
+            "organizationDescription": "Human Dreams e.V. is a non-profit organization founded by Nicole Mtawa that supports children with disabilities, serious illnesses, and special care needs. Through projects in Tanzania, Namibia, and India, it provides shelter, medical care, physiotherapy, education, and daily support. Its mission is to ensure that the most vulnerable children can live with dignity, safety, and access to new opportunities.",
             "visitWebsite": "Visit the website"
         }
     },
@@ -195,6 +195,10 @@
                 "men": {
                     "label": "For gentlemen",
                     "text": "Besides your formal wedding tie, bring a second one and get creative! The bride-team will vote for the 'ugliest' tie, and the winner will receive a special prize."
+                },
+                "ps": {
+                    "label": "P.S.",
+                    "text": "Giorgio had absolutely nothing to do with choosing the colour palette."
                 }
             },
             "children": {

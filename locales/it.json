@@ -142,8 +142,8 @@
             "title": "Un gesto che va oltre noi",
             "description": "Crediamo che un momento di gioia possa diventare anche un'occasione per fare del bene. Per questo motivo una parte dei regali ricevuti sarà destinata a sostenere un'organizzazione che opera ogni giorno per aiutare chi ne ha più bisogno.",
             "organizationLabel": "Associazione",
-            "organizationName": "Nome dell'associazione",
-            "organizationDescription": "Breve descrizione della missione dell'associazione. Potrai sostituire questo testo quando avrai scelto il progetto che desideri sostenere.",
+            "organizationName": "Human Dreams e.V.",
+            "organizationDescription": "Human Dreams e.V. è un’associazione no-profit fondata da Nicole Mtawa che sostiene bambini con disabilità, malattie gravi e bisogni assistenziali speciali. Opera attraverso progetti in Tanzania, Namibia e India, offrendo accoglienza, cure mediche, fisioterapia, istruzione e supporto quotidiano. Il suo obiettivo è garantire ai bambini più vulnerabili una vita dignitosa, sicura e ricca di opportunità.",
             "visitWebsite": "Visita il sito"
         }
     },
@@ -167,27 +167,27 @@
                     "text": "la palette consigliata è ",
                     "colors": [
                         {
-                            "name": "Warm White",
+                            "name": "Bianco Caldo",
                             "hex": "#F5F1E6"
                         },
                         {
-                            "name": "Pearl Gray",
+                            "name": "Grigio Perla",
                             "hex": "#D9D5D2"
                         },
                         {
-                            "name": "Sandstone",
+                            "name": "Oro Sabbia",
                             "hex": "#C6B182"
                         },
                         {
-                            "name": "Sage Green",
+                            "name": "Verde Salvia",
                             "hex": "#979775"
                         },
                         {
-                            "name": "Blush Pink",
+                            "name": "Rosa Cipria",
                             "hex": "#E8C8C8"
                         },
                         {
-                            "name": "Deep Burgundy",
+                            "name": "Borgogna",
                             "hex": "#6D1F32"
                         }
                     ]
@@ -195,6 +195,10 @@
                 "men": {
                     "label": "Per gli uomini",
                     "text": "Oltre alla cravatta formale per il matrimonio, portane una seconda e dai libero sfogo alla tua creatività! Il bride-team voterà la cravatta più \"brutta\" e il vincitore riceverà un premio speciale."
+                },
+                "ps": {
+                    "label": "PS",
+                    "text": "Giorgio non c'entra assolutamente nulla con la scelta della palette."
                 }
             },
             "children": {

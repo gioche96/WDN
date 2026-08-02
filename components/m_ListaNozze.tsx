@@ -129,7 +129,7 @@ export default function Donazione() {
                                 </p>
 
                                 <a
-                                    href="#"
+                                    href="https://en.humandreams.org/"
                                     className="group mt-6 inline-flex items-center gap-2 border-b border-black pb-1 text-sm uppercase tracking-[0.2em]"
                                 >
                                     {t("donation.charity.visitWebsite")}

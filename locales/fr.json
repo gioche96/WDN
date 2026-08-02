@@ -142,8 +142,8 @@
             "title": "Un geste qui va au-delà de nous",
             "description": "Nous pensons qu'un moment de joie peut également devenir une occasion de faire le bien. C'est pourquoi une partie des cadeaux reçus sera destinée à soutenir une organisation qui œuvre chaque jour pour aider les personnes qui en ont le plus besoin.",
             "organizationLabel": "Association",
-            "organizationName": "Nom de l'association",
-            "organizationDescription": "Brève description de la mission de l'association. Vous pourrez remplacer ce texte lorsque vous aurez choisi le projet que vous souhaitez soutenir.",
+            "organizationName": "Human Dreams e.V.",
+            "organizationDescription": "Human Dreams e.V. est une association à but non lucratif fondée par Nicole Mtawa, qui soutient les enfants en situation de handicap, atteints de maladies graves ou ayant des besoins spécifiques en matière de soins. Grâce à des projets menés en Tanzanie, en Namibie et en Inde, elle offre un hébergement, des soins médicaux, de la physiothérapie, une éducation et un accompagnement au quotidien. Sa mission est de permettre aux enfants les plus vulnérables de vivre dans la dignité, en sécurité et avec de réelles perspectives d'avenir.",
             "visitWebsite": "Visiter le site"
         }
     },
@@ -195,6 +195,10 @@
                 "men": {
                     "label": "Pour les hommes",
                     "text": "En plus de votre cravate de cérémonie, apportez-en une deuxième et laissez libre cours à votre imagination ! La bride team élira la cravate la plus « horrible » et le gagnant recevra un prix spécial."
+                },
+                "ps": {
+                    "label": "P.-S.",
+                    "text": "Giorgio n'a absolument rien eu à voir avec le choix de la palette de couleurs."
                 }
             },
             "children": {
