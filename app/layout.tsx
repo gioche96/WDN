@@ -25,6 +25,26 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Alice & Giorgio",
   description: "4 Settembre 2027",
+
+  openGraph: {
+    title: "Alice & Giorgio",
+    description: "4 Settembre 2027",
+    type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 1200,
+        height: 630,
+        alt: "Giorgio & ...",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alice & Giorgio",
+    description: "4 Settembre 2027",
+    images: ["/icon.png"],
+  },
 };
 
 export default function RootLayout({

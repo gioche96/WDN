@@ -7,12 +7,17 @@ type Attendance = "" | "yes" | "no";
 
 export default function RSVP() {
     const { t } = useTranslation();
+
     const [submitted, setSubmitted] = useState(false);
     const [attendance, setAttendance] = useState<Attendance>("");
     const [guestCount, setGuestCount] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitError, setSubmitError] = useState("");
     const [mainGuestName, setMainGuestName] = useState("");
+
+    const [guestMenus, setGuestMenus] = useState<Record<number, string>>({});
+    const [transport, setTransport] = useState("");
+    const [accommodation, setAccommodation] = useState("");
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -24,7 +29,6 @@ export default function RSVP() {
 
         setAttendance(selectedAttendance);
         setSubmitted(true);
-
     }
 
     function handleAttendanceChange(
@@ -55,7 +59,7 @@ export default function RSVP() {
                     </h2>
 
                     <p className="mx-auto mt-5 max-w-2xl text-[13pt] leading-7 text-white/80 md:mt-6 md:text-[15pt] md:leading-9">
-                        {t("rsvp.description.beforeDeadline")} {" "}
+                        {t("rsvp.description.beforeDeadline")}{" "}
                         <strong>{t("rsvp.description.deadline")}</strong>.
                     </p>
                 </div>
@@ -78,14 +82,18 @@ export default function RSVP() {
                     </div>
                 ) : (
                     <form
-                        onSubmit={async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+                        onSubmit={async function handleSubmit(
+                            event: FormEvent<HTMLFormElement>,
+                        ) {
                             event.preventDefault();
 
                             setIsSubmitting(true);
                             setSubmitError("");
 
                             try {
-                                const formData = new FormData(event.currentTarget);
+                                const formData = new FormData(
+                                    event.currentTarget,
+                                );
 
                                 const selectedAttendance = formData.get(
                                     "attendance",
@@ -93,100 +101,154 @@ export default function RSVP() {
 
                                 const guests =
                                     selectedAttendance === "yes"
-                                        ? Array.from({ length: guestCount }, (_, index) => ({
-                                            name: String(
-                                                formData.get(`guests[${index}][name]`) ?? "",
-                                            ).trim(),
+                                        ? Array.from(
+                                            {
+                                                length: guestCount,
+                                            },
+                                            (_, index) => ({
+                                                name: String(
+                                                    formData.get(
+                                                        `guests[${index}][name]`,
+                                                    ) ?? "",
+                                                ).trim(),
 
-                                            menu: String(
-                                                formData.get(`guests[${index}][menu]`) ?? "",
-                                            ),
+                                                menu: String(
+                                                    formData.get(
+                                                        `guests[${index}][menu]`,
+                                                    ) ?? "",
+                                                ),
 
-                                            allergies: String(
-                                                formData.get(
-                                                    `guests[${index}][allergies]`,
-                                                ) ?? "",
-                                            ).trim(),
-                                        }))
+                                                allergies: String(
+                                                    formData.get(
+                                                        `guests[${index}][allergies]`,
+                                                    ) ?? "",
+                                                ).trim(),
+                                            }),
+                                        )
                                         : [];
 
                                 const payload = {
-                                    name: String(formData.get("name") ?? "").trim(),
-                                    email: String(formData.get("email") ?? "").trim(),
+                                    name: String(
+                                        formData.get("name") ?? "",
+                                    ).trim(),
+
+                                    email: String(
+                                        formData.get("email") ?? "",
+                                    ).trim(),
+
                                     attendance: selectedAttendance,
+
                                     guestCount:
-                                        selectedAttendance === "yes" ? guestCount : 0,
+                                        selectedAttendance === "yes"
+                                            ? guestCount
+                                            : 0,
+
                                     guests,
+
                                     transport:
                                         selectedAttendance === "yes"
-                                            ? String(formData.get("transport") ?? "")
+                                            ? String(
+                                                formData.get(
+                                                    "transport",
+                                                ) ?? "",
+                                            )
                                             : "",
+
                                     accommodation:
                                         selectedAttendance === "yes"
-                                            ? String(formData.get("accommodation") ?? "")
+                                            ? String(
+                                                formData.get(
+                                                    "accommodation",
+                                                ) ?? "",
+                                            )
                                             : "",
+
                                     message: String(
                                         formData.get("message") ?? "",
                                     ).trim(),
                                 };
 
-                                const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+                                const scriptUrl =
+                                    process.env
+                                        .NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
 
                                 console.log("ENV:", process.env);
-                                console.log("RSVP URL:", process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL);
-                                console.log("RSVP URL:", scriptUrl);
+                                console.log(
+                                    "RSVP URL:",
+                                    process.env
+                                        .NEXT_PUBLIC_GOOGLE_SCRIPT_URL,
+                                );
+                                console.log(
+                                    "RSVP URL:",
+                                    scriptUrl,
+                                );
+
                                 if (!scriptUrl) {
                                     throw new Error(
-                                        t("rsvp.errors.notConfigured"),
+                                        t(
+                                            "rsvp.errors.notConfigured",
+                                        ),
                                     );
                                 }
 
-                                const response = await fetch(scriptUrl, {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "text/plain;charset=utf-8",
+                                const response = await fetch(
+                                    scriptUrl,
+                                    {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type":
+                                                "text/plain;charset=utf-8",
+                                        },
+                                        body: JSON.stringify(
+                                            payload,
+                                        ),
                                     },
-                                    body: JSON.stringify(payload),
-                                });
+                                );
 
                                 if (!response.ok) {
                                     throw new Error(
-                                        t("rsvp.errors.invalidResponse"),
+                                        t(
+                                            "rsvp.errors.invalidResponse",
+                                        ),
                                     );
                                 }
 
-                                const result = await response.json();
+                                const result =
+                                    await response.json();
 
                                 if (!result.success) {
                                     throw new Error(
-                                        result.message || t("rsvp.errors.submissionFailed"),
+                                        result.message ||
+                                        t(
+                                            "rsvp.errors.submissionFailed",
+                                        ),
                                     );
                                 }
 
-                                setAttendance(selectedAttendance);
+                                setAttendance(
+                                    selectedAttendance,
+                                );
+
                                 setSubmitted(true);
                             } catch (error) {
                                 setSubmitError(
                                     error instanceof Error
                                         ? error.message
-                                        : t("rsvp.errors.generic"),
+                                        : t(
+                                            "rsvp.errors.generic",
+                                        ),
                                 );
                             } finally {
                                 setIsSubmitting(false);
                             }
                         }}
-
-
-
-
                         className="grid min-w-0 w-full max-w-full gap-10"
                     >
                         {/* DATI PRINCIPALI */}
 
                         <fieldset className="grid gap-8">
-
                             <div className="grid min-w-0 gap-8 md:grid-cols-2">
-                                <label className="grid min-w-0 w-full gap-1">
+                                <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                         {t("rsvp.form.fullName")}
                                     </span>
@@ -197,14 +259,26 @@ export default function RSVP() {
                                         required
                                         autoComplete="name"
                                         value={mainGuestName}
-                                        onChange={(event) => setMainGuestName(event.target.value)}
-                                        placeholder={t("rsvp.form.fullNamePlaceholder")}
-                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
+                                        onChange={(event) =>
+                                            setMainGuestName(
+                                                event.target.value,
+                                            )
+                                        }
+                                        placeholder={t(
+                                            "rsvp.form.fullNamePlaceholder",
+                                        )}
+                                        className={`w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt] ${mainGuestName
+                                            ? "text-white"
+                                            : "text-white/40"
+                                            }`}
+                                    />
                                 </label>
 
-                                <label className="grid min-w-0 w-full gap-1">
+                                <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        {t("rsvp.form.email.label")}
+                                        {t(
+                                            "rsvp.form.email.label",
+                                        )}
                                     </span>
 
                                     <input
@@ -212,33 +286,59 @@ export default function RSVP() {
                                         name="email"
                                         required
                                         autoComplete="email"
-                                        placeholder={t("rsvp.form.email.placeholder")}
-                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
+                                        placeholder={t(
+                                            "rsvp.form.email.placeholder",
+                                        )}
+                                        className="w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] text-white placeholder:text-white/40 placeholder-shown:text-white/40 outline-none transition-colors focus:border-white md:text-[14pt]"
+                                    />
                                 </label>
                             </div>
 
-                            <label className="grid min-w-0 w-full gap-1">
+                            <label className="grid min-w-0 w-full gap-2">
                                 <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                    {t("rsvp.form.attendance.label")}
+                                    {t(
+                                        "rsvp.form.attendance.label",
+                                    )}
                                 </span>
 
                                 <select
                                     name="attendance"
                                     required
                                     value={attendance}
-                                    onChange={handleAttendanceChange}
-                                    className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                    onChange={
+                                        handleAttendanceChange
+                                    }
+                                    className={`w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] outline-none transition-colors focus:border-white md:text-[14pt] ${attendance === ""
+                                        ? "text-white/40"
+                                        : "text-white"
+                                        }`}
                                 >
-                                    <option value="" disabled className="bg-[#F5F1E6] text-black">
-                                        {t("rsvp.form.attendance.placeholder")}
+                                    <option
+                                        value=""
+                                        disabled
+                                        className="bg-[#F5F1E6] text-black"
+                                    >
+                                        {t(
+                                            "rsvp.form.attendance.placeholder",
+                                        )}
                                     </option>
 
-                                    <option value="yes" className="bg-[#F5F1E6] text-black">
-                                        {t("rsvp.form.attendance.yes")}
+                                    <option
+                                        value="yes"
+                                        className="bg-[#F5F1E6] text-black"
+                                    >
+                                        {t(
+                                            "rsvp.form.attendance.yes",
+                                        )}
                                     </option>
 
-                                    <option value="no" className="bg-[#F5F1E6] text-black">
-                                        {t("rsvp.form.attendance.no")}
+                                    <option
+                                        value="no"
+                                        className="bg-[#F5F1E6] text-black"
+                                    >
+                                        {t(
+                                            "rsvp.form.attendance.no",
+                                        )}
                                     </option>
                                 </select>
                             </label>
@@ -251,10 +351,11 @@ export default function RSVP() {
                                 {/* NUMERO PERSONE */}
 
                                 <fieldset className="grid gap-8">
-
-                                    <label className="grid min-w-0 w-full gap-1">
+                                    <label className="grid min-w-0 w-full gap-2">
                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                            {t("rsvp.form.guestCount.label")}
+                                            {t(
+                                                "rsvp.form.guestCount.label",
+                                            )}
                                         </span>
 
                                         <select
@@ -263,12 +364,13 @@ export default function RSVP() {
                                             onChange={(event) =>
                                                 setGuestCount(
                                                     Number(
-                                                        event.target
+                                                        event
+                                                            .target
                                                             .value,
                                                     ),
                                                 )
                                             }
-                                            className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                            className="w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                         >
                                             {Array.from(
                                                 { length: 10 },
@@ -282,8 +384,12 @@ export default function RSVP() {
                                                 >
                                                     {number}{" "}
                                                     {number === 1
-                                                        ? t("rsvp.form.guestCount.personSingular")
-                                                        : t("rsvp.form.guestCount.personPlural")}
+                                                        ? t(
+                                                            "rsvp.form.guestCount.personSingular",
+                                                        )
+                                                        : t(
+                                                            "rsvp.form.guestCount.personPlural",
+                                                        )}
                                                 </option>
                                             ))}
                                         </select>
@@ -294,7 +400,9 @@ export default function RSVP() {
 
                                 <fieldset className="grid min-w-0 w-full gap-8">
                                     <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/85 md:text-sm">
-                                        {t("rsvp.form.guests.legend")}
+                                        {t(
+                                            "rsvp.form.guests.legend",
+                                        )}
                                     </legend>
 
                                     <div className="grid min-w-0 w-full gap-5">
@@ -307,34 +415,44 @@ export default function RSVP() {
                                             >
                                                 <div>
                                                     <p className="font-title text-2xl md:text-3xl">
-                                                        {t("rsvp.form.guests.guestTitle", {
-                                                            number: index + 1,
-                                                        })}
+                                                        {t(
+                                                            "rsvp.form.guests.guestTitle",
+                                                            {
+                                                                number:
+                                                                    index +
+                                                                    1,
+                                                            },
+                                                        )}
                                                     </p>
-
                                                 </div>
 
                                                 <div className="grid min-w-0 w-full gap-6 md:grid-cols-2">
                                                     {index === 0 ? (
-                                                        <div className="grid gap-1">
+                                                        <div className="grid min-w-0 w-full gap-2">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                                {t("rsvp.form.fullName")}
+                                                                {t(
+                                                                    "rsvp.form.fullName",
+                                                                )}
                                                             </span>
 
-                                                            <p className="border-b border-white/35 py-4 text-[13pt] text-white/85 md:text-[14pt]">
+                                                            <p className="flex h-[69px] items-center border-b border-white/80 bg-[#828265] px-3 text-[13pt] text-white md:text-[14pt]">
                                                                 {mainGuestName}
                                                             </p>
 
                                                             <input
                                                                 type="hidden"
                                                                 name={`guests[${index}][name]`}
-                                                                value={mainGuestName}
+                                                                value={
+                                                                    mainGuestName
+                                                                }
                                                             />
                                                         </div>
                                                     ) : (
-                                                        <label className="grid min-w-0 w-full gap-1">
+                                                        <label className="grid min-w-0 w-full gap-2">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                                {t("rsvp.form.fullName")}
+                                                                {t(
+                                                                    "rsvp.form.fullName",
+                                                                )}
                                                             </span>
 
                                                             <input
@@ -342,43 +460,97 @@ export default function RSVP() {
                                                                 name={`guests[${index}][name]`}
                                                                 required
                                                                 placeholder={t("rsvp.form.guests.namePlaceholder")}
-                                                                className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
+                                                                className="h-[69px] w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 text-[13pt] text-white placeholder:text-white/40 placeholder-shown:text-white/40 outline-none transition-colors focus:border-white md:text-[14pt]"
+                                                            />
                                                         </label>
                                                     )}
 
                                                     <label className="grid min-w-0 w-full gap-2">
                                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                            {t("rsvp.form.menu.label")}
+                                                            {t(
+                                                                "rsvp.form.menu.label",
+                                                            )}
                                                         </span>
 
                                                         <select
                                                             name={`guests[${index}][menu]`}
                                                             required
-                                                            defaultValue=""
-                                                            className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                                            value={guestMenus[index] ?? ""}
+                                                            onChange={(event) =>
+                                                                setGuestMenus((previous) => ({
+                                                                    ...previous,
+                                                                    [index]: event.target.value,
+                                                                }))
+                                                            }
+                                                            className={`h-[69px] w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 text-[13pt] outline-none transition-colors focus:border-white md:text-[14pt] ${guestMenus[index]
+                                                                    ? "text-white"
+                                                                    : "text-white/40"
+                                                                }`}
                                                         >
-                                                            <option value="" disabled className="bg-[#F5F1E6] text-black">
-                                                                {t("rsvp.form.menu.placeholder")}
+
+                                                            <option
+                                                                value=""
+                                                                disabled
+                                                                className="bg-[#F5F1E6] text-black"
+                                                            >
+                                                                {t(
+                                                                    "rsvp.form.menu.placeholder",
+                                                                )}
                                                             </option>
-                                                            <option value="standard" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.standard")}</option>
-                                                            <option value="vegetarian" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.vegetarian")}</option>
-                                                            <option value="vegan" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.vegan")}</option>
-                                                            <option value="child" className="bg-[#F5F1E6] text-black">{t("rsvp.form.menu.child")}</option>
+
+                                                            <option
+                                                                value="standard"
+                                                                className="bg-[#F5F1E6] text-black"
+                                                            >
+                                                                {t(
+                                                                    "rsvp.form.menu.standard",
+                                                                )}
+                                                            </option>
+
+                                                            <option
+                                                                value="vegetarian"
+                                                                className="bg-[#F5F1E6] text-black"
+                                                            >
+                                                                {t(
+                                                                    "rsvp.form.menu.vegetarian",
+                                                                )}
+                                                            </option>
+
+                                                            <option
+                                                                value="vegan"
+                                                                className="bg-[#F5F1E6] text-black"
+                                                            >
+                                                                {t(
+                                                                    "rsvp.form.menu.vegan",
+                                                                )}
+                                                            </option>
+
+                                                            <option
+                                                                value="child"
+                                                                className="bg-[#F5F1E6] text-black"
+                                                            >
+                                                                {t(
+                                                                    "rsvp.form.menu.child",
+                                                                )}
+                                                            </option>
                                                         </select>
                                                     </label>
                                                 </div>
 
-
-                                                <label className="grid min-w-0 w-full gap-1">
+                                                <label className="grid min-w-0 w-full gap-2">
                                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                                        {t("rsvp.form.allergies.label")}
+                                                        {t(
+                                                            "rsvp.form.allergies.label",
+                                                        )}
                                                     </span>
 
                                                     <textarea
                                                         name={`guests[${index}][allergies]`}
                                                         rows={3}
-                                                        placeholder={t("rsvp.form.allergies.placeholder")}
-                                                        className="resize-none rounded-md border border-white/30 bg-transparent p-4 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
+                                                        placeholder={t(
+                                                            "rsvp.form.allergies.placeholder",
+                                                        )}
+                                                        className="w-full min-w-0 max-w-full resize-none rounded-md border border-white/80 bg-[#828265] px-3 py-4 text-[13pt] leading-7 text-white placeholder:text-white/40 placeholder-shown:text-white/40 outline-none transition-colors focus:border-white md:text-[14pt]"
                                                     />
                                                 </label>
                                             </div>
@@ -390,29 +562,60 @@ export default function RSVP() {
 
                                 <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        {t("rsvp.form.transport.label")}
+                                        {t(
+                                            "rsvp.form.transport.label",
+                                        )}
                                     </span>
 
                                     <select
                                         name="transport"
                                         required
-                                        defaultValue=""
-                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                        value={transport}
+                                        onChange={(event) =>
+                                            setTransport(
+                                                event.target.value,
+                                            )
+                                        }
+                                        className={`w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] outline-none transition-colors focus:border-white md:text-[14pt] ${transport === ""
+                                            ? "text-white/40"
+                                            : "text-white"
+                                            }`}
                                     >
-                                        <option value="" disabled className="bg-white text-black">
-                                            {t("rsvp.form.transport.placeholder")}
+                                        <option
+                                            value=""
+                                            disabled
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.transport.placeholder",
+                                            )}
                                         </option>
 
-                                        <option value="own" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.transport.own")}
+                                        <option
+                                            value="own"
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.transport.own",
+                                            )}
                                         </option>
 
-                                        <option value="rental" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.transport.rental")}
+                                        <option
+                                            value="rental"
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.transport.rental",
+                                            )}
                                         </option>
 
-                                        <option value="help" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.transport.help")}
+                                        <option
+                                            value="help"
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.transport.help",
+                                            )}
                                         </option>
                                     </select>
                                 </label>
@@ -421,39 +624,69 @@ export default function RSVP() {
 
                                 <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
-                                        {t("rsvp.form.accommodation.label")}
+                                        {t(
+                                            "rsvp.form.accommodation.label",
+                                        )}
                                     </span>
 
                                     <select
                                         name="accommodation"
                                         required
-                                        defaultValue=""
-                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                        value={accommodation}
+                                        onChange={(event) =>
+                                            setAccommodation(
+                                                event.target.value,
+                                            )
+                                        }
+                                        className={`w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 py-4 text-[13pt] outline-none transition-colors focus:border-white md:text-[14pt] ${accommodation === ""
+                                            ? "text-white/40"
+                                            : "text-white"
+                                            }`}
                                     >
-                                        <option value="" disabled className="bg-white text-black">
-                                            {t("rsvp.form.accommodation.placeholder")}
+                                        <option
+                                            value=""
+                                            disabled
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.accommodation.placeholder",
+                                            )}
                                         </option>
 
                                         <option
                                             value="arranged"
                                             className="bg-[#F5F1E6] text-black"
                                         >
-                                            {t("rsvp.form.accommodation.arranged")}
+                                            {t(
+                                                "rsvp.form.accommodation.arranged",
+                                            )}
                                         </option>
 
                                         <option
                                             value="entire-room"
                                             className="bg-[#F5F1E6] text-black"
                                         >
-                                            {t("rsvp.form.accommodation.entireRoom")}
+                                            {t(
+                                                "rsvp.form.accommodation.entireRoom",
+                                            )}
                                         </option>
 
-                                        <option value="shared-room" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.accommodation.sharedRoom")}
+                                        <option
+                                            value="shared-room"
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.accommodation.sharedRoom",
+                                            )}
                                         </option>
 
-                                        <option value="nearby" className="bg-[#F5F1E6] text-black">
-                                            {t("rsvp.form.accommodation.nearby")}
+                                        <option
+                                            value="nearby"
+                                            className="bg-[#F5F1E6] text-black"
+                                        >
+                                            {t(
+                                                "rsvp.form.accommodation.nearby",
+                                            )}
                                         </option>
                                     </select>
                                 </label>
@@ -465,22 +698,30 @@ export default function RSVP() {
                         {attendance && (
                             <fieldset className="grid min-w-0 w-full gap-6">
                                 <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/85 md:text-sm">
-                                    {t("rsvp.form.message.legend")}
+                                    {t(
+                                        "rsvp.form.message.legend",
+                                    )}
                                 </legend>
 
-                                <label className="grid min-w-0 w-full gap-1">
+                                <label className="grid min-w-0 w-full gap-2">
                                     <span className="sr-only">
-                                        {t("rsvp.form.message.label")}
+                                        {t(
+                                            "rsvp.form.message.label",
+                                        )}
                                     </span>
 
                                     <textarea
                                         name="message"
                                         rows={5}
-                                        placeholder={t("rsvp.form.message.placeholder")}
-                                        className="min-h-36 w-full min-w-0 max-w-full resize-none rounded-md border border-white/30 bg-transparent p-5 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt] md:leading-8" />
+                                        placeholder={t(
+                                            "rsvp.form.message.placeholder",
+                                        )}
+                                        className="min-h-36 w-full min-w-0 max-w-full resize-none rounded-md border border-white/80 bg-[#828265] px-3 py-5 text-[13pt] leading-7 text-white placeholder:text-white/40 placeholder-shown:text-white/40 outline-none transition-colors focus:border-white md:text-[14pt] md:leading-8"
+                                    />
                                 </label>
                             </fieldset>
                         )}
+
                         {submitError && (
                             <p
                                 role="alert"
@@ -489,11 +730,12 @@ export default function RSVP() {
                                 {submitError}
                             </p>
                         )}
+
                         <button
                             type="submit"
                             disabled={!attendance || isSubmitting}
                             aria-busy={isSubmitting}
-                            className="mt-2 inline-flex items-center justify-center gap-3 justify-self-center rounded-md border border-white px-8 py-4 text-[10pt] uppercase tracking-[0.25em] transition-colors duration-300 hover:bg-white hover:text-[#979775] disabled:cursor-not-allowed disabled:opacity-40 md:mt-4 md:px-10 md:text-sm"
+                            className="mt-2 inline-flex items-center justify-center gap-3 justify-self-center rounded-md border border-white/80 bg-[#828265] px-8 py-4 text-[10pt] uppercase tracking-[0.25em] transition-colors duration-300 hover:bg-white hover:text-[#979775] disabled:cursor-not-allowed disabled:opacity-40 md:mt-4 md:px-10 md:text-sm"
                         >
                             {isSubmitting && (
                                 <span
@@ -504,8 +746,12 @@ export default function RSVP() {
 
                             <span>
                                 {isSubmitting
-                                    ? t("rsvp.form.submit.submitting")
-                                    : t("rsvp.form.submit.default")}
+                                    ? t(
+                                        "rsvp.form.submit.submitting",
+                                    )
+                                    : t(
+                                        "rsvp.form.submit.default",
+                                    )}
                             </span>
                         </button>
                     </form>
