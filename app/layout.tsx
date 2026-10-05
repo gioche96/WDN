@@ -23,6 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gioche96.github.io/1wdn/"),
   title: "Alice & Giorgio",
   description: "4 Settembre 2027",
   openGraph: {
