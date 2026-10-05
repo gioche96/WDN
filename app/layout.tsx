@@ -23,14 +23,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gioche96.github.io/WDN/"),
   title: "Alice & Giorgio",
   description: "4 Settembre 2027",
-  openGraph: {
-    title: "Alice & Giorgio",
-    description: "4 Settembre 2027",
-    images: "/icon.png",
-  },
 };
 
 export default function RootLayout({
