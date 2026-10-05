@@ -156,11 +156,11 @@
                 "answer": "Ti consigliamo di arrivare almeno 30 minuti prima dell'inizio della cerimonia. Chi arriva per tempo avrà modo di conoscere altre fantastiche persone e di godersi un bel drink fresco.🍹"
             },
             "location": {
-                "question": "La cerimonia e il ricevimento si svolgono nello stesso luogo?",
-                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo saranno disponibili costumi e salvagenti."
+                "question": "📍 La cerimonia e il ricevimento si svolgono nello stesso luogo?",
+                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo... abbiamo un piano B.☀️"
             },
             "dressCode": {
-                "question": "C'è un dress code?",
+                "question": "👑 C'è un dress code?",
                 "intro": "Sì, il dress code è elegante. Considerando la stagione e gli spazi esterni, consigliamo scarpe comode.",
                 "women": {
                     "label": "Per le donne",

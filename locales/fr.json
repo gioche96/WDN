@@ -152,12 +152,12 @@
         "title": "Questions fréquentes",
         "questions": {
             "arrival": {
-                "question": "À quelle heure dois-je arriver ?",
-                "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités formidables et de profiter d'un verre de bienvenue bien frais."
+                "question": "⌛ À quelle heure dois-je arriver ?",
+                "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités formidables et de profiter d'un verre de bienvenue bien frais.🍹"
             },
             "location": {
-                "question": "La cérémonie et la réception auront-elles lieu au même endroit ?",
-                "answer": "Oui ! Toute la journée se déroulera au Relais Chiaramonte - Sala Qirat. La cérémonie est prévue en extérieur, mais en cas de mauvais temps, des costumes et des gilets de sauvetage seront à votre disposition."
+                "question": "📍 La cérémonie et la réception auront-elles lieu au même endroit ?",
+                "answer": "Oui ! Toute la journée se déroulera au Relais Chiaramonte - Sala Qirat. La cérémonie est prévue en extérieur, mais en cas de mauvais temps... nous avons un plan B.☀️"
             },
             "dressCode": {
                 "question": "Y a-t-il un dress code ?",
