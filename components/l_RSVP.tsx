@@ -25,10 +25,6 @@ export default function RSVP() {
         setAttendance(selectedAttendance);
         setSubmitted(true);
 
-        /*
-        Qui potrai successivamente inviare i dati a Formspree,
-        Supabase, Google Sheets o a una route API di Next.js.
-        */
     }
 
     function handleAttendanceChange(
@@ -48,7 +44,7 @@ export default function RSVP() {
             id="rsvp"
             className="scroll-mt-24 bg-[#979775] px-6 py-10 text-white md:py-15"
         >
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto w-full min-w-0 max-w-3xl">
                 <div className="mb-10 text-center md:mb-14">
                     <p className="mb-4 text-[10pt] uppercase tracking-[0.3em] text-white/75 md:text-[13pt]">
                         {t("rsvp.subtitle")}
@@ -183,14 +179,14 @@ export default function RSVP() {
 
 
 
-                        className="grid gap-10"
+                        className="grid min-w-0 w-full max-w-full gap-10"
                     >
                         {/* DATI PRINCIPALI */}
 
                         <fieldset className="grid gap-8">
 
-                            <div className="grid gap-8 md:grid-cols-2">
-                                <label className="grid gap-1">
+                            <div className="grid min-w-0 gap-8 md:grid-cols-2">
+                                <label className="grid min-w-0 w-full gap-1">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                         {t("rsvp.form.fullName")}
                                     </span>
@@ -203,11 +199,10 @@ export default function RSVP() {
                                         value={mainGuestName}
                                         onChange={(event) => setMainGuestName(event.target.value)}
                                         placeholder={t("rsvp.form.fullNamePlaceholder")}
-                                        className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
-                                    />
+                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
                                 </label>
 
-                                <label className="grid gap-1">
+                                <label className="grid min-w-0 w-full gap-1">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                         {t("rsvp.form.email.label")}
                                     </span>
@@ -218,12 +213,11 @@ export default function RSVP() {
                                         required
                                         autoComplete="email"
                                         placeholder={t("rsvp.form.email.placeholder")}
-                                        className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
-                                    />
+                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
                                 </label>
                             </div>
 
-                            <label className="grid gap-1">
+                            <label className="grid min-w-0 w-full gap-1">
                                 <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                     {t("rsvp.form.attendance.label")}
                                 </span>
@@ -258,7 +252,7 @@ export default function RSVP() {
 
                                 <fieldset className="grid gap-8">
 
-                                    <label className="grid gap-1">
+                                    <label className="grid min-w-0 w-full gap-1">
                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                             {t("rsvp.form.guestCount.label")}
                                         </span>
@@ -274,7 +268,7 @@ export default function RSVP() {
                                                     ),
                                                 )
                                             }
-                                            className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                            className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                         >
                                             {Array.from(
                                                 { length: 10 },
@@ -298,18 +292,18 @@ export default function RSVP() {
 
                                 {/* INFORMAZIONI OSPITI */}
 
-                                <fieldset className="grid gap-8">
-                                    <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/75 md:text-sm">
+                                <fieldset className="grid min-w-0 w-full gap-8">
+                                    <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/85 md:text-sm">
                                         {t("rsvp.form.guests.legend")}
                                     </legend>
 
-                                    <div className="grid gap-5">
+                                    <div className="grid min-w-0 w-full gap-5">
                                         {Array.from({
                                             length: guestCount,
                                         }).map((_, index) => (
                                             <div
                                                 key={index}
-                                                className="grid gap-7 rounded-md border border-white/25 p-5 md:p-7"
+                                                className="grid min-w-0 w-full max-w-full gap-7 rounded-md border border-white/25 p-5 md:p-7"
                                             >
                                                 <div>
                                                     <p className="font-title text-2xl md:text-3xl">
@@ -320,14 +314,14 @@ export default function RSVP() {
 
                                                 </div>
 
-                                                <div className="grid gap-6 md:grid-cols-2">
+                                                <div className="grid min-w-0 w-full gap-6 md:grid-cols-2">
                                                     {index === 0 ? (
                                                         <div className="grid gap-1">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                                                 {t("rsvp.form.fullName")}
                                                             </span>
 
-                                                            <p className="border-b border-white/35 py-4 text-[13pt] text-white/75 md:text-[14pt]">
+                                                            <p className="border-b border-white/35 py-4 text-[13pt] text-white/85 md:text-[14pt]">
                                                                 {mainGuestName}
                                                             </p>
 
@@ -338,7 +332,7 @@ export default function RSVP() {
                                                             />
                                                         </div>
                                                     ) : (
-                                                        <label className="grid gap-1">
+                                                        <label className="grid min-w-0 w-full gap-1">
                                                             <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                                                 {t("rsvp.form.fullName")}
                                                             </span>
@@ -348,12 +342,11 @@ export default function RSVP() {
                                                                 name={`guests[${index}][name]`}
                                                                 required
                                                                 placeholder={t("rsvp.form.guests.namePlaceholder")}
-                                                                className="border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]"
-                                                            />
+                                                                className="w-full min-w-0 max-w-full border-b border-white/35 bg-transparent px-0 py-4 text-[13pt] text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt]" />
                                                         </label>
                                                     )}
 
-                                                    <label className="grid gap-2">
+                                                    <label className="grid min-w-0 w-full gap-2">
                                                         <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                                             {t("rsvp.form.menu.label")}
                                                         </span>
@@ -362,7 +355,7 @@ export default function RSVP() {
                                                             name={`guests[${index}][menu]`}
                                                             required
                                                             defaultValue=""
-                                                            className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                                            className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                                         >
                                                             <option value="" disabled className="bg-[#F5F1E6] text-black">
                                                                 {t("rsvp.form.menu.placeholder")}
@@ -376,7 +369,7 @@ export default function RSVP() {
                                                 </div>
 
 
-                                                <label className="grid gap-1">
+                                                <label className="grid min-w-0 w-full gap-1">
                                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                                         {t("rsvp.form.allergies.label")}
                                                     </span>
@@ -395,7 +388,7 @@ export default function RSVP() {
 
                                 {/* TRASPORTO */}
 
-                                <label className="grid gap-2">
+                                <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                         {t("rsvp.form.transport.label")}
                                     </span>
@@ -404,7 +397,7 @@ export default function RSVP() {
                                         name="transport"
                                         required
                                         defaultValue=""
-                                        className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                     >
                                         <option value="" disabled className="bg-white text-black">
                                             {t("rsvp.form.transport.placeholder")}
@@ -426,7 +419,7 @@ export default function RSVP() {
 
                                 {/* ALLOGGIO */}
 
-                                <label className="grid gap-2">
+                                <label className="grid min-w-0 w-full gap-2">
                                     <span className="text-[10pt] uppercase tracking-[0.18em] text-white/85 md:text-sm">
                                         {t("rsvp.form.accommodation.label")}
                                     </span>
@@ -435,7 +428,7 @@ export default function RSVP() {
                                         name="accommodation"
                                         required
                                         defaultValue=""
-                                        className="border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
+                                        className="w-full min-w-0 max-w-full border-b border-white/35 bg-[#979775] py-4 text-[13pt] text-white outline-none transition-colors focus:border-white md:text-[14pt]"
                                     >
                                         <option value="" disabled className="bg-white text-black">
                                             {t("rsvp.form.accommodation.placeholder")}
@@ -470,12 +463,12 @@ export default function RSVP() {
                         {/* MESSAGGIO */}
 
                         {attendance && (
-                            <fieldset className="grid gap-6">
-                                <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/75 md:text-sm">
+                            <fieldset className="grid min-w-0 w-full gap-6">
+                                <legend className="mb-2 w-full border-b border-white/25 pb-4 text-[10pt] uppercase tracking-[0.25em] text-white/85 md:text-sm">
                                     {t("rsvp.form.message.legend")}
                                 </legend>
 
-                                <label className="grid gap-1">
+                                <label className="grid min-w-0 w-full gap-1">
                                     <span className="sr-only">
                                         {t("rsvp.form.message.label")}
                                     </span>
@@ -484,8 +477,7 @@ export default function RSVP() {
                                         name="message"
                                         rows={5}
                                         placeholder={t("rsvp.form.message.placeholder")}
-                                        className="min-h-36 resize-none rounded-md border border-white/30 bg-transparent p-5 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt] md:leading-8"
-                                    />
+                                        className="min-h-36 w-full min-w-0 max-w-full resize-none rounded-md border border-white/30 bg-transparent p-5 text-[13pt] leading-7 text-white outline-none transition-colors placeholder:text-white/40 focus:border-white md:text-[14pt] md:leading-8" />
                                 </label>
                             </fieldset>
                         )}

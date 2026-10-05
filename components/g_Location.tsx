@@ -76,7 +76,7 @@ export default function Location() {
                         </a>
 
                         <a
-                            href="https://maps.app.goo.gl/nfrzeeS91FVjXqzB8"
+                            href="https://maps.app.goo.gl/UaUBNQiXDdTakVfB6"
                             target="_blank"
                             rel="noreferrer"
                             className="group inline-flex items-center gap-2 border-b border-black pb-1 text-sm uppercase tracking-[0.2em]"
@@ -112,7 +112,7 @@ export default function Location() {
                     <div className="relative h-[160px] overflow-hidden rounded-md md:h-[180px]">
                         <iframe
                             title={t("location.mapTitle")}
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.8833677544035!2d14.63910647812349!3d36.83533987749175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311bd0030d8c15f%3A0xa91169fdef8cdfd5!2sQIRAT!5e1!3m2!1sit!2sch!4v1785163491045!5m2!1sit!2sch"
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2889.8159935340545!2d14.640710999999998!3d36.834078000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDUwJzAyLjciTiAxNMKwMzgnMjYuNiJF!5e1!3m2!1sit!2sch!4v1791208219783!5m2!1sit!2sch"
                             loading="lazy"
                             allowFullScreen
                             referrerPolicy="no-referrer-when-downgrade"

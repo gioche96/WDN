@@ -34,8 +34,8 @@
         "description": "Avant le grand jour, nous souhaitons partager avec vous un petit aperçu de ce qui nous attend. Une courte bande-annonce qui raconte un moment spécial de notre histoire et ouvre les portes du plus beau chapitre.",
         "story": {
             "beforeDate": "Cette vidéo a été réalisée le",
-            "date": "10 Février 2027",
-            "afterDate": " à Chieri, le lieu où nous nous sommes déjà promis l'un à l'autre lors d'une cérémonie civile simple et intime. La prochaine étape sera celle dont nous rêvons de vivre avec vous. Le 4 septembre, nous célébrerons notre union entourés des personnes qui ont rendu notre parcours si précieux. Ceci n'est que la bande-annonce... le plus beau film reste à commencer!"
+            "date": "23 Janvier 2027",
+            "afterDate": " à Mango (Italie), le lieu où nous nous sommes déjà promis l'un à l'autre lors d'une cérémonie civile simple et intime. La prochaine étape sera celle dont nous rêvons de vivre avec vous. Le 4 Septembre, nous célébrerons notre union entourés des personnes qui ont rendu notre parcours si précieux. Ceci n'est que la bande-annonce... le plus beau film reste à commencer!"
         }
     },
     "fragments": {
@@ -153,7 +153,7 @@
         "questions": {
             "arrival": {
                 "question": "À quelle heure dois-je arriver ?",
-                "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités et de profiter d'un verre de bienvenue (offert)."
+                "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités formidables et de profiter d'un verre de bienvenue bien frais."
             },
             "location": {
                 "question": "La cérémonie et la réception auront-elles lieu au même endroit ?",
