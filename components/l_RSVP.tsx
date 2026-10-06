@@ -411,7 +411,7 @@ export default function RSVP() {
                                         }).map((_, index) => (
                                             <div
                                                 key={index}
-                                                className="grid min-w-0 w-full max-w-full gap-7 rounded-md border border-white/25 p-5 md:p-7"
+                                                className="grid min-w-0 w-full max-w-full gap-7 rounded-md border border-white/80 p-5 md:p-7"
                                             >
                                                 <div>
                                                     <p className="font-title text-2xl md:text-3xl">
@@ -483,8 +483,8 @@ export default function RSVP() {
                                                                 }))
                                                             }
                                                             className={`h-[69px] w-full min-w-0 max-w-full border-b border-white/80 bg-[#828265] px-3 text-[13pt] outline-none transition-colors focus:border-white md:text-[14pt] ${guestMenus[index]
-                                                                    ? "text-white"
-                                                                    : "text-white/40"
+                                                                ? "text-white"
+                                                                : "text-white/40"
                                                                 }`}
                                                         >
 
@@ -659,15 +659,6 @@ export default function RSVP() {
                                         >
                                             {t(
                                                 "rsvp.form.accommodation.arranged",
-                                            )}
-                                        </option>
-
-                                        <option
-                                            value="entire-room"
-                                            className="bg-[#F5F1E6] text-black"
-                                        >
-                                            {t(
-                                                "rsvp.form.accommodation.entireRoom",
                                             )}
                                         </option>
 

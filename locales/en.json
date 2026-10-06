@@ -308,8 +308,7 @@
                 "label": "Accommodation",
                 "placeholder": "Where are you planning to stay?",
                 "arranged": "I already have accommodation",
-                "entireRoom": "I'd like a room at the venue (private occupancy)",
-                "sharedRoom": "I'd like a room at the venue and I'm happy to share",
+                "sharedRoom": "I'm willing to share a room",
                 "nearby": "I'll look for accommodation nearby"
             },
             "message": {

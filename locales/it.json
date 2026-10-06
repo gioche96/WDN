@@ -308,8 +308,7 @@
                 "label": "Alloggio",
                 "placeholder": "Dove pensi di soggiornare?",
                 "arranged": "Ho già una sistemazione",
-                "entireRoom": "Vorrei una camera in struttura (uso esclusivo)",
-                "sharedRoom": "Vorrei una camera in struttura, disponibile a condividerla",
+                "sharedRoom": "Sono disponibile a condividere una stanza",
                 "nearby": "Cercherò una sistemazione nei dintorni"
             },
             "message": {

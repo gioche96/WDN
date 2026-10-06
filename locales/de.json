@@ -308,8 +308,7 @@
                 "label": "Unterkunft",
                 "placeholder": "Wo möchtet ihr übernachten?",
                 "arranged": "Ich habe bereits eine Unterkunft",
-                "entireRoom": "Ich möchte ein Zimmer in der Unterkunft (zur alleinigen Nutzung)",
-                "sharedRoom": "Ich möchte ein Zimmer in der Unterkunft und bin bereit, es zu teilen",
+                "sharedRoom": "Ich bin bereit, mir ein Zimmer zu teilen",
                 "nearby": "Ich werde mir eine Unterkunft in der Umgebung suchen"
             },
             "message": {
