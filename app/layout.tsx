@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alice & Giorgio",
     description: "4 Settembre 2027",
-    images: ["/icon.png"],
+    images: ["/icon_site.png"],
   },
 };
 
