@@ -25,6 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Alice & Giorgio",
   description: "4 Settembre 2027",
+  metadataBase: new URL("https://gioche96.github.io/WDN/"),
 
   openGraph: {
     title: "Alice & Giorgio",
@@ -33,9 +34,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/icon.png",
-        width: 1200,
-        height: 630,
-        alt: "Giorgio & ...",
+        alt: "Alice & Giorgio",
       },
     ],
   },
