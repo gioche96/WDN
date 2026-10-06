@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/icon.png",
-        width: 1200,
-        height: 630,
+        url: "/icon_site.png",
+        width: 2000,
+        height: 500,
         alt: "Alice & Giorgio",
       },
     ],
