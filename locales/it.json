@@ -157,7 +157,7 @@
             },
             "location": {
                 "question": "📍 La cerimonia e il ricevimento si svolgono nello stesso luogo?",
-                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo... abbiamo un piano B.☀️"
+                "answer": "Sì! L'intera giornata si svolgerà presso il Relais Chiaramonte - Sala Qirat. La cerimonia è prevista all'aperto, ma in caso di maltempo... abbiamo un piano B.☂️"
             },
             "dressCode": {
                 "question": "👑 C'è un dress code?",
@@ -197,24 +197,24 @@
                     "text": "Oltre alla cravatta formale per il matrimonio, portane una seconda e dai libero sfogo alla tua creatività! Il bride-team voterà la cravatta più \"brutta\" e il vincitore riceverà un premio speciale."
                 },
                 "ps": {
-                    "label": "PS",
+                    "label": "P.S.",
                     "text": "Giorgio non c'entra assolutamente nulla con la scelta della palette."
                 }
             },
             "children": {
-                "question": "I bambini sono i benvenuti?",
+                "question": "👶🏻 I bambini sono i benvenuti?",
                 "answer": "No, a Giorgio non piacciono... ma per questa volta farà un'eccezione. Ti chiediamo soltanto di indicare la loro presenza nella sezione RSVP."
             },
             "rsvpMeaning": {
-                "question": "Ma cosa vuol dire RSVP?",
-                "answer": "Significa \"Répondez s'il vous plaît\", un modo da nobili per chiedere semplicemente: «Ci sarai?»"
+                "question": "✒️ Ma cosa vuol dire RSVP?",
+                "answer": "Significa \"Répondez s'il vous plaît\", un modo da nobili per chiedere semplicemente: \"Ci sarai?\" 💫"
             },
             "allergies": {
-                "question": "È possibile segnalare allergie o esigenze alimentari?",
+                "question": "🍕 È possibile segnalare allergie o esigenze alimentari?",
                 "answer": "Certamente. Durante la conferma della presenza potrai indicarci allergie, intolleranze o qualsiasi esigenza alimentare particolare: faremo il possibile per accontentare tutti."
             },
             "accommodation": {
-                "question": "È possibile dormire in struttura?",
+                "question": "🧸 È possibile dormire in struttura?",
                 "answer": {
                     "beforeEmail": "Sì. Il Relais dispone di un numero limitato di camere. Se desideri pernottare, ti consigliamo di prenotare il prima possibile tramite Booking, il sito ufficiale oppure scrivendo direttamente a ",
                     "email": "info@relaischiaramonte.com",
@@ -222,19 +222,19 @@
                 }
             },
             "parking": {
-                "question": "È disponibile un parcheggio?",
-                "answer": "Il mezzo migliore per arrivare sarebbe l'elicottero... ma in generale sì! La struttura si trova a circa 15 minuti da Ragusa e dispone di un ampio parcheggio gratuito riservato agli ospiti."
+                "question": "🚗 È disponibile un parcheggio?",
+                "answer": "Nessun problema! La struttura si trova a circa 15 minuti da Ragusa e dispone di ettari di parcheggi gratuiti riservati agli ospiti. Puoi venire anche in elicottero, se vuoi.🚁"
             },
             "confirmation": {
-                "question": "Entro quando devo confermare la mia presenza?",
-                "answer": "Già sei in ritardo. Ti chiediamo gentilmente di confermare la tua partecipazione entro la data indicata sul sito, altrimenti lo chef ci toglie il saluto."
+                "question": "💌 Entro quando devo confermare la mia presenza?",
+                "answer": "Già sei in ritardo. Ti chiediamo gentilmente di confermare la tua partecipazione entro la data indicata sul sito, altrimenti lo chef si arrabbia.👨🏻‍🍳🔪"
             },
             "modify": {
-                "question": "Posso modificare la mia risposta dopo aver inviato l'RSVP?",
+                "question": "👍🏻 Posso modificare la mia risposta dopo aver inviato l'RSVP?",
                 "answer": "Sì. Se dovessi cambiare idea o avessi bisogno di aggiornare le informazioni già inviate, contattaci direttamente."
             },
             "unplugged": {
-                "question": "La cerimonia sarà \"unplugged\"?",
+                "question": "📵 La cerimonia sarà \"unplugged\"?",
                 "answer": {
                     "beforeLink": "Durante la cerimonia ti invitiamo a mettere da parte il telefono e a vivere con noi ogni istante. Ci saranno fotografi e videomaker a raccontare la giornata, quindi rilassati e goditi il momento. Dopo la cerimonia, invece, sentiti libero di scattare tutte le foto e i video che desideri e, se ti farà piacere, potrai condividerli direttamente ",
                     "link": "QUI",

@@ -157,10 +157,10 @@
             },
             "location": {
                 "question": "📍 Finden die Zeremonie und die Feier am selben Ort statt?",
-                "answer": "Ja! Der gesamte Hochzeitstag findet im Relais Chiaramonte – Sala Qirat statt. Die Zeremonie ist im Freien geplant. Sollte das Wetter nicht mitspielen... haben wir einen Plan B.☀️"
+                "answer": "Ja! Der gesamte Hochzeitstag findet im Relais Chiaramonte – Sala Qirat statt. Die Zeremonie ist im Freien geplant. Sollte das Wetter nicht mitspielen... haben wir einen Plan B.☂️"
             },
             "dressCode": {
-                "question": "Gibt es einen Dresscode?",
+                "question": "👑 Gibt es einen Dresscode?",
                 "intro": "Ja, der Dresscode ist elegant. Da ein Teil der Feier im Freien stattfindet, empfehlen wir bequeme Schuhe.",
                 "women": {
                     "label": "Für Damen",
@@ -197,24 +197,24 @@
                     "text": "Bringt zusätzlich zu eurer klassischen Krawatte eine zweite mit und lasst eurer Kreativität freien Lauf! Das Bride-Team wird die „hässlichste“ Krawatte wählen und der Gewinner erhält einen besonderen Preis."
                 },
                 "ps": {
-                    "label": "PS",
+                    "label": "P.S.",
                     "text": "Giorgio hatte absolut nichts mit der Auswahl der Farbpalette zu tun."
                 }
             },
             "children": {
-                "question": "Sind Kinder willkommen?",
+                "question": "👶🏻 Sind Kinder willkommen?",
                 "answer": "Nein, Giorgio mag keine Kinder ... nur Spaß! Natürlich sind sie herzlich willkommen. Bitte gebt ihre Teilnahme einfach bei der RSVP an."
             },
             "rsvpMeaning": {
-                "question": "Was bedeutet eigentlich RSVP?",
-                "answer": "Es steht für das französische „Répondez s'il vous plaît“ und bedeutet einfach: „Bitte gebt uns Bescheid, ob ihr dabei seid.“"
+                "question": "✒️ Was bedeutet eigentlich RSVP?",
+                "answer": "Es steht für das französische „Répondez s'il vous plaît“ und bedeutet einfach: „Bitte gebt uns Bescheid, ob ihr dabei seid.“ 💫"
             },
             "allergies": {
-                "question": "Kann ich Allergien oder besondere Ernährungswünsche angeben?",
+                "question": "🍕 Kann ich Allergien oder besondere Ernährungswünsche angeben?",
                 "answer": "Natürlich. Bei der Bestätigung eurer Teilnahme könnt ihr Allergien, Unverträglichkeiten oder besondere Ernährungswünsche angeben. Wir werden unser Bestes tun, damit sich alle wohlfühlen."
             },
             "accommodation": {
-                "question": "Kann man in der Unterkunft übernachten?",
+                "question": "🧸 Kann man in der Unterkunft übernachten?",
                 "answer": {
                     "beforeEmail": "Ja. Das Relais verfügt über eine begrenzte Anzahl an Zimmern. Wenn ihr dort übernachten möchtet, empfehlen wir, so früh wie möglich über Booking, die offizielle Website oder per E-Mail an ",
                     "email": "info@relaischiaramonte.com",
@@ -222,19 +222,19 @@
                 }
             },
             "parking": {
-                "question": "Gibt es Parkplätze?",
-                "answer": "Am stilvollsten wäre natürlich die Anreise mit dem Hubschrauber ... Aber ja! Das Relais liegt etwa 15 Minuten von Ragusa entfernt und verfügt über einen großen, kostenlosen Parkplatz für alle Gäste."
+                "question": "🚗 Gibt es Parkplätze?",
+                "answer": "Kein Problem! Die Anlage liegt etwa 15 Minuten von Ragusa entfernt und verfügt über mehrere Hektar kostenlose Parkplätze, die den Gästen vorbehalten sind. Du kannst auch mit dem Hubschrauber anreisen, wenn du möchtest.🚁"
             },
             "confirmation": {
-                "question": "Bis wann muss ich meine Teilnahme bestätigen?",
-                "answer": "Eigentlich seid ihr schon etwas spät dran. Bitte bestätigt eure Teilnahme bis zu dem auf der Website angegebenen Datum – sonst spricht der Küchenchef vielleicht nicht mehr mit uns."
+                "question": "💌 Bis wann muss ich meine Teilnahme bestätigen?",
+                "answer": "Eigentlich seid ihr schon etwas spät dran. Wir bitten dich höflich, deine Teilnahme bis zu dem auf der Website angegebenen Datum zu bestätigen, sonst wird der Küchenchef sauer.👨🏻‍🍳🔪"
             },
             "modify": {
-                "question": "Kann ich meine RSVP nachträglich ändern?",
+                "question": "👍🏻 Kann ich meine RSVP nachträglich ändern?",
                 "answer": "Ja. Sollten sich eure Pläne ändern oder ihr eure Angaben aktualisieren müssen, kontaktiert uns einfach direkt."
             },
             "unplugged": {
-                "question": "Wird die Zeremonie „unplugged“ sein?",
+                "question": "📵 Wird die Zeremonie „unplugged“ sein?",
                 "answer": {
                     "beforeLink": "Während der Zeremonie möchten wir euch bitten, das Handy beiseitezulegen und den Moment gemeinsam mit uns zu genießen. Unsere Fotografen und Videografen halten alle Erinnerungen fest, also lehnt euch zurück und erlebt den Augenblick. Nach der Zeremonie könnt ihr selbstverständlich so viele Fotos und Videos machen, wie ihr möchtet, und sie anschließend gerne ",
                     "link": "HIER",

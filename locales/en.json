@@ -157,10 +157,10 @@
             },
             "location": {
                 "question": "📍 Will the ceremony and reception take place at the same venue?",
-                "answer": "Yes! The entire day will take place at Relais Chiaramonte - Sala Qirat. The ceremony is planned outdoors, but in case of bad weather... we have a Plan B.☀️"
+                "answer": "Yes! The entire day will take place at Relais Chiaramonte - Sala Qirat. The ceremony is planned outdoors, but in case of bad weather... we have a Plan B.☂️"
             },
             "dressCode": {
-                "question": "Is there a dress code?",
+                "question": "👑 Is there a dress code?",
                 "intro": "Yes, the dress code is elegant. Since part of the event takes place outdoors, we recommend wearing comfortable shoes.",
                 "women": {
                     "label": "For ladies",
@@ -202,19 +202,19 @@
                 }
             },
             "children": {
-                "question": "Are children welcome?",
+                "question": "👶🏻 Are children welcome?",
                 "answer": "No, Giorgio doesn't like children... just kidding! We'd love to have them with us. Please remember to include them in your RSVP."
             },
             "rsvpMeaning": {
-                "question": "What does RSVP mean?",
-                "answer": "It stands for the French expression \"Répondez s'il vous plaît\", which is simply a fancy way of asking: \"Will you be there?\""
+                "question": "✒️ What does RSVP mean?",
+                "answer": "It stands for the French expression \"Répondez s'il vous plaît\", which is simply a fancy way of asking: \"Will you be there?\" 💫"
             },
             "allergies": {
-                "question": "Can I let you know about allergies or dietary requirements?",
+                "question": "🍕 Can I let you know about allergies or dietary requirements?",
                 "answer": "Absolutely. When confirming your attendance, you'll be able to let us know about allergies, intolerances or any dietary requirements. We'll do our best to accommodate everyone."
             },
             "accommodation": {
-                "question": "Is it possible to stay overnight at the venue?",
+                "question": "🧸 Is it possible to stay overnight at the venue?",
                 "answer": {
                     "beforeEmail": "Yes. The Relais has a limited number of rooms available. If you would like to stay overnight, we recommend booking as early as possible through Booking, the official website, or by emailing ",
                     "email": "info@relaischiaramonte.com",
@@ -222,19 +222,19 @@
                 }
             },
             "parking": {
-                "question": "Is parking available?",
-                "answer": "The best way to arrive would be by helicopter... but yes! The venue is about 15 minutes from Ragusa and offers a large complimentary parking area reserved for guests."
+                "question": "🚗 Is parking available?",
+                "answer": "No problem! The property is located about 15 minutes from Ragusa and has several hectares of free parking reserved for guests. You can even come by helicopter, if you'd like.🚁"
             },
             "confirmation": {
-                "question": "When should I confirm my attendance?",
-                "answer": "You're already late. Please confirm your attendance by the date indicated on the website, otherwise the chef might stop talking to us."
+                "question": "💌 When should I confirm my attendance?",
+                "answer": "You're already late. We kindly ask you to confirm your attendance by the date listed on the website; otherwise, the chef will get upset.👨🏻‍🍳🔪"
             },
             "modify": {
-                "question": "Can I change my RSVP after submitting it?",
+                "question": "👍🏻 Can I change my RSVP after submitting it?",
                 "answer": "Yes. If your plans change or you need to update the information you've already provided, simply get in touch with us."
             },
             "unplugged": {
-                "question": "Will the ceremony be unplugged?",
+                "question": "📵 Will the ceremony be unplugged?",
                 "answer": {
                     "beforeLink": "During the ceremony, we'd love for you to put your phone away and simply enjoy the moment with us. Our photographers and videographers will capture every memory, so relax and be fully present. After the ceremony, feel free to take as many photos and videos as you'd like and, if you wish, you can share them ",
                     "link": "HERE",

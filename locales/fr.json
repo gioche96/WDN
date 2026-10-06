@@ -152,15 +152,15 @@
         "title": "Questions fréquentes",
         "questions": {
             "arrival": {
-                "question": "⌛ À quelle heure dois-je arriver ?",
+                "question": "⌛ À quelle heure dois-je arriver?",
                 "answer": "Nous vous conseillons d'arriver au moins 30 minutes avant le début de la cérémonie. En arrivant un peu en avance, vous aurez l'occasion de faire connaissance avec les autres invités formidables et de profiter d'un verre de bienvenue bien frais.🍹"
             },
             "location": {
-                "question": "📍 La cérémonie et la réception auront-elles lieu au même endroit ?",
-                "answer": "Oui ! Toute la journée se déroulera au Relais Chiaramonte - Sala Qirat. La cérémonie est prévue en extérieur, mais en cas de mauvais temps... nous avons un plan B.☀️"
+                "question": "📍 La cérémonie et la réception auront-elles lieu au même endroit?",
+                "answer": "Oui ! Toute la journée se déroulera au Relais Chiaramonte - Sala Qirat. La cérémonie est prévue en extérieur, mais en cas de mauvais temps... nous avons un plan B.☂️"
             },
             "dressCode": {
-                "question": "Y a-t-il un dress code ?",
+                "question": "👑 Y a-t-il un dress code?",
                 "intro": "Oui, une tenue élégante est demandée. Compte tenu de la saison et des espaces extérieurs, nous vous recommandons de porter des chaussures confortables.",
                 "women": {
                     "label": "Pour les femmes",
@@ -197,24 +197,24 @@
                     "text": "En plus de votre cravate de cérémonie, apportez-en une deuxième et laissez libre cours à votre imagination ! La bride team élira la cravate la plus « horrible » et le gagnant recevra un prix spécial."
                 },
                 "ps": {
-                    "label": "P.-S.",
+                    "label": "P.S.",
                     "text": "Giorgio n'a absolument rien eu à voir avec le choix de la palette de couleurs."
                 }
             },
             "children": {
-                "question": "Les enfants sont-ils les bienvenus ?",
+                "question": "👶🏻 Les enfants sont-ils les bienvenus?",
                 "answer": "Non, Giorgio n'aime pas les enfants... on plaisante ! Bien sûr qu'ils sont les bienvenus. Merci simplement de les indiquer dans votre RSVP."
             },
             "rsvpMeaning": {
-                "question": "Mais que signifie RSVP ?",
-                "answer": "Cela signifie « Répondez s'il vous plaît », une façon très élégante de demander simplement : « Serez-vous parmi nous ? »"
+                "question": "✒️ Mais que signifie RSVP?",
+                "answer": "Cela signifie « Répondez s'il vous plaît », une façon très élégante de demander simplement : « Serez-vous parmi nous? » 💫"
             },
             "allergies": {
-                "question": "Puis-je signaler des allergies ou un régime alimentaire particulier ?",
+                "question": "🍕 Puis-je signaler des allergies ou un régime alimentaire particulier ?",
                 "answer": "Bien sûr. Lors de votre confirmation de présence, vous pourrez nous indiquer vos allergies, intolérances ou toute autre exigence alimentaire particulière. Nous ferons de notre mieux pour satisfaire tout le monde."
             },
             "accommodation": {
-                "question": "Est-il possible de dormir sur place ?",
+                "question": "🧸 Est-il possible de dormir sur place?",
                 "answer": {
                     "beforeEmail": "Oui. Le Relais dispose d'un nombre limité de chambres. Si vous souhaitez y séjourner, nous vous conseillons de réserver le plus tôt possible via Booking, le site officiel ou en écrivant directement à ",
                     "email": "info@relaischiaramonte.com",
@@ -222,19 +222,19 @@
                 }
             },
             "parking": {
-                "question": "Y a-t-il un parking ?",
-                "answer": "Le meilleur moyen d'arriver serait en hélicoptère... mais oui ! Le Relais se trouve à environ 15 minutes de Raguse et dispose d'un grand parking gratuit réservé aux invités."
+                "question": "🚗 Y a-t-il un parking?",
+                "answer": "Pas de problème ! L'établissement se trouve à environ 15 minutes de Raguse et dispose de plusieurs hectares de parkings gratuits réservés à ses clients. Tu peux aussi venir en hélicoptère, si tu veux.🚁"
             },
             "confirmation": {
-                "question": "Jusqu'à quand dois-je confirmer ma présence ?",
-                "answer": "Vous êtes déjà un peu en retard. Merci de confirmer votre présence avant la date indiquée sur le site, sinon le chef risque de ne plus nous adresser la parole."
+                "question": "💌 Jusqu'à quand dois-je confirmer ma présence?",
+                "answer": "Vous êtes déjà un peu en retard. Nous te prions de bien vouloir confirmer ta participation avant la date indiquée sur le site, sinon le chef va se fâcher.👨🏻‍🍳🔪"
             },
             "modify": {
-                "question": "Puis-je modifier ma réponse après avoir envoyé le RSVP ?",
+                "question": "👍🏻 Puis-je modifier ma réponse après avoir envoyé le RSVP?",
                 "answer": "Oui. Si vos projets changent ou si vous souhaitez mettre à jour les informations transmises, contactez-nous directement."
             },
             "unplugged": {
-                "question": "La cérémonie sera-t-elle « unplugged » ?",
+                "question": "📵 La cérémonie sera-t-elle « unplugged »?",
                 "answer": {
                     "beforeLink": "Pendant la cérémonie, nous vous invitons à mettre votre téléphone de côté et à vivre pleinement ce moment avec nous. Des photographes et vidéastes immortaliseront cette journée, alors détendez-vous et profitez-en. Après la cérémonie, n'hésitez pas à prendre autant de photos et de vidéos que vous le souhaitez et, si cela vous fait plaisir, vous pourrez les partager ",
                     "link": "ICI",

@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/icon_site.png",
-        width: 2000,
-        height: 500,
+        width: 1200,
+        height: 630,
         alt: "Alice & Giorgio",
       },
     ],
