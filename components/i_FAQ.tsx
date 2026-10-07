@@ -321,7 +321,7 @@ export default function FAQ() {
                                                 )}
 
                                                 <a
-                                                    href="https://TUO-LINK-QUI"
+                                                    href="https://wdn-six.vercel.app/foto/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="underline underline-offset-2 transition-opacity hover:opacity-70"
