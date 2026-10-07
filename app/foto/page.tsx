@@ -17,7 +17,7 @@ const ALLOWED_TYPES = [
 ];
 
 const CONCURRENT_UPLOADS = 3;
-const CHUNK_SIZE = 10 * 1024 * 1024; // 10 MB
+const CHUNK_SIZE = 4 * 1024 * 1024; // 10 MB
 
 export default function FotoPage() {
     const [files, setFiles] = useState<File[]>([]);
