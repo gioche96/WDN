@@ -17,7 +17,7 @@ const ALLOWED_TYPES = [
 ];
 
 const CONCURRENT_UPLOADS = 3;
-const CHUNK_SIZE = 4 * 1024 * 1024; // 10 MB
+const CHUNK_SIZE = 4 * 1024 * 1024; // 4 MB
 
 export default function FotoPage() {
     const [files, setFiles] = useState<File[]>([]);
@@ -34,7 +34,7 @@ export default function FotoPage() {
 
         if (invalidType) {
             setMessage(
-                `Il file "${invalidType.name}" non è supportato.`
+                `The file "${invalidType.name}" is not supported.`
             );
             return;
         }
@@ -57,7 +57,7 @@ export default function FotoPage() {
                 : "1 GB";
 
             setMessage(
-                `"${invalidSize.name}" supera il limite di ${limit}.`
+                `"${invalidSize.name}" exceeds the ${limit} limit.`
             );
             return;
         }
@@ -87,7 +87,7 @@ export default function FotoPage() {
         if (!sessionResponse.ok || !sessionData.success) {
             throw new Error(
                 sessionData.message ||
-                `Impossibile iniziare il caricamento di "${file.name}".`
+                `Unable to start the upload of "${file.name}".`
             );
         }
 
@@ -146,14 +146,14 @@ export default function FotoPage() {
             }
 
             throw new Error(
-                `Errore durante il caricamento di "${file.name}".`
+                `Error while uploading "${file.name}".`
             );
         }
     }
 
     async function handleUpload() {
         if (files.length === 0) {
-            setMessage("Seleziona almeno un file.");
+            setMessage("Please select at least one file.");
             return;
         }
 
@@ -185,7 +185,7 @@ export default function FotoPage() {
                         firstError =
                             error instanceof Error
                                 ? error.message
-                                : `Errore durante il caricamento di "${file.name}".`;
+                                : `Error while uploading "${file.name}".`;
                     }
                 }
             }
@@ -207,57 +207,196 @@ export default function FotoPage() {
 
         if (firstError) {
             setMessage(
-                `Caricamento parziale: ${completed} di ${files.length} file completati. ${firstError}`
+                `Partial upload: ${completed} of ${files.length} files completed. ${firstError}`
             );
         } else {
             setFiles([]);
             setMessage(
-                "Caricamento completato. Grazie per aver condiviso i tuoi ricordi! ❤️"
+                "upload-complete"
             );
         }
     }
 
+    const isCompleted = message === "upload-complete";
+
     return (
-        <main className="min-h-screen bg-[#f5f1e8] px-6 py-12">
-            <div className="mx-auto max-w-2xl text-center">
-                <h1 className="text-4xl font-serif text-[#4d4d3c]">
-                    Alice & Giorgio
-                </h1>
+        <main className="min-h-screen bg-[#f4f0e6] px-5 py-10 text-[#4d4d3c] sm:px-8 sm:py-16">
+            <div className="mx-auto max-w-2xl">
+                {/* Header */}
+                <div className="text-center">
+                    <p className="text-m uppercase tracking-[0.28em] text-[#7f8060] font-normal">
+                        Alice & Giorgio
+                    </p>
 
-                <p className="mt-4 text-lg text-[#6b6b55]">
-                    Condividi con noi le foto e i video del nostro giorno
-                    speciale.
-                </p>
+                    <h1 className="mt-4 font-serif text-5xl leading-tight text-[#55563f] sm:text-6xl">
+                        Photo & Video
+                    </h1>
 
-                <div className="mt-10">
-                    <input
-                        type="file"
-                        accept={ALLOWED_TYPES.join(",")}
-                        multiple
-                        onChange={handleFileChange}
-                        disabled={uploading}
-                        className="w-full rounded-xl border border-[#828265] bg-white p-4"
-                    />
+                    <h2 className="font-serif text-5xl leading-tight text-[#55563f] sm:text-6xl">
+                        Gallery
+                    </h2>
+
+                    <p className="mt-5 text-sm uppercase tracking-[0.22em] text-[#88896d]">
+                        4 September 2027
+                    </p>
+
+                    <div className="mx-auto mt-6 h-px w-16 bg-[#a7a889] font-normal" />
+
+                    <p className="mx-auto mt-6 max-w-lg text-base leading-7 text-[#77785f]">
+                        Share the photos and videos you captured
+                        during our special day.
+                    </p>
                 </div>
 
-                {files.length > 0 && (
-                    <div className="mt-6 text-left text-[#4d4d3c]">
-                        <p className="font-medium">
-                            {files.length} file selezionati
+                {/* Upload area */}
+                <div className="mt-8">
+                    <label
+                        htmlFor="photo-upload"
+                        className={`
+                            group flex cursor-pointer flex-col items-center
+                            rounded-3xl border border-dashed
+                            border-[#9b9d78] bg-[#faf8f1]
+                            px-6 py-7 text-center
+                            transition-all duration-300
+                            hover:border-[#6f7655]
+                            hover:bg-[#f8f6ed]
+                            ${uploading
+                                ? "pointer-events-none opacity-60"
+                                : ""
+                            }
+                        `}
+                    >
+                        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#dfe2c8] text-[#697052] transition-transform duration-300 group-hover:scale-105">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                className="h-9 w-9"
+                                aria-hidden="true"
+                            >
+                                <rect
+                                    x="3"
+                                    y="4"
+                                    width="18"
+                                    height="16"
+                                    rx="2"
+                                />
+                                <circle
+                                    cx="8.5"
+                                    cy="9"
+                                    r="1.5"
+                                />
+                                <path d="m3 16 5-5 4 4 2.5-2.5L21 17" />
+                            </svg>
+                        </div>
+
+                        <p className="mt-4 font-serif text-2xl text-[#55563f]">
+                            Share your memories
                         </p>
 
-                        <ul className="mt-3 max-h-64 space-y-1 overflow-y-auto text-sm">
+                        <p className="mt-1 max-w-sm text-sm leading-6 text-[#85866d]">
+                            Choose one or more photos or videos
+                            from your device.
+                        </p>
+
+                        <span className="mt-5 rounded-full bg-[#727955] px-6 py-3 text-sm font-medium text-white transition-colors duration-200 group-hover:bg-[#626947]">
+                            Choose files
+                        </span>
+
+                        <p className="mt-3 text-xs text-[#9a9b83]">
+                            Photos up to 100 MB · Videos up to 1 GB
+                        </p>
+
+                        <input
+                            id="photo-upload"
+                            type="file"
+                            accept={ALLOWED_TYPES.join(",")}
+                            multiple
+                            onChange={handleFileChange}
+                            disabled={uploading}
+                            className="sr-only"
+                        />
+                    </label>
+                </div>
+
+                {/* Selected files */}
+                {files.length > 0 && (
+                    <div className="mt-6 rounded-2xl bg-[#e7e5d5] px-5 py-5">
+                        <div className="flex items-center justify-between gap-4">
+                            <p className="text-sm font-medium uppercase tracking-[0.12em] text-[#62654b]">
+                                Selected files
+                            </p>
+
+                            <span className="rounded-full bg-[#d2d5b8] px-3 py-1 text-xs font-medium text-[#62654b]">
+                                {files.length}
+                            </span>
+                        </div>
+
+                        <ul className="mt-4 max-h-56 space-y-2 overflow-y-auto">
                             {files.map((file, index) => (
                                 <li
                                     key={`${file.name}-${file.size}-${index}`}
+                                    className="flex items-center gap-3 rounded-xl bg-[#f5f3ea] px-3 py-2.5 text-sm text-[#656750]"
                                 >
-                                    {file.name}
+                                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#dfe2c8] text-[#697052]">
+                                        {file.type.startsWith("video/") ? (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="1.5"
+                                                className="h-4 w-4"
+                                                aria-hidden="true"
+                                            >
+                                                <rect
+                                                    x="3"
+                                                    y="5"
+                                                    width="13"
+                                                    height="14"
+                                                    rx="2"
+                                                />
+                                                <path d="m16 10 5-3v10l-5-3z" />
+                                            </svg>
+                                        ) : (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="1.5"
+                                                className="h-4 w-4"
+                                                aria-hidden="true"
+                                            >
+                                                <rect
+                                                    x="3"
+                                                    y="4"
+                                                    width="18"
+                                                    height="16"
+                                                    rx="2"
+                                                />
+                                                <circle
+                                                    cx="8.5"
+                                                    cy="9"
+                                                    r="1.5"
+                                                />
+                                                <path d="m3 16 5-5 4 4 2.5-2.5L21 17" />
+                                            </svg>
+                                        )}
+                                    </span>
+
+                                    <span className="min-w-0 flex-1 truncate">
+                                        {file.name}
+                                    </span>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 )}
 
+                {/* Upload button */}
                 <button
                     type="button"
                     onClick={handleUpload}
@@ -265,21 +404,64 @@ export default function FotoPage() {
                         uploading ||
                         files.length === 0
                     }
-                    className="mt-8 rounded-xl bg-[#828265] px-8 py-4 text-white disabled:cursor-not-allowed disabled:opacity-50"
+                    className="mt-7 w-full rounded-full bg-[#727955] px-8 py-4 text-sm font-medium tracking-wide text-white transition-all duration-200 hover:bg-[#626947] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                     {uploading
-                        ? `Caricamento ${uploadedCount}/${files.length}...`
-                        : "Carica foto e video"}
+                        ? `Uploading ${uploadedCount}/${files.length}...`
+                        : "Upload photos & videos"}
                 </button>
 
-                {message && (
-                    <p
-                        className="mt-6 text-[#4d4d3c]"
+                {/* Status */}
+                {message && !isCompleted && (
+                    <div
+                        className="mt-6 rounded-2xl bg-[#e7e5d5] px-5 py-4 text-center text-sm leading-6 text-[#62654b]"
                         aria-live="polite"
                     >
                         {message}
-                    </p>
+                    </div>
                 )}
+
+                {/* Success */}
+                {isCompleted && (
+                    <div
+                        className="mt-8 rounded-3xl border border-[#b4b792] bg-[#e4e6d2] px-6 py-8 text-center"
+                        aria-live="polite"
+                    >
+                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#727955] text-white">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                className="h-7 w-7"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m5 12 4 4L19 6"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </div>
+
+                        <p className="mt-5 font-serif text-3xl text-[#55563f]">
+                            Grazie · Thanks · Merci · Danke
+                        </p>
+
+                        <p className="mt-3 text-sm leading-6 text-[#6e7056]">
+                            Upload completed.
+                            <br />
+                            Thank you for sharing your memories! ❤️
+                        </p>
+                    </div>
+                )}
+
+                {/* Footer note */}
+                <p className="mt-5 text-center text-xs leading-5 text-[#999a82]">
+                    Your original photos and videos are uploaded
+                    without compression.
+                </p>
             </div>
         </main>
     );

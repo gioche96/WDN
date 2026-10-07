@@ -25,6 +25,7 @@ const questionKeys = [
     "confirmation",
     "modify",
     "unplugged",
+    "pictures",
 ];
 
 export default function FAQ() {
@@ -96,6 +97,11 @@ export default function FAQ() {
             key: "unplugged",
             question: t("faq.questions.unplugged.question"),
             answer: t("faq.questions.unplugged.answer"),
+        },
+        {
+            key: "pictures",
+            question: t("faq.questions.pictures.question"),
+            answer: t("faq.questions.pictures.answer"),
         },
     ];
 
@@ -333,6 +339,27 @@ export default function FAQ() {
 
                                                 {t(
                                                     "faq.questions.unplugged.answer.afterLink"
+                                                )}
+                                            </p>
+                                        ) : item.key === "pictures" ? (
+                                            <p className="max-w-2xl leading-7 text-black/70">
+                                                {t(
+                                                    "faq.questions.pictures.answer.beforeLink"
+                                                )}
+
+                                                <a
+                                                    href="https://wdn-six.vercel.app/foto/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                                                >
+                                                    {t(
+                                                        "faq.questions.pictures.answer.link"
+                                                    )}
+                                                </a>
+
+                                                {t(
+                                                    "faq.questions.pictures.answer.afterLink"
                                                 )}
                                             </p>
                                         ) : (

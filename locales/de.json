@@ -240,6 +240,14 @@
                     "link": "HIER",
                     "afterLink": " mit uns teilen."
                 }
+            },
+            "pictures": {
+                "question": "📷 Und was ist, wenn ich während der Hochzeit ein besseres Foto mache als der Fotograf?",
+                "answer": {
+                    "beforeLink": "Ganz einfach: Alles hochladen ",
+                    "link": "HIER",
+                    "afterLink": "! Ein wunderschönes Foto? Ein schreckliches Foto? Ein kompromittierendes Video? Teilt alles, aber wir können nicht garantieren, dass es nicht gegen euch verwendet wird 👀. Das Schönste daran ist, auch eure Erinnerungen an diesen Tag festzuhalten: Jede zusätzliche Perspektive ist ein Moment, den wir vielleicht verpasst haben und den wir gerne bewahren möchten.💕"
+                }
             }
         }
     },

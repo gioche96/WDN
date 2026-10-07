@@ -240,6 +240,14 @@
                     "link": "ICI",
                     "afterLink": "."
                 }
+            },
+            "pictures": {
+                "question": "📷 Et si, pendant le mariage, je prenais une meilleure photo que le photographe?",
+                "answer": {
+                    "beforeLink": "C'est simple : télécharge tout ",
+                    "link": "ICI",
+                    "afterLink": "! Une superbe photo ? Une photo embarrassante ? Une vidéo compromettante ? Partagez tout ce que vous voulez, mais nous ne pouvons pas garantir qu'elles ne seront pas utilisées contre vous 👀. Le plus beau, c'est de recueillir également vos souvenirs de cette journée: chaque point de vue supplémentaire représente un moment que nous avons peut-être manqué et que nous serons heureux de conserver.💕"
+                }
             }
         }
     },

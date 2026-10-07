@@ -240,6 +240,14 @@
                     "link": "HERE",
                     "afterLink": "."
                 }
+            },
+            "pictures": {
+                "question": "📷 What if I take a better photo than the photographer during the wedding?",
+                "answer": {
+                    "beforeLink": "Simple: upload everything ",
+                    "link": "HERE",
+                    "afterLink": "! A beautiful photo? A terrible photo? A compromising video? Share it all, but we can't guarantee it won't be used against you 👀. The best part is collecting your memories of the day as well: every additional perspective is a moment we may have missed and that we’ll be happy to preserve.💕"
+                }
             }
         }
     },
